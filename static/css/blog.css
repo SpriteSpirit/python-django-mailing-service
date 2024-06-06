@@ -37,3 +37,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.25rem;
   color: #727272;
 }
+
+html, body {
+height: 100%;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin-bottom: -80px; /* Отрицательное значение высоты footer'а */
+}
+
+.footer, .push {
+height: 80px; /* .push и .footer должны быть одинаковой высоты */
+clear: both;
+}
