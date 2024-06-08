@@ -4,11 +4,11 @@ const myChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: [
-      'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
-    ],
+      [{% for data in client_data %}'{{ data.date|date:"Y-m-d" }}',{% endfor %}],
     datasets: [{
+      label: 'Клиенты',
       data: [
-        15339, 21345, 18483, 24003, 23489, 24092, 12034
+        [{% for data in client_data %}{{ data.count }},{% endfor %}]
       ],
       lineTension: 0,
       backgroundColor: 'transparent',
@@ -28,3 +28,5 @@ const myChart = new Chart(ctx, {
     }
   }
 });
+
+

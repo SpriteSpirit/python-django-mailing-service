@@ -27,8 +27,8 @@
                href="{% url 'main:index' %}">ГЛАВНАЯ</a>
             <a class="nav-item nav-link link-body-emphasis {% if request.path == '/blogs/' %} active {% endif %}"
                href="#">ПУБЛИКАЦИИ</a>
-            <a class="nav-item nav-link link-body-emphasis" href="/dashboard/">ЛИЧНЫЙ КАБИНЕТ</a>
-            <a class="nav-item nav-link link-body-emphasis" href="/about/">КОНТАКТЫ</a>
+            <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:dashboard' %}">ЛИЧНЫЙ КАБИНЕТ</a>
+            <a class="nav-item nav-link link-body-emphasis" href="{% url 'main:contacts' %}">СВЯЗАТЬСЯ С НАМИ</a>
         </nav>
     </div>
 </div>
