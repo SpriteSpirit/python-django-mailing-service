@@ -25,16 +25,9 @@
   color: #999999;
 }
 
-.sidebar .nav-link.active > .nav-link {
-  color: #0d6efd;
-}
-
-.sidebar .navbar-nav .nav-link.active {
-    color: #234512;
-}
 
 .active {
-  color: #0d6efd;
+  color: #ffc107;
 }
 
 .sidebar-heading {

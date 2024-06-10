@@ -4,19 +4,26 @@
         color: inherit;
     }
 
-    .nav-link.active {
-        color: #0d6efd;
+    .nav-link.focus,
+    .nav-link.active,
+    .nav-link:hover {
+        color: #ff9000;
+    }
+
+    .nav-link {
+    transition: color 0.3s, background-color 0.3s;
     }
 </style>
 
-<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary w-15">
+<div class="sidebar border border-left col-md-3 col-lg-2 p-0 bg-body-tertiary w-15">
     <div class="offcanvas-lg offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
          aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
                 <li class="nav-item">
-<!--                    <p>Active page: {{ active_page }}</p>-->
-                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'dashboard' %}active{% endif %}" data-toggle="tab" aria-current="page"
+                    <!--                    <p>Active page: {{ active_page }}</p>-->
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'dashboard' %}active{% endif %}"
+                       data-toggle="tab" aria-current="page"
                        href="{% url 'mailing:dashboard' %}">
                         <svg class="bi">
                             <use xlink:href="#house-fill"/>
@@ -25,16 +32,29 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" data-toggle="tab" href="#">
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'mailing_list' %}active{% endif %}"
+                       data-toggle="tab"
+                       href="{% url 'mailing:mailing_list' %}">
                         <svg class="bi">
                             <use xlink:href="#file-earmark"/>
                         </svg>
                         Рассылки
                     </a>
                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'message_list' %}active{% endif %}"
+                       data-toggle="tab"
+                       href="{% url 'mailing:message_list' %}">
+                        <svg class="bi">
+                            <use xlink:href="#file-earmark"/>
+                        </svg>
+                        Письма
+                    </a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'clients' %}active{% endif %}" data-toggle="tab"
-                       href="{% url 'mailing:clients' %}">
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'client_list' %}active{% endif %}"
+                       data-toggle="tab"
+                       href="{% url 'mailing:client_list' %}">
                         <svg class="bi">
                             <use xlink:href="#people"/>
                         </svg>

@@ -4,11 +4,11 @@ const myChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: [
-      [{% for data in client_data %}'{{ data.date|date:"Y-m-d" }}',{% endfor %}],
+      [{{ ', '.join(dates) }}],
     datasets: [{
       label: 'Клиенты',
       data: [
-        [{% for data in client_data %}{{ data.count }},{% endfor %}]
+        [{{ ', '.join(counts) }}]
       ],
       lineTension: 0,
       backgroundColor: 'transparent',

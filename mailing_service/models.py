@@ -27,12 +27,10 @@ class Client(models.Model):
 
 class Message(models.Model):
     """ Сообщение для рассылки """
-
     objects = models.Manager()
 
     message_subject = models.CharField(max_length=150, verbose_name='Тема письма')
     message_body = models.TextField(verbose_name='Тело письма')
-    sent_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата отправки')
 
     class Meta:
         verbose_name = 'Сообщение'
@@ -41,3 +39,38 @@ class Message(models.Model):
 
     def __str__(self):
         return f'{self.message_subject}'
+
+
+class Mailing(models.Model):
+    """ Рассылка """
+
+    PERIODICITY_CHOICES = (
+        ('daily', 'Раз в день'),
+        ('weekly', 'Раз в неделю'),
+        ('monthly', 'Раз в месяц'),
+    )
+
+    STATUS_CHOICES = (
+        ('created', 'Создана'),
+        ('started', 'Запущена'),
+        ('completed', 'Завершена'),
+    )
+
+    objects = models.Manager()
+
+    first_send = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время отправки')
+    # date = models.DateField(auto_now_add=True, verbose_name='Дата создания')
+    # time = models.TimeField(auto_now_add=True, verbose_name='Время создания')
+    periodicity = models.CharField(max_length=20, choices=PERIODICITY_CHOICES, verbose_name='Периодичность')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, verbose_name='Статус рассылки')
+
+    clients = models.ManyToManyField(Client, related_name='mailings', verbose_name='Клиенты')
+    message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
+
+    class Meta:
+        verbose_name = 'Рассылка'
+        verbose_name_plural = 'Рассылки'
+        ordering = ('-first_send',)
+
+    def __str__(self):
+        return f'{self.first_send} {self.periodicity}'

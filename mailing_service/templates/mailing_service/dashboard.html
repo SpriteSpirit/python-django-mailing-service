@@ -3,65 +3,53 @@
 {% block content %}
 
 {% include 'mailing_service/includes/inc_head.html' %}
-<body>
 {% include 'mailing_service/includes/inc_icons.html' %}
-<div class="container-fluid">
-    <div class="row">
-        {% include 'mailing_service/includes/inc_inner_menu.html' %}
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">ЛИЧНЫЙ КАБИНЕТ</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Поделиться</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Экспорт</button>
-                    </div>
-                    <button type="button"
-                            class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
-                        <svg class="bi">
-                            <use xlink:href="#calendar3"/>
-                        </svg>
-                        Календарь
-                    </button>
-                </div>
-            </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+<div class="row">
+    {% include 'mailing_service/includes/inc_inner_menu.html' %}
 
-            <h2>Выполненные рассылки</h2>
-            <div class="table-responsive small">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th scope="col">№</th>
-                        <th scope="col">Кому</th>
-                        <th scope="col">Что</th>
-                        <th scope="col">Когда</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>mr.cateline@catswill.com</td>
-                        <td>Как прекрасен март...</td>
-                        <td>07.06.24</td>
-                    </tr>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">ЛИЧНЫЙ КАБИНЕТ</h1>
+        </div>
 
-                    </tbody>
-                </table>
-            </div>
-        </main>
-    </div>
+<!--        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
+
+        <h2>Выполненные рассылки</h2>
+        <div class="table-responsive small">
+            <table class="table table-striped table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Ф.И.О.</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Сообщение</th>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Настройки</th>
+                </tr>
+                </thead>
+                {% for object in object_list %}
+                <tbody>
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ object.name }}</td>
+                    <td>{{ object.email }}</td>
+                    <td>{{ message_subject }}</td>
+                    <td>{{ send_data }}</td>
+                    <td>{{ status }}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
+                            <button type="button" class="btn btn-info">View</button>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
 </div>
-
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-
-<script src="{% static 'js/chart.umd.min.js' %}"
-        integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG"
-        crossorigin="anonymous"></script>
-<script src="{% static 'js/dashboard.js' %}"></script>
-</body>
+<!--</div>-->
 {% endblock %}
