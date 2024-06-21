@@ -79,6 +79,43 @@ class ClientCreateView(CreateView):
         return super().form_valid(form)
 
 
+class ClientDetailView(DetailView):
+    model = Client
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['client'] = Client.objects.get(id=self.kwargs['pk'])
+
+        return context
+
+
+class ClientUpdateView(UpdateView):
+    model = Client
+    form_class = ClientForm
+    success_url = reverse_lazy('mailing:client_list')
+
+    def form_valid(self, form):
+        """ Валидация формы"""
+        client = form.save(commit=False)
+        client.save()
+
+        """ Если форма валидна, то отправляется сообщение"""
+
+        return super().form_valid(form)
+
+
+class ClientDeleteView(DeleteView):
+    model = Client
+    success_url = reverse_lazy('mailing:client_list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['client'] = self.object
+        print(context['client'])
+
+        return context
+
+
 class MailingListView(ListView):
     """ Просмотр списка клиентов """
     model = Mailing

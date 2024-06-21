@@ -58,6 +58,7 @@ html, body {
     text-align: -webkit-auto;
     height: 450px;
     width:450px;
+    line-height: 24px;
 }
 
 .sm_btn {

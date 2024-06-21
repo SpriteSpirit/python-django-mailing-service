@@ -16,12 +16,12 @@
         box-shadow: 0 4px 8px rgb(79 71 71); /* Тень для карточки */
         background: dark;      /* Фон карточки белый */
         border-radius: 8px;     /* Скругление углов карточки */
-
     }
 
     .box {
-        text-align: left;
-        height: 100%;
+        text-align: center;
+        height: 200px;
+        margin-top: 20px;
     }
 
     /* Настройка заголовка формы */
@@ -30,32 +30,26 @@
         margin-bottom: 20px; /* Отступ снизу для заголовка */
     }
 
-    .confirm_text {
+    p {
         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         font-size: 24px;
         font-weight: 200;
-        text-align: center;
-    }
 
+    }
 </Style>
 
 <div class="container-form justify-content-center align-items-center text-center">
     <form class="mb-5" method="post" id="contactForm">
-        <h3>Удаление рассылки</h3>
+        <h3>Удаление клиента</h3>
         <div class="card border-0">
             <div class="box">
                 {% csrf_token %}
-                <p class="confirm_text"><strong>Вы действительно хотите удалить:</strong></p><br>
-                <strong>Тема:</strong><br> {{ mail.message.message_subject }}<br><hr>
-                <strong>Сообщение:</strong><br>  {{ mail.message.message_body }} <br><br><hr>
-                <strong>Создано:</strong> {{ mail.first_send }} <br><hr>
-                <strong>Периодичность:</strong> {{ mail.periodicity }} <br><hr>
-                <strong>Статус:</strong>  {{ mail.status }} <br><hr><br>
+                <p><strong>Вы действительно хотите удалить:</strong><br><br>{{ client.name }}</p>
             </div>
 
             <button class="btn btn-danger sm_btn mt-1 mb-2" type="submit">Да, удалить</button>
             <span class="submitting"></span>
-            <a href="{% url 'mailing:mailing_list' %}" class="btn btn-warning sm_btn">Нет, вернуться назад</a>
+            <a href="{% url 'mailing:client_list' %}" class="btn btn-warning sm_btn">Нет, вернуться назад</a>
 
         </div>
     </form>

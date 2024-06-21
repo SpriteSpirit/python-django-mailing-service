@@ -13,7 +13,7 @@
             width: 100%;            /* Ширина карточки на всю доступную ширину */
             max-width: 600px;       /* Максимальная ширина карточки */
             padding: 20px;          /* Отступы внутри карточки */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для карточки */
+            box-shadow: 0 4px 8px rgb(79 71 71); /* Тень для карточки */
             background: dark;      /* Фон карточки белый */
             border-radius: 8px;     /* Скругление углов карточки */
         }
@@ -27,18 +27,21 @@
 
 <div class="container-form justify-content-center align-items-center text-center">
     <form class="mb-5" method="post" id="contactForm" name="contactForm">
-        <h3>Создание рассылки</h3>
+        <h3>Информация о клиенте</h3>
         <div class="card border-0">
-            <div class="card-body">
-                {% csrf_token %}
-                {{ form.as_p }}
+            <div class="box">
+                <strong>Ф.И.О.:</strong><br> {{ client.name }}<br><hr>
+                <strong>Email:</strong><br> {{ client.email }} <br><hr>
+                {% if client.is_active %}
+                <strong>Действующий:</strong> Да <br><hr>
+                {% else %}
+                <strong>Действующий:</strong> Нет <br><hr>
+                {% endif %}
+                <strong>Комментарий:</strong> {{ client.comment }} <br>
             </div>
 
-            <button type="submit" value="Отправить"
-                    class="btn btn-success rounded-2 mt-1 mb-2 sm_btn">Сохранить
-            </button>
-            <span class="submitting"></span>
-            <a href="{% url 'mailing:mailing_list' %}" class="btn btn-warning sm_btn">Назад</a>
+            <span class="submitting"></span> <br>
+            <a href="{% url 'mailing:client_list' %}" class="btn btn-warning sm_btn">Назад</a>
         </div>
     </form>
 </div>
