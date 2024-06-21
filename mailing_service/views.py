@@ -119,6 +119,17 @@ class MailingCreateView(CreateView):
         return super().form_valid(form)
 
 
+class MailingDetailView(DetailView):
+    model = Mailing
+
+    def get_context_data(self, **kwargs):
+        """ Дополнительная информация """
+        context = super().get_context_data(**kwargs)
+        context['mail'] = self.object
+
+        return context
+
+
 class MailingUpdateView(UpdateView):
     """ Редактирование новой рассылки """
     model = Mailing
@@ -138,6 +149,18 @@ class MailingUpdateView(UpdateView):
         """ Если форма валидна, то отправляется сообщение"""
 
         return super().form_valid(form)
+
+
+class MailingDeleteView(DeleteView):
+    model = Mailing
+    success_url = reverse_lazy('mailing:mailing_list')
+
+    def get_context_data(self, **kwargs):
+        """ Дополнительная информация """
+        context = super().get_context_data(**kwargs)
+        context['mail'] = self.object
+
+        return context
 
 
 class MessageCreateView(CreateView):
@@ -195,4 +218,3 @@ class MessageUpdateView(UpdateView):
 class MessageDeleteView(DeleteView):
     model = Message
     success_url = reverse_lazy('mailing:message_list')
-

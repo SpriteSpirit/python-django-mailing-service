@@ -20,8 +20,8 @@
     }
 
     .box {
-        text-align: center;
-        height: 200px;
+        text-align: left;
+        height: 100%;
     }
 
     /* Настройка заголовка формы */
@@ -30,24 +30,30 @@
         margin-bottom: 20px; /* Отступ снизу для заголовка */
     }
 
-    p {
+    .confirm_text {
         font-size: 24px;
         font-weight: bold;
+        text-align: center;
     }
 </Style>
 
 <div class="container-form justify-content-center align-items-center text-center">
     <form class="mb-5" method="post" id="contactForm">
-        <h3>Удаление сообщения</h3>
+        <h3>Удаление рассылки</h3>
         <div class="card border-0">
             <div class="box">
                 {% csrf_token %}
-                <p>Вы действительно хотите удалить <br><br>'{{ message.message_subject }}'?</p>
+                <p class="confirm_text">Вы действительно хотите удалить рассылку?</p><br>
+                <strong>Тема:</strong><br> {{ mail.message.message_subject }}<br><hr>
+                <strong>Сообщение:</strong><br>  {{ mail.message.message_body }} <br><br><hr>
+                <strong>Создано:</strong> {{ mail.first_send }} <br><hr>
+                <strong>Периодичность:</strong> {{ mail.periodicity }} <br><hr>
+                <strong>Статус:</strong>  {{ mail.status }} <br><hr><br>
             </div>
 
             <button class="btn btn-danger sm_btn mt-1 mb-2" type="submit">Да, удалить</button>
             <span class="submitting"></span>
-            <a href="{% url 'mailing:message_list' %}" class="btn btn-warning sm_btn">Нет, вернуться назад</a>
+            <a href="{% url 'mailing:mailing_list' %}" class="btn btn-warning sm_btn">Нет, вернуться назад</a>
 
         </div>
     </form>

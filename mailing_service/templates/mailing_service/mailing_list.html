@@ -37,10 +37,12 @@
                     <td>{{ mail.status }}</td>
                     <td>
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <button type="button" class="btn btn-info">View</button>
+                            <a href="{% url 'mailing:view_mail' mail.pk %}" class="btn btn-info"
+                               role="button">View</a>
                             <a href="{% url 'mailing:update_mail' mail.pk %}" class="btn btn-warning"
                                role="button">Edit</a>
-                            <button type="button" class="btn btn-danger">Delete</button>
+                             <a href="{% url 'mailing:delete_mail' mail.pk %}" class="btn btn-danger"
+                               role="button">Delete</a>
                         </div>
                     </td>
                 </tr>
