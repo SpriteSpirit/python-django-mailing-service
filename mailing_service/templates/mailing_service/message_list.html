@@ -29,14 +29,16 @@
                 <tbody>
                 <tr>
                     <td>{{ forloop.counter }}</td>
-                    <td>{{ message.message_subject }}</td>
-                    <td>{{ message.message_body }}</td>
+                    <td>{{ message.message_subject|truncatewords:5 }}</td>
+                    <td>{{ message.message_body|truncatewords:10 }}</td>
                     <td>
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-
-                            <button type="button" class="btn btn-info">View</button>
-                            <button type="button" class="btn btn-warning">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
+                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-info"
+                               role="button">View</a>
+                            <a href="{% url 'mailing:update_message' message.pk %}" class="btn btn-warning"
+                               role="button">Edit</a>
+                            <a href="{% url 'mailing:delete_message' message.pk %}" class="btn btn-danger"
+                               role="button">Delete</a>
                         </div>
                     </td>
                 </tr>

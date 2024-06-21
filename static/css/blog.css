@@ -1,55 +1,66 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-  font-size: 2.25rem;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-size: 2.25rem;
 }
 
 .blog-header-logo:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
 }
 
 .flex-auto {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .h-250 { height: 250px; }
 @media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
+    .h-md-250 { height: 250px; }
 }
 
 /* Pagination */
 .blog-pagination {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 /*
  * Blog posts
  */
 .blog-post {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 .blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #727272;
+    margin-bottom: 1.25rem;
+    color: #727272;
 }
 
 html, body {
-height: 100%;
+    height: 100%;
 }
 
 .wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin-bottom: -80px; /* Отрицательное значение высоты footer'а */
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -80px; /* Отрицательное значение высоты footer'а */
 }
 
 .footer, .push {
-height: 80px; /* .push и .footer должны быть одинаковой высоты */
-clear: both;
+    height: 80px; /* .push и .footer должны быть одинаковой высоты */
+    clear: both;
+}
+
+.box {
+    text-align: -webkit-auto;
+    height: 450px;
+    width:450px;
+}
+
+.sm_btn {
+    width: 50%;
+    align-self: center;
 }

@@ -1,0 +1,57 @@
+<!doctype html>
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<Style>
+    /* Общие стили для контейнера */
+    .container-form {
+        display: flex;
+    }
+
+    .card {
+        width: 100%;            /* Ширина карточки на всю доступную ширину */
+        max-width: 600px;       /* Максимальная ширина карточки */
+        padding: 20px;          /* Отступы внутри карточки */
+        box-shadow: 0 4px 8px rgb(79 71 71); /* Тень для карточки */
+        background: dark;      /* Фон карточки белый */
+        border-radius: 8px;     /* Скругление углов карточки */
+
+    }
+
+    .box {
+        text-align: center;
+        height: 200px;
+    }
+
+    /* Настройка заголовка формы */
+    h3 {
+        text-align: center; /* Центрирование заголовка */
+        margin-bottom: 20px; /* Отступ снизу для заголовка */
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: bold;
+    }
+</Style>
+
+<div class="container-form justify-content-center align-items-center text-center">
+    <form class="mb-5" method="post" id="contactForm">
+        <h3>Удаление сообщения</h3>
+        <div class="card border-0">
+            <div class="box">
+                {% csrf_token %}
+                <p>Вы действительно хотите удалить <br><br>'{{ message.message_subject }}'?</p>
+            </div>
+
+            <button class="btn btn-danger sm_btn" type="submit">Да, удалить</button>
+            <span class="submitting"></span><br>
+            <a href="{% url 'mailing:message_list' %}" class="btn btn-warning sm_btn">Нет, вернуться назад</a>
+
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

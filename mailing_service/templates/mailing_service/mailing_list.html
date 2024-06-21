@@ -11,7 +11,8 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
-                <a class="btn btn-success" href="{% url 'mailing:create_mail' %}" role="button" aria-disabled="true">Создать рассылку</a>
+            <a class="btn btn-success" href="{% url 'mailing:create_mail' %}" role="button" aria-disabled="true">Создать
+                рассылку</a>
         </div>
         <h2>Все рассылки</h2>
         <div class="table-responsive small">
@@ -31,16 +32,14 @@
                 <tr>
                     <td>{{ forloop.counter }}</td>
                     <td>{{ mail.first_send }}</td>
-                    <td>{{ mail.message.message_subject }}</td>
+                    <td>{{ mail.message.message_subject|truncatewords:10 }}</td>
                     <td>{{ mail.periodicity }}</td>
                     <td>{{ mail.status }}</td>
                     <td>
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-
                             <button type="button" class="btn btn-info">View</button>
-                            <a href="{% url 'mailing:update_mail' mail.pk %}">
-                                <button type="button" class="btn btn-warning">Edit</button>
-                            </a>
+                            <a href="{% url 'mailing:update_mail' mail.pk %}" class="btn btn-warning"
+                               role="button">Edit</a>
                             <button type="button" class="btn btn-danger">Delete</button>
                         </div>
                     </td>

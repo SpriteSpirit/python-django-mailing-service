@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing
@@ -144,7 +144,7 @@ class MessageCreateView(CreateView):
     """ Создание нового сообщения """
     model = Message
     form_class = MessageForm
-    success_url = reverse_lazy('mailing:mailing_list')
+    success_url = reverse_lazy('mailing:message_list')
 
     def form_valid(self, form):
         """ Валидация формы"""
@@ -168,3 +168,31 @@ class MessageListView(ListView):
         context['message_list'] = Message.objects.all()
 
         return context
+
+
+class MessageDetailView(DetailView):
+    model = Message
+
+    def get_context_data(self, **kwargs):
+        """ Дополнительная информация """
+        context = super().get_context_data(**kwargs)
+
+        return context
+
+
+class MessageUpdateView(UpdateView):
+    model = Message
+    form_class = MessageForm
+    success_url = reverse_lazy('mailing:message_list')
+
+    def get_context_data(self, **kwargs):
+        """ Дополнительная информация """
+        context = super().get_context_data(**kwargs)
+
+        return context
+
+
+class MessageDeleteView(DeleteView):
+    model = Message
+    success_url = reverse_lazy('mailing:message_list')
+
