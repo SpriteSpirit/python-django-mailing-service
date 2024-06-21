@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'mailing_service/includes/inc_head.html' %}
+{% include 'mailing_service/includes/inc_icons.html' %}
+
+
+
+<div class="row">
+    {% include 'mailing_service/includes/inc_inner_menu.html' %}
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">{{ title }}</h1>
+        </div>
+        <h2>Все статусы рассылок</h2>
+        <div class="table-responsive small">
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr class="tr_text_content_center">
+                    <th scope="col">№</th>
+                    <th scope="col">Рассылка</th>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Сообщение сервера</th>
+                </tr>
+                </thead>
+                {% for log in log_list %}
+                <tbody>
+                {% if log.status == "success" %}
+                <tr class="table-success text_align">
+                    {% elif log.status == 'failed' %}
+                <tr class="table-danger text_align">
+                    {% endif %}
+                <td class="text_content_center">{{ forloop.counter }}</td>
+                <td class="text_content">{{ log.mailing.message.message_subject|truncatewords:5 }}</td>
+                <td class="text_content">{{ log.date_time }}</td>
+                <td class="text_content">{{ log.status }}</td>
+                <td class="text_content">{{ log.server_response }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+
+{% endblock %}

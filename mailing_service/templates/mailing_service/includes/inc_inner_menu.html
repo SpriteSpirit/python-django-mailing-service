@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'log_list' %}active{% endif %}" href="{% url 'mailing:log_list' %}">
                         <svg class="bi">
                             <use xlink:href="#graph-up"/>
                         </svg>

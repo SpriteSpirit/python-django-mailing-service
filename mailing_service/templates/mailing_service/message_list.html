@@ -16,9 +16,9 @@
         </div>
         <h2>Все письма</h2>
         <div class="table-responsive small">
-            <table class="table table-striped table-sm">
+            <table class="table table-bordered table-sm">
                 <thead>
-                <tr>
+                <tr class="tr_text_content_center">
                     <th scope="col">№</th>
                     <th scope="col">Тема</th>
                     <th scope="col">Сообщение</th>
@@ -28,17 +28,17 @@
                 {% for message in message_list %}
                 <tbody>
                 <tr>
-                    <td>{{ forloop.counter }}</td>
-                    <td>{{ message.message_subject|truncatewords:5 }}</td>
-                    <td>{{ message.message_body|truncatewords:10 }}</td>
-                    <td>
+                    <td class="text_content_center">{{ forloop.counter }}</td>
+                    <td class="text_content">{{ message.message_subject|truncatewords:5 }}</td>
+                    <td class="text_content">{{ message.message_body|truncatewords:10 }}</td>
+                    <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-info"
-                               role="button">View</a>
-                            <a href="{% url 'mailing:update_message' message.pk %}" class="btn btn-warning"
-                               role="button">Edit</a>
-                            <a href="{% url 'mailing:delete_message' message.pk %}" class="btn btn-danger"
-                               role="button">Delete</a>
+                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-info text_button"
+                               role="button">Смотреть</a>
+                            <a href="{% url 'mailing:update_message' message.pk %}" class="btn btn-warning text_button"
+                               role="button">Изменить</a>
+                            <a href="{% url 'mailing:delete_message' message.pk %}" class="btn btn-danger text_button"
+                               role="button">Удалить</a>
                         </div>
                     </td>
                 </tr>

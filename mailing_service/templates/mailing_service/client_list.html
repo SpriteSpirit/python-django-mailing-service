@@ -4,6 +4,9 @@
 
 {% include 'mailing_service/includes/inc_head.html' %}
 {% include 'mailing_service/includes/inc_icons.html' %}
+
+
+
 <div class="row">
     {% include 'mailing_service/includes/inc_inner_menu.html' %}
 
@@ -15,9 +18,9 @@
 
         <h2>Все клиенты</h2>
         <div class="table-responsive small">
-            <table class="table table-striped table-sm">
+            <table class="table table-bordered table-sm" >
                 <thead>
-                <tr>
+                <tr class="tr_text_content_center">
                     <th scope="col">№</th>
                     <th scope="col">Ф.И.О.</th>
                     <th scope="col">Email</th>
@@ -28,18 +31,18 @@
                 {% for object in object_list %}
                 <tbody>
                 <tr>
-                    <td>{{ forloop.counter }}</td>
-                    <td>{{ object.name }}</td>
-                    <td>{{ object.email }}</td>
-                    <td>{{ object.comment }}</td>
-                    <td>
+                    <td class="text_content_center">{{ forloop.counter }}</td>
+                    <td class="text_content">{{ object.name }}</td>
+                    <td class="text_content">{{ object.email }}</td>
+                    <td class="text_content">{{ object.comment }}</td>
+                    <td class="text_content_center">
                          <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <a href="{% url 'mailing:view_client' object.pk %}" class="btn btn-info"
-                               role="button">View</a>
-                              <a href="{% url 'mailing:update_client' object.pk %}" class="btn btn-warning"
-                               role="button">Edit</a>
-                              <a href="{% url 'mailing:delete_client' object.pk %}" class="btn btn-danger"
-                               role="button">Delete</a>
+                            <a href="{% url 'mailing:view_client' object.pk %}" class="btn btn-info text_button"
+                               role="button">Смотреть</a>
+                              <a href="{% url 'mailing:update_client' object.pk %}" class="btn btn-warning text_button"
+                               role="button" >Изменить</a>
+                              <a href="{% url 'mailing:delete_client' object.pk %}" class="btn btn-danger text_button"
+                               role="button">Удалить</a>
                         </div>
                     </td>
                 </tr>

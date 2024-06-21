@@ -27,10 +27,11 @@
 
 <div class="container-form justify-content-center align-items-center text-center">
     <form class="mb-5" method="post" id="contactForm" name="contactForm">
-        <h3>{{ message.message_subject }}</h3>
+        <h3>{{ title }}</h3>
         <div class="card border-0">
             <div class="box">
-                {{ message.message_body }}
+                <strong>Тема:</strong><br>{{ message.message_subject }}<br><hr>
+                <strong>Сообщение:</strong><br>{{ message.message_body }}
             </div>
 
             <span class="submitting"></span> <br>

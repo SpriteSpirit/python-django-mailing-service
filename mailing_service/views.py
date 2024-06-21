@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
-from mailing_service.models import Client, Message, Mailing
+from mailing_service.models import Client, Message, Mailing, MailingLogs
 
 
 def dashboard(request):
@@ -127,6 +127,8 @@ class MailingListView(ListView):
         context['active_page'] = 'mailing_list'
         context['mailing_list'] = Mailing.objects.filter(status=Mailing.STATUS_CHOICES[0][1]).order_by('-id')
 
+        # print(context['status'])
+
         return context
 
     # def get_queryset(self):
@@ -138,6 +140,7 @@ class MailingCreateView(CreateView):
     """ Создание новой рассылки """
     model = Mailing
     form_class = MailingForm
+    extra_context = {'title': 'Создание рассылки'}
     success_url = reverse_lazy('mailing:mailing_list')
 
     def get_queryset(self):
@@ -171,6 +174,7 @@ class MailingUpdateView(UpdateView):
     """ Редактирование новой рассылки """
     model = Mailing
     form_class = MailingForm
+    extra_context = {'title': 'Редактирование рассылки'}
     success_url = reverse_lazy('mailing:mailing_list')
 
     # def get_queryset(self):
@@ -204,6 +208,7 @@ class MessageCreateView(CreateView):
     """ Создание нового сообщения """
     model = Message
     form_class = MessageForm
+    extra_context = {'title': 'Создание письма'}
     success_url = reverse_lazy('mailing:message_list')
 
     def form_valid(self, form):
@@ -232,6 +237,7 @@ class MessageListView(ListView):
 
 class MessageDetailView(DetailView):
     model = Message
+    extra_context = {'title': 'Информация о сообщении'}
 
     def get_context_data(self, **kwargs):
         """ Дополнительная информация """
@@ -243,6 +249,7 @@ class MessageDetailView(DetailView):
 class MessageUpdateView(UpdateView):
     model = Message
     form_class = MessageForm
+    extra_context = {'title': 'Редактирование письма'}
     success_url = reverse_lazy('mailing:message_list')
 
     def get_context_data(self, **kwargs):
@@ -255,3 +262,19 @@ class MessageUpdateView(UpdateView):
 class MessageDeleteView(DeleteView):
     model = Message
     success_url = reverse_lazy('mailing:message_list')
+
+
+class MailingLogListView(ListView):
+    """ Просмотр логов рассылки """
+    model = MailingLogs
+    extra_context = {'title': 'Состояние отправки'}
+
+    def get_context_data(self, **kwargs):
+        """ Дополнительная информация """
+        context = super().get_context_data(**kwargs)
+        context['active_page'] = 'log_list'
+        context['log_list'] = MailingLogs.objects.all()
+
+        print(context['log_list'])
+
+        return context

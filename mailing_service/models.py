@@ -59,13 +59,13 @@ class Mailing(models.Model):
     objects = models.Manager()
 
     first_send = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время отправки')
-    # date = models.DateField(auto_now_add=True, verbose_name='Дата создания')
-    # time = models.TimeField(auto_now_add=True, verbose_name='Время создания')
+    finish_send = models.DateTimeField(verbose_name='Дата и время завершения рассылки', default='2025-01-01 00:00:00')
     periodicity = models.CharField(max_length=20, choices=PERIODICITY_CHOICES, verbose_name='Периодичность')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, verbose_name='Статус рассылки')
 
-    clients = models.ManyToManyField(Client, related_name='mailings', verbose_name='Клиенты')
+    client = models.ManyToManyField(Client, related_name='mailings', verbose_name='Клиент')
     message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
+    is_published = models.BooleanField(default=False, verbose_name='Опубликован')
 
     class Meta:
         verbose_name = 'Рассылка'
@@ -73,4 +73,33 @@ class Mailing(models.Model):
         ordering = ('-first_send',)
 
     def __str__(self):
-        return f'{self.first_send} {self.periodicity}'
+        return f'Рассылка: {self.pk} [{self.status}] [{self.is_published}]'
+
+    def deactivate_post(self):
+        """ Деактивация пост рассылки """
+        self.is_published = False
+        self.status = 'completed'
+        self.save()
+
+
+class MailingLogs(models.Model):
+    """ Логи рассылки """
+    STATUS = [
+        ('success', 'Успешно'),
+        ('failed', 'Неудачно'),
+    ]
+
+    objects = models.Manager()
+
+    date_time = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время отправки')
+    status = models.CharField(max_length=100, choices=STATUS, verbose_name='Статус отправки')
+    server_response = models.TextField(verbose_name='Ответ сервера', **NULLABLE)
+    mailing = models.ForeignKey(Mailing, on_delete=models.CASCADE, verbose_name='Рассылка', **NULLABLE)
+
+    class Meta:
+        verbose_name = 'Лог рассылки'
+        verbose_name_plural = 'Логи рассылок'
+        ordering = ('-date_time',)
+
+    def __str__(self):
+        return f'Лог рассылки: {self.pk} [{self.status}] [{self.mailing}][{self.server_response}]'

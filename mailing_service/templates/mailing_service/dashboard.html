@@ -1,5 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% load custom_filters %}
 {% block content %}
 
 {% include 'mailing_service/includes/inc_head.html' %}
@@ -18,9 +19,9 @@
 
         <h2>Выполненные рассылки</h2>
         <div class="table-responsive small">
-            <table class="table table-striped table-sm">
+            <table class="table table-bordered table-sm">
                 <thead>
-                <tr>
+                <tr style="text-align: center;">
                     <th scope="col">№</th>
                     <th scope="col">Ф.И.О.</th>
                     <th scope="col">Email</th>
@@ -33,15 +34,15 @@
                 {% for object in object_list %}
                 <tbody>
                 <tr>
-                    <td>{{ forloop.counter }}</td>
-                    <td>{{ object.name }}</td>
-                    <td>{{ object.email }}</td>
-                    <td>{{ message_subject }}</td>
-                    <td>{{ send_data }}</td>
-                    <td>{{ status }}</td>
-                    <td>
+                    <td class="text_content_center">{{ forloop.counter }}</td>
+                    <td class="text_content">{{ object.name }}</td>
+                    <td class="text_content">{{ object.email }}</td>
+                    <td class="text_content">{{ message_subject }}</td>
+                    <td class="text_content">{{ send_data }}</td>
+                    <td class="text_content">{{ status|translate_status }}</td>
+                    <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <button type="button" class="btn btn-info">View</button>
+                            <button type="button" class="btn btn-info text_button">Смотреть</button>
                         </div>
                     </td>
                 </tr>

@@ -30,14 +30,14 @@
         <h3>Информация о клиенте</h3>
         <div class="card border-0">
             <div class="box">
-                <strong>Ф.И.О.:</strong><br> {{ client.name }}<br><hr>
+                <strong>Фамилия Имя Отчество:</strong><br> {{ client.name }}<br><hr>
                 <strong>Email:</strong><br> {{ client.email }} <br><hr>
                 {% if client.is_active %}
                 <strong>Действующий:</strong> Да <br><hr>
                 {% else %}
-                <strong>Действующий:</strong> Нет <br><hr>
+                <strong>Действующий:</strong><br>Нет <br><hr>
                 {% endif %}
-                <strong>Комментарий:</strong> {{ client.comment }} <br>
+                <strong>Комментарий:</strong><br>{{ client.comment }} <br>
             </div>
 
             <span class="submitting"></span> <br>
