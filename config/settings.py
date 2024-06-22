@@ -25,8 +25,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
-
 ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0', 'http://89.108.98.89 ', 'http://*', 'https://*']
 
 # Application definition
 INSTALLED_APPS = [
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'django_crontab',
+
+    'bootstrap_datepicker_plus',
+    'django_celery_beat',
 
     "main",
     "mailing_service",
@@ -71,6 +75,10 @@ TEMPLATES = [
         },
     },
 ]
+
+BOOTSTRAP_DATEPICKER_PLUS = {
+    "template_name": "mailing_service/custom-input.html",
+}
 
 WSGI_APPLICATION = "config.wsgi.application"
 
@@ -142,3 +150,23 @@ CRONJOBS = [
     ('0   0 * * 0', 'django.core.management.call_command', ['dumpdata', 'auth'], {'indent': 4},
      '> /home/john/backups/last_sunday_auth_backup.json'),
 ]
+
+# Email settings
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+# Celery settings
+
+# settings.py
+BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', "redis://localhost:6379")
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Europe/Moscow'

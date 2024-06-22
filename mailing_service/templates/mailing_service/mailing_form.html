@@ -5,24 +5,24 @@
 
 <Style>
     /* Общие стили для контейнера */
-        .container-form {
-            display: flex;
-        }
+    .container-form {
+        display: flex;
+    }
 
-        .card {
-            width: 100%;            /* Ширина карточки на всю доступную ширину */
-            max-width: 600px;       /* Максимальная ширина карточки */
-            padding: 20px;          /* Отступы внутри карточки */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для карточки */
-            background: dark;      /* Фон карточки белый */
-            border-radius: 8px;     /* Скругление углов карточки */
-        }
+    .card {
+        width: 100%;            /* Ширина карточки на всю доступную ширину */
+        max-width: 600px;       /* Максимальная ширина карточки */
+        padding: 20px;          /* Отступы внутри карточки */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для карточки */
+        background: dark;      /* Фон карточки белый */
+        border-radius: 8px;     /* Скругление углов карточки */
+    }
 
-        /* Настройка заголовка формы */
-        h3 {
-            text-align: center; /* Центрирование заголовка */
-            margin-bottom: 20px; /* Отступ снизу для заголовка */
-        }
+    /* Настройка заголовка формы */
+    h3 {
+        text-align: center; /* Центрирование заголовка */
+        margin-bottom: 20px; /* Отступ снизу для заголовка */
+    }
 </Style>
 
 <div class="container-form justify-content-center align-items-center text-center">
@@ -32,6 +32,7 @@
             <div class="card-body">
                 {% csrf_token %}
                 {{ form.as_p }}
+
             </div>
 
             <button type="submit" value="Отправить"

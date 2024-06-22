@@ -21,7 +21,8 @@
                 <thead>
                 <tr class="tr_text_content_center">
                     <th scope="col">№</th>
-                    <th scope="col">Дата и время</th>
+                    <th scope="col">Дата старта</th>
+                    <th scope="col">Дата окончания</th>
                     <th scope="col">Тема</th>
                     <th scope="col">Периодичность</th>
                     <th scope="col">Статус</th>
@@ -31,8 +32,9 @@
                 {% for mail in mailing_list %}
                 <tbody>
                 <tr>
-                    <td  class="text_content_center">{{ forloop.counter }}</td>
+                    <td class="text_content_center">{{ forloop.counter }}</td>
                     <td class="text_content">{{ mail.first_send }}</td>
+                    <td class="text_content">{{ mail.finish_send }}</td>
                     <td class="text_content">{{ mail.message.message_subject|truncatewords:10 }}</td>
                     <td class="text_content">{{ mail.periodicity|translate_periodicity }}</td>
                     <td class="text_content">{{ mail.status|translate_status }}</td>

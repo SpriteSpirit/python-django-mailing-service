@@ -1,13 +1,17 @@
+from datetime import datetime, timedelta
+from django.utils import timezone
+
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
+from mailing_service.services import MailingService, send_mailing
 
 
 def dashboard(request):
-    mailing = Mailing.objects.filter(status='created').first()
+    mailing = Mailing.objects.filter().first()
     context = {
         'active_page': 'dashboard',
     }
@@ -125,7 +129,7 @@ class MailingListView(ListView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'mailing_list'
-        context['mailing_list'] = Mailing.objects.filter(status=Mailing.STATUS_CHOICES[0][1]).order_by('-id')
+        context['mailing_list'] = Mailing.objects.all().order_by('-id')
 
         # print(context['status'])
 
@@ -147,16 +151,32 @@ class MailingCreateView(CreateView):
         """ Создание рассылки только для своих клиентов"""
         pass
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['initial'] = {
+            'first_send': datetime.now(),
+            'finish_send': datetime.now() + timedelta(days=7),  # или любое другое значение по вашему выбору
+        }
+        return kwargs
+
     def form_valid(self, form):
-        """ Валидация формы"""
+        """ Валидация формы """
         mailing = form.save(commit=False)
-        mailing.status = Mailing.STATUS_CHOICES[0][1]
-        print(mailing.status)
+        if not mailing.first_send:
+            mailing.first_send = timezone.now()
+        mailing.status = 'created'
         mailing.save()
 
-        """ Если форма валидна, то отправляется сообщение"""
+        """ Если форма валидна, то отправляется сообщение """
+        message_service = MailingService(mailing)
+        mailing.status = 'started'
+        mailing.save()
 
-        return super().form_valid(form)
+        super().form_valid(form)
+        send_mailing(mailing)
+        message_service.create_task()
+
+        return super(MailingCreateView, self).form_valid(form)
 
 
 class MailingDetailView(DetailView):
@@ -166,6 +186,7 @@ class MailingDetailView(DetailView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['mail'] = self.object
+        context['clients'] = self.object.client.all()
 
         return context
 
@@ -276,5 +297,6 @@ class MailingLogListView(ListView):
         context['log_list'] = MailingLogs.objects.all()
 
         print(context['log_list'])
+        print(context)
 
         return context

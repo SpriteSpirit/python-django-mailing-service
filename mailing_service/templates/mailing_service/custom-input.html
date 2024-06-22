@@ -1,0 +1,46 @@
+<!-- templates/bootstrap_datepicker_plus/input.html -->
+<!-- Datepicker -->
+<!-- jQuery (если еще не подключен) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Moment.js (необходим для bootstrap-datetimepicker) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<!-- Bootstrap (если используете) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Datepicker -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+
+<div class="input-group dbdp">
+    <input type='text' id="id_first_send" name="first_send" class="form-control datetimepicker"/>
+    <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+    </span>
+</div>
+
+<div class="input-group dbdp">
+    <input type='text' id="id_finish_send" name="finish_send" class="form-control datetimepicker"/>
+    <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+    </span>
+</div>
+
+<script>
+    $(function () {
+        $('.datetimepicker').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss'
+        });
+
+        // Обработка изменений для каждого поля
+        $('#id_first_send').on('dp.change', function(e) {
+            $(this).val(e.date.format('YYYY-MM-DD HH:mm:ss'));
+        });
+
+        $('#id_finish_send').on('dp.change', function(e) {
+            $(this).val(e.date.format('YYYY-MM-DD HH:mm:ss'));
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>

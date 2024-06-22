@@ -1,5 +1,7 @@
-from django.db import models
+from datetime import datetime
 
+from django.db import models
+from django.utils import timezone
 
 NULLABLE = {'null': True, 'blank': True}
 
@@ -58,12 +60,14 @@ class Mailing(models.Model):
 
     objects = models.Manager()
 
-    first_send = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время отправки')
-    finish_send = models.DateTimeField(verbose_name='Дата и время завершения рассылки', default='2025-01-01 00:00:00')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время создания')
+
+    first_send = models.DateTimeField(verbose_name='Дата и время отправки')
+    finish_send = models.DateTimeField(verbose_name='Дата и время завершения рассылки')
     periodicity = models.CharField(max_length=20, choices=PERIODICITY_CHOICES, verbose_name='Периодичность')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, verbose_name='Статус рассылки')
 
-    client = models.ManyToManyField(Client, related_name='mailings', verbose_name='Клиент')
+    client = models.ManyToManyField(Client, verbose_name='Клиент', related_name='mailings')
     message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
     is_published = models.BooleanField(default=False, verbose_name='Опубликован')
 
