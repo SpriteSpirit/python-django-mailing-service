@@ -31,5 +31,4 @@ urlpatterns = [
     path('delete_message/<int:pk>/', MessageDeleteView.as_view(), name='delete_message'),
 
     path('log_list/', MailingLogListView.as_view(), name='log_list'),
-
 ]

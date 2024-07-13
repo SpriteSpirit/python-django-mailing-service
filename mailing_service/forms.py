@@ -1,6 +1,5 @@
 from django import forms
 from mailing_service.models import Mailing, Message, Client
-from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 
 
 class FormStyleMixin:

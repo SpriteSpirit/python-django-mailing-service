@@ -79,12 +79,22 @@ html, body {
 td.text_content_center {
     text-align: center;
     line-height: 24px;
-/*    padding-top: 14px;*/
+    /*    padding-top: 14px;*/
 }
 
 tr.tr_text_content_center {
     text-align: center !important;
     line-height: 24px;
+}
+
+ul {
+    margin-bottom: 0 !important;
+}
+
+
+.text_list {
+    line-height: 24px;
+/*    margin-bottom: 0 !important;*/
 }
 
 /*td.text_content {*/

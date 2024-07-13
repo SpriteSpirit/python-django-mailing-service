@@ -1,7 +1,4 @@
-from datetime import datetime
-
 from django.db import models
-from django.utils import timezone
 
 NULLABLE = {'null': True, 'blank': True}
 
@@ -77,7 +74,7 @@ class Mailing(models.Model):
         ordering = ('-first_send',)
 
     def __str__(self):
-        return f'Рассылка: {self.pk} [{self.status}] [{self.is_published}]'
+        return f'Рассылка #{self.pk}'
 
     def deactivate_post(self):
         """ Деактивация пост рассылки """
@@ -106,4 +103,5 @@ class MailingLogs(models.Model):
         ordering = ('-date_time',)
 
     def __str__(self):
-        return f'Лог рассылки: {self.pk} [{self.status}] [{self.mailing}][{self.server_response}]'
+        return (f'Лог рассылки: {self.pk} || \nСтатус: [{self.status}] || '
+                f'\n{self.mailing} || \nResponse: [{self.server_response}]\n')

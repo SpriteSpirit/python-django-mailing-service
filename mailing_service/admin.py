@@ -15,13 +15,11 @@ class MessageAdmin(admin.ModelAdmin):
     list_display = ['message_subject', 'message_body']
     list_filter = ['message_subject']
     search_fields = ['message_subject']
-    # date_hierarchy = 'sent_at'
-    # ordering = ('-sent_at',)
 
 
 @admin.register(Mailing)
 class MailingAdmin(admin.ModelAdmin):
-    list_display = ['first_send', 'periodicity','status']
+    list_display = ['first_send', 'periodicity', 'status']
     list_filter = ['first_send', 'status']
     search_fields = ['status']
     date_hierarchy = 'first_send'

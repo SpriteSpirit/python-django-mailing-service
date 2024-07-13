@@ -13,6 +13,8 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / '.env')
@@ -170,3 +172,6 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Europe/Moscow'
+CELERY_IMPORTS = ('mailing_service.services',)
+
+# DJANGO_SETTINGS_MODULE = config.settings

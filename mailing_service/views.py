@@ -169,9 +169,12 @@ class MailingCreateView(CreateView):
 
         """ Если форма валидна, то отправляется сообщение """
         message_service = MailingService(mailing)
+        print("Starting mailing...")
+
         mailing.status = 'started'
         mailing.save()
 
+        # Создание и запуск таска для отправки рассылки
         super().form_valid(form)
         send_mailing(mailing)
         message_service.create_task()
@@ -294,9 +297,11 @@ class MailingLogListView(ListView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'log_list'
-        context['log_list'] = MailingLogs.objects.all()
+        # print(context)
+        # for log in self.object_list:
+        #     context['clients'] = log.mailing.client.all()
 
-        print(context['log_list'])
-        print(context)
+        # for client in context['clients']:
+        #     context['client'] = client.email
 
         return context
