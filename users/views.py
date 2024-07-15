@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -31,3 +31,11 @@ def register_user(request):
 class CustomLoginView(LoginView):
     form_class = CustomAuthenticationForm
     template_name = 'users/login.html'
+    success_url = reverse_lazy('mailing:dashboard')
+
+
+class CustomLogoutView(LogoutView):
+    form_class = CustomAuthenticationForm
+    template_name = 'users/logout.html'
+    next_page = reverse_lazy('main:index')
+    # success_url = reverse_lazy('main:index')

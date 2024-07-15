@@ -11,7 +11,7 @@
     }
 
     .nav-link {
-    transition: color 0.3s, background-color 0.3s;
+        transition: color 0.3s, background-color 0.3s;
     }
 </style>
 
@@ -41,7 +41,7 @@
                         Рассылки
                     </a>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'message_list' %}active{% endif %}"
                        data-toggle="tab"
                        href="{% url 'mailing:message_list' %}">
@@ -62,7 +62,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'log_list' %}active{% endif %}" href="{% url 'mailing:log_list' %}">
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'log_list' %}active{% endif %}"
+                       href="{% url 'mailing:log_list' %}">
                         <svg class="bi">
                             <use xlink:href="#graph-up"/>
                         </svg>
@@ -118,12 +119,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                        <svg class="bi">
-                            <use xlink:href="#door-closed"/>
-                        </svg>
-                        Выйти
-                    </a>
+                    <form action="{% url 'users:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button class="nav-link d-flex align-items-center gap-2" type="submit">
+                            <svg class="bi">
+                                <use xlink:href="#door-closed"/>
+                            </svg>
+                            Выйти
+                        </button>
+                    </form>
                 </li>
             </ul>
         </div>

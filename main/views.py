@@ -9,3 +9,7 @@ def index(request):
 def contacts(request):
     """ Страница контактов сайта """
     return render(request, 'main/contacts.html')
+
+
+def noway_page(request):
+    return render(request, 'main/noway_page.html')

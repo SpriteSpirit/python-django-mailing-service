@@ -16,8 +16,11 @@
                             {% csrf_token %}
                             {{ form.as_p }}
                             <div class="mb-3 mt-3 k"
-                                 style="display: flex; flex-direction: row; justify-content: center;">
-                                    <button class="btn btn-warning w-75" type="submit">Войти</button>
+                                 style="display: flex; flex-direction: row; justify-content: space-between;">
+                                <a href="{% url 'users:login' %}" style="color: #FFFFFF; text-decoration: none;"
+                                   class="w-50">
+                                    <a href="{% url 'mailing:dashboard' %}" class="btn btn-warning w-75">Войти</a>
+                                </a>
                             </div>
                         </div>
                         <div class="card-footer"></div>

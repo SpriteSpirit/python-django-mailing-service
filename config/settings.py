@@ -177,3 +177,6 @@ CELERY_IMPORTS = ('mailing_service.services',)
 # DJANGO_SETTINGS_MODULE = config.settings
 
 AUTH_USER_MODEL = 'users.User'
+
+LOGIN_REDIRECT_URL = "mailing:dashboard"
+LOGOUT_REDIRECT_URL = "main:index"
