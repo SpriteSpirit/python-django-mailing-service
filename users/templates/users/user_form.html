@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="container w-75 text-center">
+    <dΩiv class="row justify-content-center">
+        <div class="col-6">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    {% if not user.is_authenticated %}
+                    <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+                    {% else %}
+                    <button type="submit" class="btn btn-success">Сохранить</button>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </dΩiv>
+</div>
+{% endblock %}
