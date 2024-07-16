@@ -11,7 +11,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
-            <a class="btn btn-success" href="{% url 'mailing:create_message' %}" role="button" aria-disabled="true">Создать
+            <a class="btn btn-outline-success" href="{% url 'mailing:create_message' %}" role="button" aria-disabled="true">Создать
                 письмо</a>
         </div>
         <h2>Все письма</h2>
@@ -33,11 +33,11 @@
                     <td class="text_content">{{ message.message_body|truncatewords:10 }}</td>
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-info text_button"
+                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-outline-secondary text_button"
                                role="button">Смотреть</a>
-                            <a href="{% url 'mailing:update_message' message.pk %}" class="btn btn-warning text_button"
+                            <a href="{% url 'mailing:update_message' message.pk %}" class="btn btn-outline-primary text_button"
                                role="button">Изменить</a>
-                            <a href="{% url 'mailing:delete_message' message.pk %}" class="btn btn-danger text_button"
+                            <a href="{% url 'mailing:delete_message' message.pk %}" class="btn btn-outline-danger text_button"
                                role="button">Удалить</a>
                         </div>
                     </td>

@@ -11,9 +11,10 @@
                     {% csrf_token %}
                     {{ form.as_p }}
                     {% if not user.is_authenticated %}
-                    <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+                    <button type="submit" class="btn btn-success my-3 mx-1">Зарегистрироваться</button>
                     {% else %}
-                    <button type="submit" class="btn btn-success">Сохранить</button>
+                    <button type="submit" class="btn btn-success my-3 mx-1">Сохранить</button>
+                    <a href="{% url 'users:profile' user.pk %}" class="btn btn-warning my-3 mx-1">Назад</a>
                     {% endif %}
                 </form>
             </div>

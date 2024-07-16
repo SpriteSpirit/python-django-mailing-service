@@ -3,8 +3,9 @@ from users.models import User
 
 
 class Command(BaseCommand):
+    help = 'Создание администратора с полными правами доступа'
 
-    def handle(self, *args, **options):
+    def handle(self, *args, **kwargs):
         user = User.objects.create(
             email='admin@localhost',
             first_name='admin',

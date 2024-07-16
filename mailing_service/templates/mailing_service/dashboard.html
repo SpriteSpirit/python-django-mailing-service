@@ -15,7 +15,7 @@
             <h1 class="h2">ЛИЧНЫЙ КАБИНЕТ</h1>
         </div>
 
-<!--        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
+        <!--        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
 
         <h2>Выполненные рассылки</h2>
         <div class="table-responsive small">
@@ -23,26 +23,31 @@
                 <thead>
                 <tr style="text-align: center;">
                     <th scope="col">№</th>
-                    <th scope="col">Ф.И.О.</th>
-                    <th scope="col">Email</th>
                     <th scope="col">Сообщение</th>
-                    <th scope="col">Дата</th>
-                    <th scope="col">Статус</th>
+                    <th scope="col">Клиент</th>
+<!--                    <th scope="col">Статус</th>-->
                     <th scope="col">Настройки</th>
                 </tr>
                 </thead>
-                {% for object in object_list %}
+                {% for mailing in mailing_list %}
                 <tbody>
-                <tr>
-                    <td class="text_content_center">{{ forloop.counter }}</td>
-                    <td class="text_content">{{ object.name }}</td>
-                    <td class="text_content">{{ object.email }}</td>
-                    <td class="text_content">{{ message_subject }}</td>
-                    <td class="text_content">{{ send_data }}</td>
-                    <td class="text_content">{{ status|translate_status }}</td>
+                <p>{{ mailing }}</p>
+                <tr class="align-middle">
+                    <td class="text_content text-center">{{ forloop.counter }}</td>
+                    <td class="text_content">
+                        <p class="mx-2 mb-0">{{ mailing.message.message_subject }}</p>
+                    </td>
+                    <td class="text_content">
+                        {% for client in client_list %}
+                        <ul>
+                            <li class="text_content">{{ client.name }} <span class="text-success">[{{ client.email }}]</span> </li>
+                        </ul>
+                        {% endfor %}
+                    </td>
+<!--                    <td class="text_content">{{ status|translate_status }}</td>-->
                     <td class="text_content_center">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <button type="button" class="btn btn-info text_button">Смотреть</button>
+                        <div class="btn-group btn-group-lg">
+                            <button type="button" class="btn btn-outline-secondary text_button">Смотреть</button>
                         </div>
                     </td>
                 </tr>

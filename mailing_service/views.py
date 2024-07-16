@@ -1,4 +1,7 @@
 from datetime import datetime, timedelta
+
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils import timezone
 
 from django.shortcuts import render
@@ -10,21 +13,25 @@ from mailing_service.models import Client, Message, Mailing, MailingLogs
 from mailing_service.services import MailingService, send_mailing
 
 
+@login_required
 def dashboard(request):
-    mailing = Mailing.objects.filter().first()
+    user = request.user
+    mailing_list = Mailing.objects.filter(user=user)
     context = {
         'active_page': 'dashboard',
     }
-    if mailing:
+    if mailing_list:
         # Получение связанного сообщения письма
-        message = mailing.message
+        # message = mailing.message
+        print(mailing_list)
         context = {
             'active_page': 'dashboard',
-            'object_list': Client.objects.all(),
-            'message_subject': message.message_subject,
-            'message_body': message.message_body,
-            'send_data': mailing.first_send,
-            'status': mailing.status,
+            'mailing_list': mailing_list,
+            'client_list': list(Client.objects.filter(user=user)),
+            # 'message_subject': message.message_subject,
+            # 'message_body': message.message_body,
+            # 'send_data': mailing.first_send,
+            # 'status': mailing.status,
         }
         print(context)
     return render(request, 'mailing_service/dashboard.html', context)
@@ -39,28 +46,28 @@ class ClientListView(ListView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'client_list'
-        context['object_list'] = Client.objects.all()
-        mailing = Mailing.objects.filter(status='created').first()
+        context['client_list'] = Client.objects.all()
+        # mailing = Mailing.objects.filter(status='created').first()
+        #
+        # if mailing:
+        #     # Получение связанного сообщения письма
+        #     message = mailing.message
+        #     context['message_subject'] = message.message_subject
+        #     context['message_body'] = message.message_body
+        #     context['send_data'] = mailing.first_send
+        #     context['status'] = mailing.status
+        #     # print(context['message_subject'])
+        #     # print(context['message_body'])
+        #     # print(context['send_data'])
+        #     # print(context['status'])
+        # else:
+        #     context['message_subject'] = ''
+        #     context['message_body'] = ''
+        #     context['send_data'] = ''
+        #     context['status'] = ''
 
-        if mailing:
-            # Получение связанного сообщения письма
-            message = mailing.message
-            context['message_subject'] = message.message_subject
-            context['message_body'] = message.message_body
-            context['send_data'] = mailing.first_send
-            context['status'] = mailing.status
-            print(context['message_subject'])
-            print(context['message_body'])
-            print(context['send_data'])
-            print(context['status'])
-        else:
-            context['message_subject'] = ''
-            context['message_body'] = ''
-            context['send_data'] = ''
-            context['status'] = ''
-
-            print(context['message_subject'])
-            print(context['message_body'])
+            # print(context['message_subject'])
+            # print(context['message_body'])
         return context
 
     # def get_queryset(self):
@@ -115,12 +122,12 @@ class ClientDeleteView(DeleteView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['client'] = self.object
-        print(context['client'])
+        # print(context['client'])
 
         return context
 
 
-class MailingListView(ListView):
+class MailingListView(LoginRequiredMixin, ListView):
     """ Просмотр списка клиентов """
     model = Mailing
     extra_context = {'title': 'РАССЫЛКИ'}
@@ -131,13 +138,18 @@ class MailingListView(ListView):
         context['active_page'] = 'mailing_list'
         context['mailing_list'] = Mailing.objects.all().order_by('-id')
 
-        # print(context['status'])
-
         return context
 
-    # def get_queryset(self):
-    #     """ Просмотр только своих климентов """
-    # pass
+    def get_queryset(self):
+        """ Просмотр рассылок только своих клиентов """
+        user = self.request.user
+
+        if user.is_superuser or user.is_staff:
+            queryset = Mailing.objects.all().filter(is_published=True)
+        else:
+            queryset = Mailing.objects.filter(user=user, is_published=True)
+
+        return queryset
 
 
 class MailingCreateView(CreateView):
@@ -169,7 +181,7 @@ class MailingCreateView(CreateView):
 
         """ Если форма валидна, то отправляется сообщение """
         message_service = MailingService(mailing)
-        print("Starting mailing...")
+        # print("Starting mailing...")
 
         mailing.status = 'started'
         mailing.save()

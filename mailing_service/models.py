@@ -1,5 +1,7 @@
 from django.db import models
 
+from config import settings
+
 NULLABLE = {'null': True, 'blank': True}
 
 
@@ -14,6 +16,7 @@ class Client(models.Model):
     email = models.EmailField(unique=True, verbose_name='Email')
     comment = models.TextField(verbose_name='Комментарий', **NULLABLE)
     is_active = models.BooleanField(default=True, verbose_name='Действующий')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE)
 
     class Meta:
         verbose_name = 'Клиент'
@@ -67,6 +70,7 @@ class Mailing(models.Model):
     client = models.ManyToManyField(Client, verbose_name='Клиент', related_name='mailings')
     message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
     is_published = models.BooleanField(default=False, verbose_name='Опубликован')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE)
 
     class Meta:
         verbose_name = 'Рассылка'

@@ -13,14 +13,19 @@ class User(AbstractUser):
 
     username = None
 
-    email = models.EmailField(unique=True, verbose_name='Email')
+    email = models.EmailField(unique=True, verbose_name="Email")
     first_name = models.CharField(max_length=100, verbose_name="Имя")
     last_name = models.CharField(max_length=100, verbose_name="Фамилия")
     middle_name = models.CharField(max_length=100, verbose_name="Отчество", **NULLABLE)
-    phone_number = PhoneNumberField(verbose_name='Номер телефона', default='+7')
-    avatar = models.ImageField(upload_to='users/avatars/', **NULLABLE)
-    country = CountryField(blank_label="(select country)", verbose_name='Страна', default='RU')
+    phone_number = PhoneNumberField(verbose_name="Номер телефона", default="+7")
+    avatar = models.ImageField(upload_to="users/avatars/", **NULLABLE)
+    country = CountryField(blank_label="(select country)", verbose_name="Страна", default="Russia")
     about_message = models.TextField(verbose_name="О себе", **NULLABLE)
+
+    # messangers
+    website = models.CharField(max_length=150, verbose_name="Сайт", default="https://")
+    github = models.CharField(max_length=150, verbose_name="GitHub", default="")
+    telegram = models.CharField(max_length=150, verbose_name="Telegram", default="@")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
