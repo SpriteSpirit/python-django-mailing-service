@@ -13,7 +13,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
-                <a class="btn btn-success" href="{% url 'mailing:create_client' %}" role="button" aria-disabled="true">Добавить клиента</a>
+                <a class="btn btn-outline-success" href="{% url 'mailing:create_client' %}" role="button" aria-disabled="true">Добавить клиента</a>
         </div>
 
         <h2>Все клиенты</h2>
@@ -30,10 +30,14 @@
                 </thead>
                 {% for object in object_list %}
                 <tbody>
-                <tr>
+                <tr class="align-middle">
                     <td class="text_content_center">{{ forloop.counter }}</td>
-                    <td class="text_content">{{ object.name }}</td>
-                    <td class="text_content">{{ object.email }}</td>
+                    <td class="text_content">
+                         <p class="mx-2 mb-0">{{ object.name }}</p>
+                    </td>
+                    <td class="text_content">
+                        <p class="mx-2 mb-0">{{ object.email }}</p>
+                    </td>
                     <td class="text_content">{{ object.comment }}</td>
                     <td class="text_content_center">
                          <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
