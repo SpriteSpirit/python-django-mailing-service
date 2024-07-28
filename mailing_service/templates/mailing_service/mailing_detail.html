@@ -38,9 +38,11 @@
                 <hr>
                 <strong>Создано:</strong> {{ mail.created_at }} <br>
                 <strong>Старт рассылки:</strong> {{ mail.first_send }} <br>
-                <strong>Окончание рассылки:</strong> {{ mail.finish_send }} <br><hr>
+                <strong>Окончание рассылки:</strong> {{ mail.finish_send }} <br>
+                <hr>
                 <strong>Периодичность:</strong> {{ mail.periodicity|translate_periodicity }} <br>
-                <strong>Статус:</strong> {{ mail.status|translate_status }} <br><hr>
+                <strong>Статус:</strong> {{ mail.status|translate_status }} <br>
+                <hr>
 
                 <strong>Клиенты:</strong>
                 <ul>
@@ -52,7 +54,7 @@
             </div>
 
             <span class="submitting"></span> <br>
-            <a href="{% url 'mailing:mailing_list' %}" class="btn btn-warning sm_btn">Назад</a>
+            <a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-warning sm_btn">Назад</a>
         </div>
     </div>
 </div>

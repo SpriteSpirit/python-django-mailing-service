@@ -63,7 +63,7 @@ def register_user(request):
             user = authenticate(email=email, password=password)
             login(request, user)
 
-            return HttpResponseRedirect('mailing:dashboard')
+            return HttpResponseRedirect('users:profile')
     else:
         form = UserRegisterForm()
     return render(request, 'register.html', {'form': form})

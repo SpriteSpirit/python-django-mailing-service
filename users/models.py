@@ -19,7 +19,7 @@ class User(AbstractUser):
     middle_name = models.CharField(max_length=100, verbose_name="Отчество", **NULLABLE)
     phone_number = PhoneNumberField(verbose_name="Номер телефона", default="+7")
     avatar = models.ImageField(upload_to="users/avatars/", **NULLABLE)
-    country = CountryField(blank_label="(select country)", verbose_name="Страна", default="Russia")
+    country = CountryField(blank_label="(select country)", verbose_name="Страна", default="RU")
     about_message = models.TextField(verbose_name="О себе", **NULLABLE)
 
     # messangers

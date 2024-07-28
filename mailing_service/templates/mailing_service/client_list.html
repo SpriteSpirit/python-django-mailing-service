@@ -1,10 +1,10 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% load custom_filters %}
 {% block content %}
 
 {% include 'mailing_service/includes/inc_head.html' %}
 {% include 'mailing_service/includes/inc_icons.html' %}
-
 
 
 <div class="row">
@@ -13,18 +13,20 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
-                <a class="btn btn-outline-success" href="{% url 'mailing:create_client' %}" role="button" aria-disabled="true">Добавить клиента</a>
+            <a class="btn btn-outline-success" href="{% url 'mailing:create_client' %}" role="button"
+               aria-disabled="true">Добавить клиента</a>
         </div>
 
         <h2>Все клиенты</h2>
         <div class="table-responsive small">
-            <table class="table table-bordered table-sm" >
+            <table class="table table-bordered table-sm">
                 <thead>
                 <tr class="tr_text_content_center">
                     <th scope="col">№</th>
                     <th scope="col">Ф.И.О.</th>
                     <th scope="col">Email</th>
                     <th scope="col">Комментарий</th>
+                    <th scope="col">Активность</th>
                     <th scope="col">Настройки</th>
                 </tr>
                 </thead>
@@ -33,19 +35,27 @@
                 <tr class="align-middle">
                     <td class="text_content_center">{{ forloop.counter }}</td>
                     <td class="text_content">
-                         <p class="mx-2 mb-0">{{ object.name }}</p>
+                        <p class="mx-2 mb-0">{{ object.name }}</p>
                     </td>
                     <td class="text_content">
                         <p class="mx-2 mb-0">{{ object.email }}</p>
                     </td>
                     <td class="text_content">{{ object.comment }}</td>
+                    {% if object.is_active %}
+                    <td class="text_content_center text-success">{{ object.is_active|translate_activity }}</td>
+                    {% else %}
+                    <td class="text_content_center text-danger">{{ object.is_active|translate_activity }}</td>
+                    {% endif %}
                     <td class="text_content_center">
-                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <a href="{% url 'mailing:view_client' object.pk %}" class="btn btn-outline-secondary text_button"
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
+                            <a href="{% url 'mailing:view_client' object.pk %}"
+                               class="btn btn-outline-secondary text_button"
                                role="button">Смотреть</a>
-                              <a href="{% url 'mailing:update_client' object.pk %}" class="btn btn-outline-primary text_button"
-                               role="button" >Изменить</a>
-                              <a href="{% url 'mailing:delete_client' object.pk %}" class="btn btn-outline-danger text_button"
+                            <a href="{% url 'mailing:update_client' object.pk %}"
+                               class="btn btn-outline-primary text_button"
+                               role="button">Изменить</a>
+                            <a href="{% url 'mailing:delete_client' object.pk %}"
+                               class="btn btn-outline-danger text_button"
                                role="button">Удалить</a>
                         </div>
                     </td>

@@ -5,7 +5,7 @@ from mailing_service.models import Client, Message, Mailing
 # Register your models here.
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'comment', 'is_active']
+    list_display = ['name', 'email', 'comment', 'is_active', 'added_at']
     list_filter = ['name', 'is_active']
     search_fields = ['name', 'email', 'comment']
 

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'django_crontab',
+    'django.contrib.humanize',
 
     'bootstrap_datepicker_plus',
     'django_celery_beat',
@@ -174,9 +175,17 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Europe/Moscow'
 CELERY_IMPORTS = ('mailing_service.services',)
 
-# DJANGO_SETTINGS_MODULE = config.settings
-
 AUTH_USER_MODEL = 'users.User'
 
+LOGIN_URL = 'users:login'
+
+
+# User authentication settings
 LOGIN_REDIRECT_URL = "mailing:dashboard"
 LOGOUT_REDIRECT_URL = "main:index"
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}

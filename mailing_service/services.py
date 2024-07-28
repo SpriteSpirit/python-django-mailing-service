@@ -94,7 +94,7 @@ def send_mailing(mailing):
             )
             mailing_log = MailingLogs(
                 date_time=datetime.now(),
-                status='Success',
+                status='success',
                 server_response='Сообщение успешно отправлено',
                 mailing=mailing,
             )
@@ -103,7 +103,7 @@ def send_mailing(mailing):
             print(f"Сообщение не отправлено {client.email}: {e}")  # Добавьте эту строку для отладки
             mailing_log = MailingLogs(
                 date_time=datetime.now(),
-                status='Failure',
+                status='failed',
                 server_response=f'Сообщение не отправлено!\nError: {e}',
                 mailing=mailing,
             )

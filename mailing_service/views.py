@@ -1,4 +1,6 @@
+import json
 from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -11,33 +13,71 @@ from django.views.generic import ListView, CreateView, UpdateView, DetailView, D
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
 from mailing_service.services import MailingService, send_mailing
+from mailing_service.templatetags.custom_filters import translate_month_from_num
 
 
 @login_required
 def dashboard(request):
     user = request.user
     mailing_list = Mailing.objects.filter(user=user)
+
+    today = timezone.now().date()
+    now_month = timezone.now().month
+    now_year = timezone.now().year
+
+    month_mailing_count_list = [0] * 12
+    last_week = [(today - timedelta(days=i - 1)).strftime('%d.%m') for i in range(7, 0, -1)]
+    print(last_week)
+    last_half_year = [translate_month_from_num((today - relativedelta(months=i - 1)).month) for i in range(6, 0, -1)]
+    mailing_per_day = dict.fromkeys(last_week, 0)
+    clients_added_half_year = dict.fromkeys(last_half_year, 0)
+
+    for client in Client.objects.filter(user=user):
+        month_client_added = translate_month_from_num(client.added_at.month)
+
+        if client.added_at.year == now_year and month_client_added in last_half_year:
+            clients_added_half_year[month_client_added] = clients_added_half_year.get(month_client_added, 0) + 1
+
+    clients_added_half_year = list(clients_added_half_year.values())
+
+    for mail in mailing_list:
+        datetime_str = mail.first_send.strftime("%d/%m/%Y %H:%M:%S")
+        date, time = datetime_str.split()
+        month = int(date.split('/')[1][-1])
+        mailing_year = int(date.split('/')[2])
+
+        if mailing_year == now_year:
+            for i in range(12):
+                if i == month:
+                    month_mailing_count_list[i - 1] += 1
+
+        if mail.first_send.month == timezone.now().month:
+            for i in range(7):
+                day_ago = (today - timedelta(days=i)).strftime('%d.%m')
+
+                if day_ago == mail.first_send.date().strftime('%d.%m'):
+                    mailing_per_day[day_ago] = mailing_per_day.get(day_ago, 0) + 1
+
+    mailing_per_day = list(mailing_per_day.values())
+    now_month = translate_month_from_num(now_month)
+
     context = {
         'active_page': 'dashboard',
+        'mailing_list': mailing_list,
+        'client_list': [mail.client.all().filter(user=user) for mail in mailing_list],
+        'mailing_per_day': mailing_per_day,
+        'last_week': json.dumps(last_week, ensure_ascii=False),
+        'month_mailing_count_list': month_mailing_count_list,
+        'year': now_year,
+        'now_month': json.dumps(now_month, ensure_ascii=False),
+        'last_half_year': json.dumps(last_half_year, ensure_ascii=False),
+        'clients_added_half_year': clients_added_half_year,
     }
-    if mailing_list:
-        # Получение связанного сообщения письма
-        # message = mailing.message
-        print(mailing_list)
-        context = {
-            'active_page': 'dashboard',
-            'mailing_list': mailing_list,
-            'client_list': list(Client.objects.filter(user=user)),
-            # 'message_subject': message.message_subject,
-            # 'message_body': message.message_body,
-            # 'send_data': mailing.first_send,
-            # 'status': mailing.status,
-        }
-        print(context)
+
     return render(request, 'mailing_service/dashboard.html', context)
 
 
-class ClientListView(ListView):
+class ClientListView(LoginRequiredMixin, ListView):
     """ Просмотр списка клиентов """
     model = Client
     extra_context = {'title': 'КЛИЕНТЫ'}
@@ -46,36 +86,24 @@ class ClientListView(ListView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'client_list'
-        context['client_list'] = Client.objects.all()
-        # mailing = Mailing.objects.filter(status='created').first()
-        #
-        # if mailing:
-        #     # Получение связанного сообщения письма
-        #     message = mailing.message
-        #     context['message_subject'] = message.message_subject
-        #     context['message_body'] = message.message_body
-        #     context['send_data'] = mailing.first_send
-        #     context['status'] = mailing.status
-        #     # print(context['message_subject'])
-        #     # print(context['message_body'])
-        #     # print(context['send_data'])
-        #     # print(context['status'])
-        # else:
-        #     context['message_subject'] = ''
-        #     context['message_body'] = ''
-        #     context['send_data'] = ''
-        #     context['status'] = ''
 
-            # print(context['message_subject'])
-            # print(context['message_body'])
         return context
 
-    # def get_queryset(self):
-    #     """ Просмотр только своих климентов """
-    # pass
+    def get_queryset(self):
+        """ Просмотр только своих климентов """
+        user = self.request.user
+
+        if user.is_superuser or user.is_staff:
+            print("stuff")
+            queryset = Client.objects.all()
+        else:
+            print("not stuff")
+            queryset = Client.objects.filter(user=user)
+        print(queryset)
+        return queryset
 
 
-class ClientCreateView(CreateView):
+class ClientCreateView(LoginRequiredMixin, CreateView):
     model = Client
     form_class = ClientForm
     success_url = reverse_lazy('mailing:client_list')
@@ -83,6 +111,7 @@ class ClientCreateView(CreateView):
     def form_valid(self, form):
         """ Валидация формы"""
         client = form.save(commit=False)
+        client.user = self.request.user
         client.save()
 
         """ Если форма валидна, то отправляется сообщение"""
@@ -90,7 +119,7 @@ class ClientCreateView(CreateView):
         return super().form_valid(form)
 
 
-class ClientDetailView(DetailView):
+class ClientDetailView(LoginRequiredMixin, DetailView):
     model = Client
 
     def get_context_data(self, **kwargs):
@@ -100,7 +129,7 @@ class ClientDetailView(DetailView):
         return context
 
 
-class ClientUpdateView(UpdateView):
+class ClientUpdateView(LoginRequiredMixin, UpdateView):
     model = Client
     form_class = ClientForm
     success_url = reverse_lazy('mailing:client_list')
@@ -115,14 +144,13 @@ class ClientUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class ClientDeleteView(DeleteView):
+class ClientDeleteView(LoginRequiredMixin, DeleteView):
     model = Client
     success_url = reverse_lazy('mailing:client_list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['client'] = self.object
-        # print(context['client'])
 
         return context
 
@@ -131,14 +159,6 @@ class MailingListView(LoginRequiredMixin, ListView):
     """ Просмотр списка клиентов """
     model = Mailing
     extra_context = {'title': 'РАССЫЛКИ'}
-
-    def get_context_data(self, **kwargs):
-        """ Дополнительная информация """
-        context = super().get_context_data(**kwargs)
-        context['active_page'] = 'mailing_list'
-        context['mailing_list'] = Mailing.objects.all().order_by('-id')
-
-        return context
 
     def get_queryset(self):
         """ Просмотр рассылок только своих клиентов """
@@ -151,29 +171,36 @@ class MailingListView(LoginRequiredMixin, ListView):
 
         return queryset
 
+    def get_context_data(self, **kwargs):
+        """ Дополнительная информация """
+        context = super().get_context_data(**kwargs)
+        context['active_page'] = 'mailing_list'
 
-class MailingCreateView(CreateView):
+        return context
+
+
+class MailingCreateView(LoginRequiredMixin, CreateView):
     """ Создание новой рассылки """
     model = Mailing
     form_class = MailingForm
     extra_context = {'title': 'Создание рассылки'}
     success_url = reverse_lazy('mailing:mailing_list')
 
-    def get_queryset(self):
-        """ Создание рассылки только для своих клиентов"""
-        pass
-
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
         kwargs['initial'] = {
             'first_send': datetime.now(),
             'finish_send': datetime.now() + timedelta(days=7),  # или любое другое значение по вашему выбору
         }
+
         return kwargs
 
     def form_valid(self, form):
         """ Валидация формы """
         mailing = form.save(commit=False)
+        mailing.user = self.request.user
+
         if not mailing.first_send:
             mailing.first_send = timezone.now()
         mailing.status = 'created'
@@ -181,7 +208,6 @@ class MailingCreateView(CreateView):
 
         """ Если форма валидна, то отправляется сообщение """
         message_service = MailingService(mailing)
-        # print("Starting mailing...")
 
         mailing.status = 'started'
         mailing.save()
@@ -194,7 +220,7 @@ class MailingCreateView(CreateView):
         return super(MailingCreateView, self).form_valid(form)
 
 
-class MailingDetailView(DetailView):
+class MailingDetailView(LoginRequiredMixin, DetailView):
     model = Mailing
 
     def get_context_data(self, **kwargs):
@@ -206,16 +232,12 @@ class MailingDetailView(DetailView):
         return context
 
 
-class MailingUpdateView(UpdateView):
+class MailingUpdateView(LoginRequiredMixin, UpdateView):
     """ Редактирование новой рассылки """
     model = Mailing
     form_class = MailingForm
     extra_context = {'title': 'Редактирование рассылки'}
     success_url = reverse_lazy('mailing:mailing_list')
-
-    # def get_queryset(self):
-    #     """ Редактирование рассылки только для своих клиентов"""
-    #     pass
 
     def form_valid(self, form):
         """ Валидация формы"""
@@ -228,7 +250,7 @@ class MailingUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class MailingDeleteView(DeleteView):
+class MailingDeleteView(LoginRequiredMixin, DeleteView):
     model = Mailing
     success_url = reverse_lazy('mailing:mailing_list')
 
@@ -240,7 +262,7 @@ class MailingDeleteView(DeleteView):
         return context
 
 
-class MessageCreateView(CreateView):
+class MessageCreateView(LoginRequiredMixin, CreateView):
     """ Создание нового сообщения """
     model = Message
     form_class = MessageForm
@@ -250,6 +272,7 @@ class MessageCreateView(CreateView):
     def form_valid(self, form):
         """ Валидация формы"""
         message = form.save(commit=False)
+        message.user = self.request.user
         message.save()
 
         """ Если форма валидна, то отправляется сообщение"""
@@ -257,21 +280,35 @@ class MessageCreateView(CreateView):
         return super().form_valid(form)
 
 
-class MessageListView(ListView):
+class MessageListView(LoginRequiredMixin, ListView):
     """ Просмотр списка писем """
     model = Message
     extra_context = {'title': 'ПИСЬМА'}
+
+    def get_queryset(self):
+        """ Просмотр только своих сообщений"""
+        user = self.request.user
+
+        if user.is_superuser or user.is_staff:
+            print('stuff')
+            queryset = Message.objects.all()
+        else:
+            print('NOT stuff')
+            queryset = Message.objects.filter(user=user)
+
+        print(queryset)
+        return queryset
 
     def get_context_data(self, **kwargs):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'message_list'
-        context['message_list'] = Message.objects.all()
 
+        print(context['message_list'])
         return context
 
 
-class MessageDetailView(DetailView):
+class MessageDetailView(LoginRequiredMixin, DetailView):
     model = Message
     extra_context = {'title': 'Информация о сообщении'}
 
@@ -282,7 +319,7 @@ class MessageDetailView(DetailView):
         return context
 
 
-class MessageUpdateView(UpdateView):
+class MessageUpdateView(LoginRequiredMixin, UpdateView):
     model = Message
     form_class = MessageForm
     extra_context = {'title': 'Редактирование письма'}
@@ -295,12 +332,12 @@ class MessageUpdateView(UpdateView):
         return context
 
 
-class MessageDeleteView(DeleteView):
+class MessageDeleteView(LoginRequiredMixin, DeleteView):
     model = Message
     success_url = reverse_lazy('mailing:message_list')
 
 
-class MailingLogListView(ListView):
+class MailingLogListView(LoginRequiredMixin, ListView):
     """ Просмотр логов рассылки """
     model = MailingLogs
     extra_context = {'title': 'Состояние отправки'}
@@ -309,11 +346,46 @@ class MailingLogListView(ListView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'log_list'
-        # print(context)
-        # for log in self.object_list:
-        #     context['clients'] = log.mailing.client.all()
+        info = []
+        clients_per_mailing = {}
 
-        # for client in context['clients']:
-        #     context['client'] = client.email
+        logs = self.get_queryset()
+
+        for log in logs:
+            mailing_pk = log.mailing.pk
+            if mailing_pk not in clients_per_mailing:
+                clients_per_mailing[mailing_pk] = list(log.mailing.client.all())
+
+        for log in logs:
+            mailing = log.mailing
+
+            client = clients_per_mailing[mailing.pk]  # Выделяем следующего клиента
+
+            if client:
+                client = clients_per_mailing[mailing.pk].pop(0)
+            else:
+                continue
+
+            info.append(
+                {
+                    'log': log,
+                    'mailing': mailing,
+                    'client': client,
+                }
+            )
+
+        context['info_client'] = info
 
         return context
+
+    def get_queryset(self):
+        """ Просмотр логов только своих рассылок """
+        user = self.request.user
+        mailing = Mailing.objects.filter(user=user)
+
+        if user.is_superuser or user.is_staff:
+            queryset = MailingLogs.objects.all().order_by('-date_time')
+        else:
+            queryset = MailingLogs.objects.filter(mailing__in=mailing)
+
+        return queryset

@@ -20,32 +20,21 @@
                 <tr class="tr_text_content_center">
                     <th scope="col">№</th>
                     <th scope="col">Рассылка</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Дата</th>
                     <th scope="col">Клиент</th>
                     <th scope="col">Статус</th>
-                    <th scope="col">Сообщение сервера</th>
                 </tr>
                 </thead>
-                {% for log in object_list reversed %}
                 <tbody>
-<!--                <p>{{ log.mailing }}</p>-->
-                {% if log.status == "success" %}
-                <tr class="table-success text_align">
-                    {% elif log.status == 'failed' %}
-                <tr class="table-danger text_align">
-                    {% endif %}
+                {% for info in info_client %}
+                <tr class="{% if info.log.status == 'success' %}table-success{% elif info.log.status == 'failed' %}table-danger{% endif %} text_align">
                     <td class="text_content_center">{{ forloop.counter }}</td>
-                    <td class="text_content">{{ log.mailing.message.message_subject|truncatewords:5 }}</td>
-                    <td class="text_content">{{ log.date_time }}</td>
-                    <td class="text_content">
-                        {% for client in log.mailing.client.all %}
-                        <ul>
-                            <li class="text_list">{{ client.email }}</li>
-                        </ul>
-                        {% endfor %}
-                    </td>
-                    <td class="text_content">{{ log.status }}</td>
-                    <td class="text_content">{{ log.server_response }}</td>
+                    <td class="text_content">{{ info.mailing.message.message_subject|truncatewords:5 }}</td>
+                    <td class="text_content">[#{{ info.mailing.pk }}]</td>
+                    <td class="text_content">{{ info.log.date_time }}</td>
+                    <td class="text_content">{{ info.client }}</td>
+                    <td class="text_content">{{ info.log.status }}</td>
                 </tr>
                 {% endfor %}
                 </tbody>

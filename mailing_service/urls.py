@@ -11,6 +11,7 @@ app_name = MailingServiceConfig.name
 
 urlpatterns = [
     path('dashboard/', dashboard, name='dashboard'),
+    path('dashboard/data/', dashboard, name='dashboard_data'),
 
     path('client_list/', ClientListView.as_view(), name='client_list'),
     path('create_client/', ClientCreateView.as_view(), name='create_client'),
@@ -31,4 +32,5 @@ urlpatterns = [
     path('delete_message/<int:pk>/', MessageDeleteView.as_view(), name='delete_message'),
 
     path('log_list/', MailingLogListView.as_view(), name='log_list'),
+
 ]

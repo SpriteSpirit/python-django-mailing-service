@@ -68,7 +68,7 @@ class UserRegisterForm(FormStyleMixin, UserCreationForm):
         fields = ('email', 'password1', 'password2')
 
     def save(self, commit=True):
-        user = super(UserRegisterForm, self).save(commit=False)
+        user = super(UserRegisterForm).save(commit=False)
         user.email = self.cleaned_data['email']
 
         if commit:

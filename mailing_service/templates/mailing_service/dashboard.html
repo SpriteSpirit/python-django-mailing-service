@@ -8,54 +8,84 @@
 
 
 <div class="row">
-    {% include 'mailing_service/includes/inc_inner_menu.html' %}
+  {% include 'mailing_service/includes/inc_inner_menu.html' %}
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">ЛИЧНЫЙ КАБИНЕТ</h1>
         </div>
-
-        <!--        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
-
-        <h2>Выполненные рассылки</h2>
-        <div class="table-responsive small">
-            <table class="table table-bordered table-sm">
-                <thead>
-                <tr style="text-align: center;">
-                    <th scope="col">№</th>
-                    <th scope="col">Сообщение</th>
-                    <th scope="col">Клиент</th>
-<!--                    <th scope="col">Статус</th>-->
-                    <th scope="col">Настройки</th>
-                </tr>
-                </thead>
-                {% for mailing in mailing_list %}
-                <tbody>
-                <p>{{ mailing }}</p>
-                <tr class="align-middle">
-                    <td class="text_content text-center">{{ forloop.counter }}</td>
-                    <td class="text_content">
-                        <p class="mx-2 mb-0">{{ mailing.message.message_subject }}</p>
-                    </td>
-                    <td class="text_content">
-                        {% for client in client_list %}
-                        <ul>
-                            <li class="text_content">{{ client.name }} <span class="text-success">[{{ client.email }}]</span> </li>
-                        </ul>
-                        {% endfor %}
-                    </td>
-<!--                    <td class="text_content">{{ status|translate_status }}</td>-->
-                    <td class="text_content_center">
-                        <div class="btn-group btn-group-lg">
-                            <button type="button" class="btn btn-outline-secondary text_button">Смотреть</button>
-                        </div>
-                    </td>
-                </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+        <div class="content">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <div class="card card-chart">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">Статистика рассылок</h5>
+                    <h2 class="card-title">Все рассылки за {{ year }} год</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                    <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                      <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                      </div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                      <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                    </div>
+                  </div>
+                  <canvas id="chartBig1" width="1262" height="440" style="display: block; height: 220px; width: 100%;" class="chartjs-render-monitor"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-lg-6" style="display: none;">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">Информация по рассылкам</h5>
+                <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart-area"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                  <canvas id="chartLinePurple" width="1262" height="440" style="display: block; height: 220px; width: 631px;" class="chartjs-render-monitor"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">Клиенты</h5>
+                <h6 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> Данные за 6 мес [{{ year }}]</h6>
+              </div>
+              <div class="card-body">
+                <div class="chart-area"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                  <canvas id="CountryChart" width="1262" height="440" style="display: block; height: 220px; width: 631px;" class="chartjs-render-monitor"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">Рассылки</h5>
+                <h6 class="card-title"><i class="tim-icons icon-send text-success"></i> Данные за неделю [{{ now_month }}, {{ year }}]</h6>
+              </div>
+              <div class="card-body">
+                <div class="chart-area"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                  <canvas id="chartLineGreen" width="1262" height="440" style="display: block; height: 220px; width: 631px;" class="chartjs-render-monitor"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 </div>
-<!--</div>-->
+
 {% endblock %}
