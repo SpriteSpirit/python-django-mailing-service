@@ -15,4 +15,3 @@ def send_message(mailing_id):
         delete_task(mailing)
         return
     return send_mailing(mailing)
-

@@ -87,5 +87,13 @@
       </div>
     </main>
 </div>
-
+<script type="text/javascript">
+    var chart_data = JSON.parse('{{ month_mailing_count_list|safe }}');
+    var mailing_per_day = JSON.parse('{{ mailing_per_day|safe }}');
+    var last_week = JSON.parse('{{ last_week|safe }}');
+    var now_month = JSON.parse('{{ now_month|safe }}');
+    var last_half_year = JSON.parse('{{ last_half_year|safe }}');
+    var clients_added_half_year = JSON.parse('{{ clients_added_half_year|safe }}');
+    console.log(clients_added_half_year);
+</script>
 {% endblock %}

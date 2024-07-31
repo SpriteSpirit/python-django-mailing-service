@@ -14,6 +14,12 @@ from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
 from mailing_service.services import MailingService, send_mailing
 from mailing_service.templatetags.custom_filters import translate_month_from_num
+from django.contrib.auth.mixins import UserPassesTestMixin
+
+
+# class ModeratorRequiredMixin(UserPassesTestMixin):
+#     def test_func(self):
+#         return self.request.user.groups.filter(name='Moderator').exists()
 
 
 @login_required
@@ -27,7 +33,6 @@ def dashboard(request):
 
     month_mailing_count_list = [0] * 12
     last_week = [(today - timedelta(days=i - 1)).strftime('%d.%m') for i in range(7, 0, -1)]
-    print(last_week)
     last_half_year = [translate_month_from_num((today - relativedelta(months=i - 1)).month) for i in range(6, 0, -1)]
     mailing_per_day = dict.fromkeys(last_week, 0)
     clients_added_half_year = dict.fromkeys(last_half_year, 0)
@@ -60,7 +65,7 @@ def dashboard(request):
 
     mailing_per_day = list(mailing_per_day.values())
     now_month = translate_month_from_num(now_month)
-
+    print(clients_added_half_year)
     context = {
         'active_page': 'dashboard',
         'mailing_list': mailing_list,
@@ -94,12 +99,10 @@ class ClientListView(LoginRequiredMixin, ListView):
         user = self.request.user
 
         if user.is_superuser or user.is_staff:
-            print("stuff")
             queryset = Client.objects.all()
         else:
-            print("not stuff")
             queryset = Client.objects.filter(user=user)
-        print(queryset)
+
         return queryset
 
 
@@ -165,7 +168,7 @@ class MailingListView(LoginRequiredMixin, ListView):
         user = self.request.user
 
         if user.is_superuser or user.is_staff:
-            queryset = Mailing.objects.all().filter(is_published=True)
+            queryset = Mailing.objects.all()
         else:
             queryset = Mailing.objects.filter(user=user, is_published=True)
 
@@ -239,9 +242,16 @@ class MailingUpdateView(LoginRequiredMixin, UpdateView):
     extra_context = {'title': 'Редактирование рассылки'}
     success_url = reverse_lazy('mailing:mailing_list')
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+
+        return kwargs
+
     def form_valid(self, form):
         """ Валидация формы"""
         mailing = form.save(commit=True)
+        mailing.user = self.request.user
         mailing.status = Mailing.STATUS_CHOICES[0][1]
         mailing.save()
 
@@ -290,13 +300,10 @@ class MessageListView(LoginRequiredMixin, ListView):
         user = self.request.user
 
         if user.is_superuser or user.is_staff:
-            print('stuff')
             queryset = Message.objects.all()
         else:
-            print('NOT stuff')
             queryset = Message.objects.filter(user=user)
 
-        print(queryset)
         return queryset
 
     def get_context_data(self, **kwargs):
@@ -304,7 +311,6 @@ class MessageListView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['active_page'] = 'message_list'
 
-        print(context['message_list'])
         return context
 
 

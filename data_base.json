@@ -1,0 +1,2247 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-07-26T13:57:36.965Z",
+        "user": 3,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Всегдажрун Борисович [omnomnom@bigcat.com]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-07-26T18:22:43.300Z",
+        "user": 3,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "Котофей Кусьминович [sprite.spirit.t.me@gmail.com]",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-07-26T18:22:46.941Z",
+        "user": 3,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Котофей Кусьминович [sprite.spirit.t.me@gmail.com]",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-07-28T17:55:40.033Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "11",
+        "object_repr": "boom_daboom@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-07-28T17:55:40.040Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "10",
+        "object_repr": "giga_boom@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-07-28T17:55:40.041Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "9",
+        "object_repr": "one12@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-07-28T17:55:40.042Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "8",
+        "object_repr": "zero@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-07-28T17:55:50.469Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "7",
+        "object_repr": "dev.patient.zero@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-07-28T18:05:01.601Z",
+        "user": 3,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "А вы рыбов продаете?",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-07-28T18:05:05.683Z",
+        "user": 3,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "Запах марта. Голос весны",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-07-28T18:51:31.771Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "40",
+        "object_repr": "Рассылка: 40",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-07-28T18:51:36.182Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "39",
+        "object_repr": "Рассылка: 39",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-07-28T18:51:41.799Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "38",
+        "object_repr": "Рассылка: 38",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-07-28T18:51:46.266Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "37",
+        "object_repr": "Рассылка: 37",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-07-28T18:51:50.543Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "36",
+        "object_repr": "Рассылка: 36",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-07-28T18:51:57.701Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "36",
+        "object_repr": "Рассылка: 36",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-07-28T18:52:01.194Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "35",
+        "object_repr": "Рассылка: 35",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-07-28T18:52:05.010Z",
+        "user": 3,
+        "content_type": 15,
+        "object_id": "34",
+        "object_repr": "Рассылка: 34",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-07-28T20:54:53.183Z",
+        "user": 3,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Manager",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-07-28T21:06:29.836Z",
+        "user": 3,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-07-28T21:06:47.428Z",
+        "user": 3,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-07-28T21:07:52.185Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "3",
+        "object_repr": "admin@localhost",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0430\", \"GitHub\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-07-28T21:37:08.458Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "3",
+        "object_repr": "admin@localhost",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0431\\u043b\\u043e\\u043a\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-07-29T17:32:13.136Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "14",
+        "object_repr": "test3@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-07-30T18:44:57.099Z",
+        "user": 3,
+        "content_type": 17,
+        "object_id": "14",
+        "object_repr": "test3@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "Moderator",
+        "permissions": [
+            58,
+            60,
+            68
+        ]
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1inzbxpppo14iqk5xdim5lt87mdh33oo",
+    "fields": {
+        "session_data": "e30:1sTSge:Vly2Jgjimx82wAMghxRKJCWGf7l8CnvxrERjIxFAwCE",
+        "expire_date": "2024-07-29T20:52:44.954Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "24q7g2uxjcnsi95uspfmb5gmv7sgl4ko",
+    "fields": {
+        "session_data": "e30:1sTShq:myrht9Vy_uFSQhLmudizHGRn4rR7L58M0LQZ43hQqsc",
+        "expire_date": "2024-07-29T20:53:58.258Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "fghttdxia8r77229ulv9hanpg8dz9vd7",
+    "fields": {
+        "session_data": "e30:1sTSeP:CqRRzwR-4svI3pRnAIXpxg6ObsjmQ0og3LTeJuQNHt0",
+        "expire_date": "2024-07-29T20:50:25.807Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h5p3b4vz8f2ffvkrkwa16dh04oapu8bf",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFAebp07zeQYRikaiAp7cr479qkC93ec859sQjbWuM2aIlzZmc2sdPvlgAf1HaQ79BunWNv6zInviv8oINfe6bn5XD_DiqM-q2VIo_WT8HpnIJwgsiEBB4kFQvOGBROFymNJE0apVc4BR2KwiKs8pm9P9dyN4M:1sYtfA:IReOggxW9oKERZE-qK8S3CbR9Njs_K2AFtUbhW45Mpg",
+        "expire_date": "2024-08-13T20:41:40.927Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zz605ktnyc6klc30omk18yerhkbkbszr",
+    "fields": {
+        "session_data": "e30:1sTSiJ:ynXJs24RaGlaAyxZMW91Wf0BLsSHAGOW4J1IvM8m4zg",
+        "expire_date": "2024-07-29T20:54:27.155Z"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 1,
+    "fields": {
+        "minute": "23",
+        "hour": "0",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 2,
+    "fields": {
+        "minute": "0",
+        "hour": "4",
+        "day_of_month": "*",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 3,
+    "fields": {
+        "minute": "5",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 4,
+    "fields": {
+        "minute": "15",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 5,
+    "fields": {
+        "minute": "28",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 6,
+    "fields": {
+        "minute": "45",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 7,
+    "fields": {
+        "minute": "47",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 8,
+    "fields": {
+        "minute": "57",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 9,
+    "fields": {
+        "minute": "1",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 10,
+    "fields": {
+        "minute": "2",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 11,
+    "fields": {
+        "minute": "4",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 12,
+    "fields": {
+        "minute": "11",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 13,
+    "fields": {
+        "minute": "20",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 14,
+    "fields": {
+        "minute": "26",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 15,
+    "fields": {
+        "minute": "32",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 16,
+    "fields": {
+        "minute": "34",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 17,
+    "fields": {
+        "minute": "45",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 18,
+    "fields": {
+        "minute": "49",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 19,
+    "fields": {
+        "minute": "50",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 20,
+    "fields": {
+        "minute": "52",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 21,
+    "fields": {
+        "minute": "53",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 22,
+    "fields": {
+        "minute": "54",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 23,
+    "fields": {
+        "minute": "3",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 24,
+    "fields": {
+        "minute": "6",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 25,
+    "fields": {
+        "minute": "9",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 26,
+    "fields": {
+        "minute": "21",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 27,
+    "fields": {
+        "minute": "26",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 28,
+    "fields": {
+        "minute": "28",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 29,
+    "fields": {
+        "minute": "29",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 30,
+    "fields": {
+        "minute": "30",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 31,
+    "fields": {
+        "minute": "4",
+        "hour": "0",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 32,
+    "fields": {
+        "minute": "58",
+        "hour": "21",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 33,
+    "fields": {
+        "minute": "13",
+        "hour": "22",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 34,
+    "fields": {
+        "minute": "23",
+        "hour": "22",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 35,
+    "fields": {
+        "minute": "36",
+        "hour": "18",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 36,
+    "fields": {
+        "minute": "42",
+        "hour": "18",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 37,
+    "fields": {
+        "minute": "59",
+        "hour": "22",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 38,
+    "fields": {
+        "minute": "26",
+        "hour": "20",
+        "day_of_month": "28",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 39,
+    "fields": {
+        "minute": "0",
+        "hour": "21",
+        "day_of_month": "28",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 40,
+    "fields": {
+        "minute": "18",
+        "hour": "23",
+        "day_of_month": "28",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
+    "model": "django_celery_beat.periodictasks",
+    "pk": 1,
+    "fields": {
+        "last_update": "2024-07-30T19:43:06.964Z"
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 1,
+    "fields": {
+        "name": "Mailing_1_1719350583.04923",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 1,
+        "solar": null,
+        "clocked": null,
+        "args": "[1]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-06-25T21:23:03.051Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 2,
+    "fields": {
+        "name": "celery.backend_cleanup",
+        "task": "celery.backend_cleanup",
+        "interval": null,
+        "crontab": 2,
+        "solar": null,
+        "clocked": null,
+        "args": "[]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": 43200,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-31T01:58:59.128Z",
+        "total_run_count": 4,
+        "date_changed": "2024-07-31T02:30:04.576Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 3,
+    "fields": {
+        "name": "Mailing_3_1720883681.100807",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 3,
+        "solar": null,
+        "clocked": null,
+        "args": "[3]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T15:14:41.102Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 4,
+    "fields": {
+        "name": "Mailing_4_1720883703.356068",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 4,
+        "solar": null,
+        "clocked": null,
+        "args": "[4]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T15:15:03.362Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 5,
+    "fields": {
+        "name": "Mailing_5_1720884462.095804",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 5,
+        "solar": null,
+        "clocked": null,
+        "args": "[5]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:28:00.021Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:29:35.666Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 6,
+    "fields": {
+        "name": "Рассылка #6 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 6,
+        "solar": null,
+        "clocked": null,
+        "args": "[6]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:45:00.026Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:46:35.606Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 7,
+    "fields": {
+        "name": "Рассылка #7 || Статус: created",
+        "task": "send_mailing",
+        "interval": null,
+        "crontab": 7,
+        "solar": null,
+        "clocked": null,
+        "args": "[7]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:47:00.014Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:47:45.311Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 8,
+    "fields": {
+        "name": "Рассылка #8 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 8,
+        "solar": null,
+        "clocked": null,
+        "args": "[8]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:57:00.013Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:59:51.145Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 9,
+    "fields": {
+        "name": "Рассылка #9 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 9,
+        "solar": null,
+        "clocked": null,
+        "args": "[9]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T16:01:07.578Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 10,
+    "fields": {
+        "name": "Рассылка #10 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 10,
+        "solar": null,
+        "clocked": null,
+        "args": "[10]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T16:01:59.441Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 11,
+    "fields": {
+        "name": "Рассылка #11 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 11,
+        "solar": null,
+        "clocked": null,
+        "args": "[11]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:04:00.015Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:05:55.659Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 12,
+    "fields": {
+        "name": "Рассылка #12 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 12,
+        "solar": null,
+        "clocked": null,
+        "args": "[12]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:11:00.015Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:12:00.441Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 13,
+    "fields": {
+        "name": "Рассылка #13 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 13,
+        "solar": null,
+        "clocked": null,
+        "args": "[13]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:20:00.015Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:21:05.402Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 14,
+    "fields": {
+        "name": "Рассылка #14 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 14,
+        "solar": null,
+        "clocked": null,
+        "args": "[14]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:26:00.028Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:27:10.408Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 15,
+    "fields": {
+        "name": "Рассылка #15",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 15,
+        "solar": null,
+        "clocked": null,
+        "args": "[15]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:32:00.008Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:32:50.389Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 19,
+    "fields": {
+        "name": "Рассылка #19",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 19,
+        "solar": null,
+        "clocked": null,
+        "args": "[19]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:50:00.010Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:50:55.391Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 21,
+    "fields": {
+        "name": "Рассылка #21",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 21,
+        "solar": null,
+        "clocked": null,
+        "args": "[21]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T16:53:07.089Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 27,
+    "fields": {
+        "name": "Рассылка #29",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 27,
+        "solar": null,
+        "clocked": null,
+        "args": "[29]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T17:27:50.915Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 28,
+    "fields": {
+        "name": "Рассылка #30",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 28,
+        "solar": null,
+        "clocked": null,
+        "args": "[30]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T17:28:04.835Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 31,
+    "fields": {
+        "name": "Рассылка #33",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 31,
+        "solar": null,
+        "clocked": null,
+        "args": "[33]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-16T21:04:02.808Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 32,
+    "fields": {
+        "name": "Рассылка: 34",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 32,
+        "solar": null,
+        "clocked": null,
+        "args": "[34]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-17T18:58:00.273Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 33,
+    "fields": {
+        "name": "Рассылка: 35",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 33,
+        "solar": null,
+        "clocked": null,
+        "args": "[35]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-17T19:12:29.222Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 34,
+    "fields": {
+        "name": "Рассылка: 36",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 34,
+        "solar": null,
+        "clocked": null,
+        "args": "[36]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-17T19:21:35.119Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 35,
+    "fields": {
+        "name": "Рассылка: 37",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 35,
+        "solar": null,
+        "clocked": null,
+        "args": "[37]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-26T15:35:20.421Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 36,
+    "fields": {
+        "name": "Рассылка: 38",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 36,
+        "solar": null,
+        "clocked": null,
+        "args": "[38]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-26T15:41:48.787Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 37,
+    "fields": {
+        "name": "Рассылка: 39",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 37,
+        "solar": null,
+        "clocked": null,
+        "args": "[39]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-26T19:58:46.421Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 38,
+    "fields": {
+        "name": "Рассылка: 40",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 38,
+        "solar": null,
+        "clocked": null,
+        "args": "[40]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-28T17:25:32.447Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 39,
+    "fields": {
+        "name": "Рассылка: 41",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 39,
+        "solar": null,
+        "clocked": null,
+        "args": "[41]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-28T18:58:17.805Z",
+        "description": ""
+    }
+},
+{
+    "model": "django_celery_beat.periodictask",
+    "pk": 40,
+    "fields": {
+        "name": "Рассылка: 42",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 40,
+        "solar": null,
+        "clocked": null,
+        "args": "[42]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-28T20:18:00.882Z",
+        "description": ""
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 2,
+    "fields": {
+        "name": "Вездепух Мявкович",
+        "email": "dev.patient.zero@gmail.com",
+        "comment": "Очень разговорчив во время линьки",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 3,
+    "fields": {
+        "name": "Кот Бегемот",
+        "email": "mr.begemot@bigcat.com",
+        "comment": "Мастер спорта по Тыгыдычному бегу",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 4,
+    "fields": {
+        "name": "Всегдажрун Борисович",
+        "email": "omnomnom@bigcat.com",
+        "comment": "Гурман",
+        "is_active": true,
+        "user": 3,
+        "added_at": "2024-07-26"
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 5,
+    "fields": {
+        "name": "Котофей Куськоыч",
+        "email": "sprite.spirit.t.me@gmail.com",
+        "comment": "Любит делать кусь",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 6,
+    "fields": {
+        "name": "Барсик Тыгыдык",
+        "email": "runner_in_the_night@catswiil.com",
+        "comment": "Активный",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 8,
+    "fields": {
+        "name": "Котан Куськов",
+        "email": "kus_kotan@catswill.com",
+        "comment": "",
+        "is_active": true,
+        "user": 14,
+        "added_at": "2024-07-28"
+    }
+},
+{
+    "model": "mailing_service.client",
+    "pk": 9,
+    "fields": {
+        "name": "Василий Мурлыка",
+        "email": "mur_mur_mother_fucker@catswiil.com",
+        "comment": "",
+        "is_active": false,
+        "user": 14,
+        "added_at": "2024-07-28"
+    }
+},
+{
+    "model": "mailing_service.message",
+    "pk": 1,
+    "fields": {
+        "message_subject": "А вы рыбов продаете?",
+        "message_body": "Показываем. Красивое",
+        "user": 6
+    }
+},
+{
+    "model": "mailing_service.message",
+    "pk": 2,
+    "fields": {
+        "message_subject": "Запах марта. Голос весны",
+        "message_body": "Как кричать весной, чтобы не сорвать голос вам расскажет нас специалист по мартовскому горловому пению Василий Котеевич",
+        "user": 6
+    }
+},
+{
+    "model": "mailing_service.message",
+    "pk": 3,
+    "fields": {
+        "message_subject": "Тапочные войны",
+        "message_body": "Драть или не драть? Вот в чем вопрос",
+        "user": 14
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 34,
+    "fields": {
+        "created_at": "2024-07-17T18:57:56.787Z",
+        "first_send": "2024-07-17T18:58:00Z",
+        "finish_send": "2024-07-18T18:57:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 2,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2,
+            4,
+            3
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 35,
+    "fields": {
+        "created_at": "2024-07-17T19:12:26.713Z",
+        "first_send": "2024-07-17T19:13:00Z",
+        "finish_send": "2024-07-25T19:11:00Z",
+        "periodicity": "weekly",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            4,
+            3
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 36,
+    "fields": {
+        "created_at": "2024-07-17T19:21:33.645Z",
+        "first_send": "2024-07-17T19:23:00Z",
+        "finish_send": "2024-08-01T19:21:00Z",
+        "periodicity": "weekly",
+        "status": "started",
+        "message": 2,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 37,
+    "fields": {
+        "created_at": "2024-07-26T15:35:19.786Z",
+        "first_send": "2024-07-26T15:36:00Z",
+        "finish_send": "2024-07-27T15:35:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 38,
+    "fields": {
+        "created_at": "2024-07-26T15:41:46.831Z",
+        "first_send": "2024-07-26T15:42:00Z",
+        "finish_send": "2024-07-26T15:43:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 2,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 39,
+    "fields": {
+        "created_at": "2024-07-26T19:58:43.549Z",
+        "first_send": "2024-07-26T19:59:00Z",
+        "finish_send": "2024-07-27T19:58:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            6,
+            2,
+            4
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 40,
+    "fields": {
+        "created_at": "2024-07-28T17:25:29.624Z",
+        "first_send": "2024-07-28T17:26:00Z",
+        "finish_send": "2024-07-29T17:25:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            6,
+            2,
+            4
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 42,
+    "fields": {
+        "created_at": "2024-07-28T20:17:59.732Z",
+        "first_send": "2024-07-28T20:18:00Z",
+        "finish_send": "2024-07-29T20:17:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 3,
+        "is_published": true,
+        "user": 14,
+        "client": [
+            8
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 29,
+    "fields": {
+        "date_time": "2024-07-17T18:57:57.495Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 30,
+    "fields": {
+        "date_time": "2024-07-17T18:57:58.624Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 31,
+    "fields": {
+        "date_time": "2024-07-17T18:57:59.754Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 32,
+    "fields": {
+        "date_time": "2024-07-17T18:58:00.231Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 33,
+    "fields": {
+        "date_time": "2024-07-17T19:12:28.156Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 35
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 34,
+    "fields": {
+        "date_time": "2024-07-17T19:12:29.182Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 35
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 35,
+    "fields": {
+        "date_time": "2024-07-17T19:21:34.374Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 36
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 36,
+    "fields": {
+        "date_time": "2024-07-17T19:21:35.085Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 36
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 37,
+    "fields": {
+        "date_time": "2024-07-26T15:35:20.380Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 37
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 38,
+    "fields": {
+        "date_time": "2024-07-26T15:41:47.425Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 38
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 39,
+    "fields": {
+        "date_time": "2024-07-26T15:41:48.758Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 38
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 40,
+    "fields": {
+        "date_time": "2024-07-26T19:58:44.499Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 39
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 41,
+    "fields": {
+        "date_time": "2024-07-26T19:58:45.214Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 39
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 42,
+    "fields": {
+        "date_time": "2024-07-26T19:58:46.392Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 39
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 43,
+    "fields": {
+        "date_time": "2024-07-28T17:25:30.456Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 40
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 44,
+    "fields": {
+        "date_time": "2024-07-28T17:25:31.169Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 40
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 45,
+    "fields": {
+        "date_time": "2024-07-28T17:25:32.406Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 40
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 50,
+    "fields": {
+        "date_time": "2024-07-28T20:18:00.850Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 42
+    }
+},
+{
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$CbFxSw455R3qJePPsHhnl5$ErSjkItraQWA/Rt/PjQ1An8s4DFwb92jypYmek8nIhc=",
+        "last_login": "2024-07-30T20:41:40.926Z",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-07-14T20:43:57Z",
+        "email": "admin@localhost",
+        "first_name": "admin",
+        "last_name": "Moderator",
+        "middle_name": null,
+        "phone_number": "+79668772222",
+        "avatar": "",
+        "country": "RU",
+        "about_message": "",
+        "is_blocked": false,
+        "website": "https://",
+        "github": "SpriteSpirit",
+        "telegram": "@",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$BazxcQFa6sopyHsX7Y3Pet$uOuJc7nJCTj8eYUy7dKN1xI13Z8g3pbEiJzdBSkq9t4=",
+        "last_login": "2024-07-30T19:53:23.103Z",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-16T15:45:36.620Z",
+        "email": "a.backer@yandex.ru",
+        "first_name": "Ангелина",
+        "last_name": "Халуева",
+        "middle_name": "Николаевна",
+        "phone_number": "+79668772222",
+        "avatar": "users/avatars/UniverseBless_dKCr3UW.jpg",
+        "country": "RU",
+        "about_message": "Это мой профиль",
+        "is_blocked": false,
+        "website": "https://admin.com",
+        "github": "SpriteSpirit",
+        "telegram": "@sprite_spirit",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$0VM491vQjQ0G99JzQIeWpc$cTG5gOVmwM/ca9umEClUD3GJF5FlJ2gWh6IZvOq6HlA=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-28T17:46:44.905Z",
+        "email": "test1@gmail.com",
+        "first_name": "test1",
+        "last_name": "1234",
+        "middle_name": null,
+        "phone_number": "+79234567890",
+        "avatar": "",
+        "country": "RU",
+        "about_message": null,
+        "is_blocked": false,
+        "website": "https://",
+        "github": "",
+        "telegram": "@",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$KiTXsuXSKbxObBfvkD6uHY$8c5sEQ/kgdmE3kMPQjPTihnO+UHk7nPK9fHA8RWo9PA=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-28T17:48:29.823Z",
+        "email": "test2@gmail.com",
+        "first_name": "test2",
+        "last_name": "1234",
+        "middle_name": null,
+        "phone_number": "+79234567890",
+        "avatar": "",
+        "country": "RU",
+        "about_message": null,
+        "is_blocked": false,
+        "website": "https://",
+        "github": "",
+        "telegram": "@",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$yNvPWwFXmurKrZ5QtuSq5D$PEjDudPNUvrn8T8LMnAKAgLTUAuw0BsdlEEnfnjlfXs=",
+        "last_login": "2024-07-30T20:37:00.913Z",
+        "is_superuser": false,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-07-28T17:52:22Z",
+        "email": "test3@gmail.com",
+        "first_name": "test3",
+        "last_name": "1234",
+        "middle_name": null,
+        "phone_number": "+79234567890",
+        "avatar": "users/avatars/sea2_GGm0BpA.jpeg",
+        "country": "RU",
+        "about_message": "This is my profile",
+        "is_blocked": false,
+        "website": "https://not_stuff_and_its_ok.com",
+        "github": "guru_duru",
+        "telegram": "@guru_duru",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+}
+]

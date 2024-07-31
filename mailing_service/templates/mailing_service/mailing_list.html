@@ -12,7 +12,8 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
-            <a class="btn btn-outline-success" href="{% url 'mailing:create_mail' %}" role="button" aria-disabled="true">Создать
+            <a class="btn btn-outline-success" href="{% url 'mailing:create_mail' %}" role="button"
+               aria-disabled="true">Создать
                 рассылку</a>
         </div>
         <h2>Все рассылки</h2>
@@ -33,19 +34,26 @@
                 <tbody>
                 <tr>
                     <td class="text_content_center">{{ forloop.counter }}</td>
+                    <!--                    <td class="text_content"><h5>{{ user.is_staff }}</h5></td>-->
                     <td class="text_content">{{ mail.first_send }}</td>
                     <td class="text_content">{{ mail.finish_send }}</td>
                     <td class="text_content">{{ mail.message.message_subject|truncatewords:10 }}</td>
                     <td class="text_content">{{ mail.periodicity|translate_periodicity }}</td>
                     <td class="text_content">{{ mail.status|translate_status }}</td>
                     <td class="text_content_center">
-                        <div class="btn-group btn-group-sm">
-                            <a href="{% url 'mailing:view_mail' mail.pk %}" class="btn btn-outline-secondary text_button"
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
+
+                            <!--                        <div class="btn-group btn-group-sm">-->
+                            <a href="{% url 'mailing:view_mail' mail.pk %}"
+                               class="btn btn-secondary text_button"
                                role="button">Смотреть</a>
-                            <a href="{% url 'mailing:update_mail' mail.pk %}" class="btn btn-outline-primary text_button"
+                            {% if not user.is_staff %}
+                            <a href="{% url 'mailing:update_mail' mail.pk %}"
+                               class="btn btn-warning text_button"
                                role="button">Изменить</a>
-                             <a href="{% url 'mailing:delete_mail' mail.pk %}" class="btn btn-outline-danger text_button"
+                            <a href="{% url 'mailing:delete_mail' mail.pk %}" class="btn btn-danger text_button"
                                role="button">Удалить</a>
+                            {% endif %}
                         </div>
                     </td>
                 </tr>

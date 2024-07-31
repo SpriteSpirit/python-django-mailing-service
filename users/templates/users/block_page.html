@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 px-0 text-center">
+                {% if user.is_blocked %}
+                <h1 class="display-6 text-danger">Ваш аккаунт заблокирован</h1>
+                <p>Свяжитесь с администратором для разблокировки аккаунта:</p>
+                <p class="text-muted">&lt mr.admin_cat@catswill.com &gt</p>
+                <p class="text-muted">&lt Джон Кетсвилл &gt</p>
+                {% else %}
+                <h1 class="display-6 text-danger mb-5">Блокировка администратора невозможна</h1>
+                <a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-warning sm_btn">Назад</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

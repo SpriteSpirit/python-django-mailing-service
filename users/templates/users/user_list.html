@@ -1,0 +1,122 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+
+{% include 'mailing_service/includes/inc_head.html' %}
+{% include 'mailing_service/includes/inc_icons.html' %}
+
+
+<div class="row">
+    {% include 'mailing_service/includes/inc_inner_menu.html' %}
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">{{ title }}</h1>
+        </div>
+
+        <h2>Все пользователи</h2>
+        <div class="table-responsive small">
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr class="tr_text_content_center">
+                    <th scope="col">№</th>
+                    <th scope="col">Ф.И.О.</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Страна</th>
+                    <th scope="col">Права</th>
+                    <th scope="col">Доступ</th>
+                    {% if user.is_superuser %}
+                    <th scope="col">Настройки</th>
+                    {% endif %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for q_user in user_list %}
+                <tr class="align-middle" id="user-row-{{ user.id }}">
+                    <td class="text_content_center {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        {{ forloop.counter }}
+                    </td>
+                    <td class="text_content {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        <p class="mx-2 mb-0">{{ q_user.last_name }} {{ q_user.first_name }} {{ q_user.middle_name }}</p>
+                    </td>
+                    <td class="text_content {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        <p class="mx-2 mb-0">{{ q_user.email }}</p>
+                    </td>
+                    <td class="text_content_center {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        {{ q_user.country }}
+                    </td>
+                    {% if q_user.is_superuser %}
+                    <td class="text_content_center text-primary">Администратор</td>
+                    {% elif q_user.is_staff %}
+                    <td class="text_content_center text-info">Модератор</td>
+                    {% else %}
+                    <td class="text_content_center text-muted">Пользователь</td>
+                    {% endif %}
+                    <!--                    -->
+                    {% if q_user.is_blocked %}
+                    <td class="text_content_center text-danger">{{ q_user.is_blocked|translate_user_activity }}</td>
+                    {% else %}
+                    <td class="text_content_center text-success">{{ q_user.is_blocked|translate_user_activity }}</td>
+                    {% endif %}
+                    {% if user.is_superuser %}
+                    <td class="text_content_center">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <form method="post" action="{% url 'users:user_list' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="user_id" value="{{ q_user.id }}">
+                                <button id="block-button-{{ q_user.id }}"
+                                        class="btn btn-outline-{% if q_user.is_blocked %}success{% else %}danger{% endif %} text_button">
+                                    {% if q_user.is_blocked %}Разблокировать{% else %}Заблокировать{% endif %}
+                                </button>
+                            </form>
+                        </div>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+<script>
+    function toggleUserBlock(userId) {
+        const timestamp = new Date().getTime();
+        fetch(`{% url "users:user_list" %}?t=${timestamp}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: `user_id=${userId}`
+        })
+            .then(response => response.json())
+            .then(data => {
+            if (data.success) {
+                const row = document.getElementById(`user-row-${userId}`);
+                const button = document.getElementById(`block-button-${userId}`);
+                const statusCell = row.querySelector('.text_content_center:nth-child(5)');
+
+                if (data.is_blocked) {
+                    statusCell.textContent = 'Заблокирован';
+                    statusCell.classList.remove('text-success');
+                    statusCell.classList.add('text-danger');
+                    button.textContent = 'Разблокировать';
+                    button.classList.remove('btn-outline-danger');
+                    button.classList.add('btn-outline-success');
+                } else {
+                    statusCell.textContent = 'Активен';
+                    statusCell.classList.remove('text-danger');
+                    statusCell.classList.add('text-success');
+                    button.textContent = 'Заблокировать';
+                    button.classList.remove('btn-outline-success');
+                    button.classList.add('btn-outline-danger');
+                }
+            } else {
+                alert(data.message);
+            }
+        });
+    }
+</script>
+{% endblock %}

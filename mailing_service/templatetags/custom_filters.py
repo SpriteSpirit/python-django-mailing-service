@@ -49,3 +49,15 @@ def translate_activity(value):
     if value:
         return "Активный"
     return "Неактивный"
+
+
+@register.filter
+def translate_user_activity(value):
+    if value:
+        return "Заблокирован"
+    return "Разблокирован"
+
+
+@register.filter(name='has_group')
+def has_group(user, group_name):
+    return user.groups.filter(name=group_name).exists()

@@ -53,6 +53,18 @@
                 <br>
             </div>
 
+            {% if user.is_staff or user.is_superuser %}
+
+            <form method="post" action="{% url 'mailing:mailing_list' %}">
+                {% csrf_token %}
+                <!--                                <input type="hidden" name="mailing_id" value="{{ mailing.id }}">-->
+                <button id="block-button-{{ mailing.id }}"
+                        class="btn sm_btn btn-outline-{% if mailing.is_published %}danger{% else %}success{% endif %} text_button">
+                    {% if mailing.is_published %}Отключить{% else %}Включить{% endif %}
+                </button>
+            </form>
+            {% endif %}
+
             <span class="submitting"></span> <br>
             <a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-warning sm_btn">Назад</a>
         </div>

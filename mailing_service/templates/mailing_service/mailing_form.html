@@ -29,7 +29,7 @@
     <form class="mb-5" method="post" id="contactForm" name="contactForm">
         <h3>{{ title }}</h3>
         <div class="card border-0">
-            <div class="card-body">
+            <div class="card-body text-left">
                 {% csrf_token %}
                 {{ form.as_p }}
 
