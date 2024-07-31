@@ -16,9 +16,10 @@ class MailingService:
 
     def create_task(self):
         """Создание периодической задачи"""
-        crontab = self.crontab_create()
-        PeriodicTask.objects.create(crontab=crontab, name=str(self.mailing), task='send_message',
-                                    args=[self.mailing.pk])
+        if self.mailing.is_published:
+            crontab = self.crontab_create()
+            PeriodicTask.objects.create(crontab=crontab, name=str(self.mailing), task='send_message',
+                                        args=[self.mailing.pk])
 
     def crontab_create(self):
         """ Создание Crontab для выполнения периодических задач """

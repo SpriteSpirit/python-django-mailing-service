@@ -2,7 +2,8 @@ from django.urls import path
 
 from mailing_service.views import dashboard, ClientListView, MailingListView, MailingCreateView, MailingUpdateView, \
     MessageCreateView, MessageListView, ClientCreateView, MessageDetailView, MessageUpdateView, MessageDeleteView, \
-    MailingDetailView, MailingDeleteView, ClientDetailView, ClientUpdateView, ClientDeleteView, MailingLogListView
+    MailingDetailView, MailingDeleteView, ClientDetailView, ClientUpdateView, ClientDeleteView, MailingLogListView, \
+    toggle_mailing
 from mailing_service.apps import MailingServiceConfig
 
 
@@ -32,5 +33,6 @@ urlpatterns = [
     path('delete_message/<int:pk>/', MessageDeleteView.as_view(), name='delete_message'),
 
     path('log_list/', MailingLogListView.as_view(), name='log_list'),
+    path('toggle_mailing/<int:pk>', toggle_mailing, name='toggle_mailing'),
 
 ]

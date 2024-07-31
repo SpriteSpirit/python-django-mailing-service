@@ -55,7 +55,7 @@
 
             {% if user.is_staff or user.is_superuser %}
 
-            <form method="post" action="{% url 'mailing:mailing_list' %}">
+            <form method="post" action="{% url 'mailing:toggle_mailing' mailing.id %}">
                 {% csrf_token %}
                 <!--                                <input type="hidden" name="mailing_id" value="{{ mailing.id }}">-->
                 <button id="block-button-{{ mailing.id }}"

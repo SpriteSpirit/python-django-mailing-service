@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils import timezone
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 
@@ -395,3 +395,14 @@ class MailingLogListView(LoginRequiredMixin, ListView):
             queryset = MailingLogs.objects.filter(mailing__in=mailing)
 
         return queryset
+
+
+def toggle_mailing(request, pk):
+    """ Публикация/снятие с публикации рассылки """
+    mailing = get_object_or_404(Mailing, pk=pk)
+
+    if request.method == 'POST':
+        mailing.is_published = not mailing.is_published
+        mailing.save()
+
+        return redirect('mailing:view_mail', pk=mailing.pk)

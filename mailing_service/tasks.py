@@ -11,7 +11,12 @@ def send_message(mailing_id):
     for client in clients:
         print(f'Отправка рассылки {mailing.message.message_subject} на email {client.email}')
 
-    if finish_task(mailing):
+    if not mailing.is_published:
+        finish_task(mailing)
         delete_task(mailing)
         return
-    return send_mailing(mailing)
+    else:
+        if finish_task(mailing):
+            delete_task(mailing)
+            return
+        return send_mailing(mailing)
