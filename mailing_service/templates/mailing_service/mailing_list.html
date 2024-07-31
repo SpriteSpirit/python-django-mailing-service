@@ -27,6 +27,9 @@
                     <th scope="col">Тема</th>
                     <th scope="col">Периодичность</th>
                     <th scope="col">Статус</th>
+                    {% if user.is_staff or user.is_superuser %}
+                    <th scope="col">Пользователь</th>
+                    {% endif %}
                     <th scope="col">Настройки</th>
                 </tr>
                 </thead>
@@ -38,12 +41,13 @@
                     <td class="text_content">{{ mail.first_send }}</td>
                     <td class="text_content">{{ mail.finish_send }}</td>
                     <td class="text_content">{{ mail.message.message_subject|truncatewords:10 }}</td>
-                    <td class="text_content">{{ mail.periodicity|translate_periodicity }}</td>
-                    <td class="text_content">{{ mail.status|translate_status }}</td>
+                    <td class="text_content_center">{{ mail.periodicity|translate_periodicity }}</td>
+                    <td class="text_content_center">{{ mail.status|translate_status }}</td>
+                    {% if user.is_staff or user.is_superuser %}
+                    <td class="text_content_center">{{ mail.user }}</td>
+                    {% endif %}
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-
-                            <!--                        <div class="btn-group btn-group-sm">-->
                             <a href="{% url 'mailing:view_mail' mail.pk %}"
                                class="btn btn-secondary text_button"
                                role="button">Смотреть</a>
@@ -57,7 +61,6 @@
                         </div>
                     </td>
                 </tr>
-
                 {% endfor %}
                 </tbody>
             </table>

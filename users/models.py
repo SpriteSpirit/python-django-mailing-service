@@ -7,9 +7,7 @@ NULLABLE = {'null': True, 'blank': True}
 
 
 class User(AbstractUser):
-    """
-    Пользователь
-    """
+    """ Пользователь """
 
     username = None
 
@@ -23,7 +21,7 @@ class User(AbstractUser):
     about_message = models.TextField(verbose_name="О себе", **NULLABLE)
     is_blocked = models.BooleanField(verbose_name="Заблокирован", default=False)
 
-    # messangers
+    # social messengers
     website = models.CharField(max_length=150, verbose_name="Сайт", default="https://", **NULLABLE)
     github = models.CharField(max_length=150, verbose_name="GitHub", default="", **NULLABLE)
     telegram = models.CharField(max_length=150, verbose_name="Telegram", default="@", **NULLABLE)

@@ -8,9 +8,7 @@ NULLABLE = {'null': True, 'blank': True}
 
 # Create your models here.
 class Client(models.Model):
-    """
-    Клиент
-    """
+    """ Клиент """
     objects = models.Manager()
 
     name = models.CharField(max_length=150, verbose_name='Фамилия Имя Отчество')

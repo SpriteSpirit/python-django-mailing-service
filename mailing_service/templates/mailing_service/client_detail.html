@@ -38,6 +38,10 @@
                 <strong>Действующий:</strong><br>Нет <br><hr>
                 {% endif %}
                 <strong>Комментарий:</strong><br>{{ client.comment }} <br>
+                {% if user.is_staff or user.is_superuser %}
+                <br><hr>
+                <strong>Пользователь:</strong><br>{{ client.user }} <br>
+                {% endif %}
             </div>
 
             <span class="submitting"></span> <br>

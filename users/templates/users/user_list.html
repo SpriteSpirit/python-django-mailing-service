@@ -26,54 +26,52 @@
                     <th scope="col">Страна</th>
                     <th scope="col">Права</th>
                     <th scope="col">Доступ</th>
-                    {% if user.is_superuser %}
                     <th scope="col">Настройки</th>
-                    {% endif %}
                 </tr>
                 </thead>
                 <tbody>
-                {% for q_user in user_list %}
+                {% for query_user in user_list %}
+                {% if query_user != request.user %}
                 <tr class="align-middle" id="user-row-{{ user.id }}">
-                    <td class="text_content_center {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                    <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
                         {{ forloop.counter }}
                     </td>
-                    <td class="text_content {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
-                        <p class="mx-2 mb-0">{{ q_user.last_name }} {{ q_user.first_name }} {{ q_user.middle_name }}</p>
+                    <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        <p class="mx-2 mb-0">{{ query_user.last_name }} {{ query_user.first_name }} {{ query_user.middle_name }}</p>
                     </td>
-                    <td class="text_content {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
-                        <p class="mx-2 mb-0">{{ q_user.email }}</p>
+                    <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        <p class="mx-2 mb-0">{{ query_user.email }}</p>
                     </td>
-                    <td class="text_content_center {% if q_user.is_superuser %} text-primary {% elif q_user.is_staff %} text-info {% else %} text-muted {% endif %}">
-                        {{ q_user.country }}
+                    <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                        {{ query_user.country }}
                     </td>
-                    {% if q_user.is_superuser %}
+                    {% if query_user.is_superuser %}
                     <td class="text_content_center text-primary">Администратор</td>
-                    {% elif q_user.is_staff %}
+                    {% elif query_user.is_staff %}
                     <td class="text_content_center text-info">Модератор</td>
                     {% else %}
                     <td class="text_content_center text-muted">Пользователь</td>
                     {% endif %}
                     <!--                    -->
-                    {% if q_user.is_blocked %}
-                    <td class="text_content_center text-danger">{{ q_user.is_blocked|translate_user_activity }}</td>
+                    {% if query_user.is_blocked %}
+                    <td class="text_content_center text-danger">{{ query_user.is_blocked|translate_user_activity }}</td>
                     {% else %}
-                    <td class="text_content_center text-success">{{ q_user.is_blocked|translate_user_activity }}</td>
+                    <td class="text_content_center text-success">{{ query_user.is_blocked|translate_user_activity }}</td>
                     {% endif %}
-                    {% if user.is_superuser %}
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group">
                             <form method="post" action="{% url 'users:user_list' %}">
                                 {% csrf_token %}
-                                <input type="hidden" name="user_id" value="{{ q_user.id }}">
-                                <button id="block-button-{{ q_user.id }}"
-                                        class="btn btn-outline-{% if q_user.is_blocked %}success{% else %}danger{% endif %} text_button">
-                                    {% if q_user.is_blocked %}Разблокировать{% else %}Заблокировать{% endif %}
+                                <input type="hidden" name="user_id" value="{{ query_user.id }}">
+                                <button id="block-button-{{ query_user.id }}"
+                                        class="btn btn-outline-{% if query_user.is_blocked %}success{% else %}danger{% endif %} text_button">
+                                    {% if query_user.is_blocked %}Разблокировать{% else %}Заблокировать{% endif %}
                                 </button>
                             </form>
                         </div>
-                        {% endif %}
                     </td>
                 </tr>
+                {% endif %}
                 {% endfor %}
                 </tbody>
             </table>

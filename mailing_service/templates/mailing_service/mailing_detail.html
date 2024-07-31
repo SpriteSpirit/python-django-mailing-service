@@ -66,7 +66,7 @@
             {% endif %}
 
             <span class="submitting"></span> <br>
-            <a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-warning sm_btn">Назад</a>
+            <a href="{% url 'mailing:mailing_list' %}" class="btn btn-warning sm_btn">Назад</a>
         </div>
     </div>
 </div>

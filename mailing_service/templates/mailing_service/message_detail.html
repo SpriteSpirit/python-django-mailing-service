@@ -32,6 +32,10 @@
             <div class="box">
                 <strong>Тема:</strong><br>{{ message.message_subject }}<br><hr>
                 <strong>Сообщение:</strong><br>{{ message.message_body }}
+                {% if user.is_staff or user.is_superuser %}
+                <br><hr>
+                <strong>Пользователь:</strong><br>{{ message.user }}
+                {% endif %}
             </div>
 
             <span class="submitting"></span> <br>
