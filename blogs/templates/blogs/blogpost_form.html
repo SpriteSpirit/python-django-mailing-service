@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="container w-50">
+        <h1>{% if blogpost %}
+            Редактировать
+            {% else %}
+            Создать
+            {% endif %}
+            пост</h1>
+        <form method="post" class="user-update-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="mb-3">
+                <button type="submit" class="btn btn-danger">Сохранить</button>
+                <a href="{% url 'blogs:blog_list' %}">
+                    <button type="button" class="btn btn-success">Назад</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

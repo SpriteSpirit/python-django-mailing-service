@@ -33,7 +33,7 @@
             <a class="nav-item nav-link link-body-emphasis {% if request.path == '/' %} active {% endif %}"
                href="{% url 'main:index' %}">ГЛАВНАЯ</a>
             <a class="nav-item nav-link link-body-emphasis {% if request.path == '/blogs/' %} active {% endif %}"
-               href="#">ПУБЛИКАЦИИ</a>
+               href="{% url 'blogs:blog_list' %}">ПУБЛИКАЦИИ</a>
             {% if request.user|has_group:"Moderator" %}
             <a class="nav-item nav-link link-body-emphasis" href="{% url 'users:user_list' %}">ПОЛЬЗОВАТЕЛИ</a>
             {% endif %}

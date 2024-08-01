@@ -25,4 +25,5 @@ urlpatterns = [
     path("", include('main.urls', 'main')),
     path("mailing/", include('mailing_service.urls', 'mailing')),
     path("users/", include('users.urls', 'users')),
+    path("blogs/", include('blogs.urls', 'blogs')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

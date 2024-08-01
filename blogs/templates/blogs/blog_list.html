@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <h1>{{ title }}</h1>
+        </div>
+
+        <div class="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+             {% if user.is_staff %}
+            <a class="btn btn-success" href="{% url 'blogs:create_blog' %}" role="button"
+               aria-disabled="true">Добавить публикацию</a>
+            {% endif %}
+        </div>
+        {% for blogpost in blogposts %}
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                {% if blogpost.image %}
+                <div class="card d-flex justify-content-center align-items-center bg-dark">
+                    <img src="{{ blogpost.image.url }}" style="width: 75%; height: 220px;" class="card-img-top mt-3"
+                         alt="{{ blogpost.title }}">
+                    {% endif %}
+
+                    <div class="card-body ">
+                        <h5 class="card-title text-center mb-4 box-shadow bg-dark">
+                            {% if blogpost.slug %}
+                            <a href="#" class=" text-white" style="text-decoration: none;">{{ blogpost.title }}</a>
+                            {% else %}
+                            {{ blogpost.title }}
+                            {% endif %}
+                        </h5>
+                        <p class="card-text">{{ blogpost.preview_text|truncatechars:100 }}</p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-warning m-1">Читать</a>
+
+                                {% if perms.catalog.change_blogpost and user.is_stuff %}
+                                <a href="#" class="btn btn-warning m-1">Редактировать</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    {% if user.is_stuff %}
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <a href="#" class="btn btn-success">Создать новый пост</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

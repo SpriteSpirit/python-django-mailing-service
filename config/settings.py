@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "main",
     "mailing_service",
     "users",
-
+    "blogs",
 ]
 
 MIDDLEWARE = [
@@ -185,8 +185,19 @@ LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = "mailing:dashboard"
 LOGOUT_REDIRECT_URL = "main:index"
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+#     }
+# }
+
+CACHE_ENABLED = os.getenv('CACHE_ENABLED')
+
+if CACHE_ENABLED:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": os.getenv('CACHE_LOCATION'),
+            "TIMEOUT": 300  # Ручная регулировка времени жизни кеша в секундах, по умолчанию 300
+        }
     }
-}
