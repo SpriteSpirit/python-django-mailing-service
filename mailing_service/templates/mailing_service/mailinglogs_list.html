@@ -5,7 +5,6 @@
 {% include 'mailing_service/includes/inc_head.html' %}
 {% include 'mailing_service/includes/inc_icons.html' %}
 
-
 <div class="row">
     {% include 'mailing_service/includes/inc_inner_menu.html' %}
 
@@ -23,6 +22,9 @@
                     <th scope="col">ID</th>
                     <th scope="col">Дата</th>
                     <th scope="col">Клиент</th>
+                    {% if user.is_staff or user.is_superuser %}
+                    <th scope="col">Пользователь</th>
+                    {% endif %}
                     <th scope="col">Статус</th>
                 </tr>
                 </thead>
@@ -34,6 +36,9 @@
                     <td class="text_content">[#{{ info.mailing.pk }}]</td>
                     <td class="text_content">{{ info.log.date_time }}</td>
                     <td class="text_content">{{ info.client }}</td>
+                    {% if user.is_staff or user.is_superuser %}
+                    <td class="text_content_center">{{ info.mailing.user }}</td>
+                    {% endif %}
                     <td class="text_content">{{ info.log.status }}</td>
                 </tr>
                 {% endfor %}

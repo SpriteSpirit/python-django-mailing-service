@@ -12,9 +12,10 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
+            {% if not user.is_staff %}
             <a class="btn btn-outline-success" href="{% url 'mailing:create_mail' %}" role="button"
-               aria-disabled="true">Создать
-                рассылку</a>
+               aria-disabled="true">Создать рассылку</a>
+            {% endif %}
         </div>
         <h2>Все рассылки</h2>
         <div class="table-responsive small">
@@ -49,7 +50,7 @@
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
                             <a href="{% url 'mailing:view_mail' mail.pk %}"
-                               class="btn btn-secondary text_button"
+                               class="btn btn-info text_button"
                                role="button">Смотреть</a>
                             {% if not user.is_staff %}
                             <a href="{% url 'mailing:update_mail' mail.pk %}"

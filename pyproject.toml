@@ -24,6 +24,7 @@ django-countries = "^7.6.1"
 django-phonenumbers = "^1.0.1"
 pillow = "^10.4.0"
 django-birthday = "^0.1.4"
+pycountry = "^24.6.1"
 
 
 [build-system]

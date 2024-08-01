@@ -3,7 +3,7 @@ from django.urls import path
 from mailing_service.views import dashboard, ClientListView, MailingListView, MailingCreateView, MailingUpdateView, \
     MessageCreateView, MessageListView, ClientCreateView, MessageDetailView, MessageUpdateView, MessageDeleteView, \
     MailingDetailView, MailingDeleteView, ClientDetailView, ClientUpdateView, ClientDeleteView, MailingLogListView, \
-    toggle_mailing
+    toggle_mailing, moderator_dashboard
 from mailing_service.apps import MailingServiceConfig
 
 
@@ -12,7 +12,7 @@ app_name = MailingServiceConfig.name
 
 urlpatterns = [
     path('dashboard/', dashboard, name='dashboard'),
-    path('dashboard/data/', dashboard, name='dashboard_data'),
+    path('moderator_dashboard/', moderator_dashboard, name='moderator_dashboard'),
 
     path('client_list/', ClientListView.as_view(), name='client_list'),
     path('create_client/', ClientCreateView.as_view(), name='create_client'),

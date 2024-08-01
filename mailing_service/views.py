@@ -1,4 +1,5 @@
 import json
+from collections import Counter
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
@@ -16,10 +17,8 @@ from mailing_service.services import MailingService, send_mailing
 from mailing_service.templatetags.custom_filters import translate_month_from_num
 from django.contrib.auth.mixins import UserPassesTestMixin
 
-
-# class ModeratorRequiredMixin(UserPassesTestMixin):
-#     def test_func(self):
-#         return self.request.user.groups.filter(name='Moderator').exists()
+from users.models import User
+from django.utils.translation import gettext_lazy as _
 
 
 @login_required
@@ -80,6 +79,61 @@ def dashboard(request):
     }
 
     return render(request, 'mailing_service/dashboard.html', context)
+
+
+@login_required
+def moderator_dashboard(request):
+    user = request.user
+    all_users = User.objects.all()
+    # Подсчет встречаемости каждой страны среди пользователей
+    countries = Counter(user.country.name for user in all_users if user.country)
+    # Получаем общее количество упоминаний стран для нормализации данных
+    total_count = sum(countries.values())
+    # Сортировка и расчет процентного соотношения
+    countries_sorted = sorted(countries.items(), key=lambda x: x[1], reverse=True)
+    countries_percentage = [(name, count / total_count) for name, count in countries_sorted]
+
+    total_clients = 0
+    # Подсчет общего количества клиентов для нормализации данных
+    for user in all_users:
+        total_clients += len(user.client_set.all())
+
+    total_mailings = 0
+    # Подсчет общего количества рассылок для нормализации данных
+    for user in all_users:
+        total_mailings += len(user.mailing_set.all())
+
+    total_messages = 0
+    # Подсчет общего количества сообщений для нормализации данных
+    for user in all_users:
+        total_messages += len(user.message_set.all())
+
+    total_users = len(all_users)  # Количество всех пользователей
+
+    # Выбор топ-3 стран с наибольшим процентным соотношением
+    countries_percentage = countries_percentage[:3]  # Обрезаем до трех элементов
+
+    # Подсчет общего количества клиентов для нормализации данных
+    total_clients = 0
+    for user in all_users:
+        total_clients += len(user.client_set.all())
+
+    context = {
+        'title': "КАБИНЕТ МОДЕРАТОРА",
+        'active_page': 'moderator_dashboard',
+        'country_1': countries_percentage[0][0],
+        'country_2': countries_percentage[1][0],
+        'country_3': countries_percentage[2][0],
+        'percent_1': int(countries_percentage[0][1] * 100),
+        'percent_2': int(countries_percentage[1][1] * 100),
+        'percent_3': int(countries_percentage[2][1] * 100),
+        'total_clients': total_clients,
+        'total_mailings': total_mailings,
+        'total_messages': total_messages,
+        'total_users': total_users,
+    }
+
+    return render(request, 'mailing_service/moderator_dashboard.html', context)
 
 
 class ClientListView(LoginRequiredMixin, ListView):

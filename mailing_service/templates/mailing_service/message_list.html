@@ -11,9 +11,10 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">{{ title }}</h1>
+             {% if not user.is_staff %}
             <a class="btn btn-outline-success" href="{% url 'mailing:create_message' %}" role="button"
-               aria-disabled="true">Создать
-                письмо</a>
+               aria-disabled="true">Создать письмо</a>
+            {% endif %}
         </div>
         <h2>Все письма</h2>
         <div class="table-responsive small">
@@ -36,11 +37,11 @@
                     <td class="text_content">{{ message.message_subject|truncatewords:5 }}</td>
                     <td class="text_content">{{ message.message_body|truncatewords:10 }}</td>
                     {% if user.is_staff or user.is_superuser %}
-                    <td class="text_content">{{ message.user}}</td>
+                    <td class="text_content_center">{{ message.user}}</td>
                     {% endif %}
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
-                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-secondary text_button"
+                            <a href="{% url 'mailing:view_message' message.pk %}" class="btn btn-info text_button"
                                role="button">Смотреть</a>
                             {% if not user.is_staff %}
                             <a href="{% url 'mailing:update_message' message.pk %}" class="btn btn-warning text_button"

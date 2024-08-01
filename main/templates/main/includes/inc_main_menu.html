@@ -37,7 +37,12 @@
             {% if request.user|has_group:"Moderator" %}
             <a class="nav-item nav-link link-body-emphasis" href="{% url 'users:user_list' %}">ПОЛЬЗОВАТЕЛИ</a>
             {% endif %}
+
+            {% if not user.is_staff %}
             <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:dashboard' %}">ЛИЧНЫЙ КАБИНЕТ</a>
+            {% else %}
+             <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:moderator_dashboard' %}">КАБИНЕТ МОДЕРАТОРА</a>
+            {% endif %}
             <a class="nav-item nav-link link-body-emphasis" href="{% url 'main:contacts' %}">СВЯЗАТЬСЯ С НАМИ</a>
         </nav>
     </div>
