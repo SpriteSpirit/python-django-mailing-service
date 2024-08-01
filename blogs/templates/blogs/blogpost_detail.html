@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card mb-4 box-shadow bg-dark text-white">
+            <div class="card-header text-center">
+                <h1 class="text-white">{{ blogpost.title }}</h1>
+                {% if blogpost.image %}
+                <div class="card d-flex justify-content-center align-items-center bg-dark text-white">
+                    <img src="{{ blogpost.image.url }}" style="width: 100%; height: 400px;"
+                         alt="{{ blogpost.title }}">
+                    {% endif %}
+                </div>
+                <div class="card d-flex justify-content-center align-items-center bg-dark text-white text-start m-2">
+                    <div class="m-3">
+                        <p>{{ blogpost.content }}</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p>Просмотров: {{ blogpost.view_count }}</p>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+                        {% if user.is_staff or user.is_superuser  %}
+                        <a href="{% url 'blogs:update_blog' blogpost.slug %}">
+                            <button type="button" class="m-2 btn btn-warning">Редактировать</button>
+                        </a>
+                        <a href="{% url 'blogs:delete_blog' blogpost.slug %}">
+                            <button type="button" class="m-2 btn btn-danger">Удалить</button>
+                        </a>
+                        {% endif %}
+
+                        <a href="{% url 'blogs:blog_list' %}">
+                            <button type="button" class="m-2 btn btn-success">Назад</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

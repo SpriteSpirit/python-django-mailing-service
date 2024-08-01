@@ -34,10 +34,10 @@
                         <p class="card-text">{{ blogpost.preview_text|truncatechars:100 }}</p>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="btn-group">
-                                <a href="#" class="btn btn-warning m-1">Читать</a>
+                                <a href="{% url 'blogs:detail_blog' blogpost.slug %}" class="btn btn-warning m-1">Читать</a>
 
-                                {% if perms.catalog.change_blogpost and user.is_stuff %}
-                                <a href="#" class="btn btn-warning m-1">Редактировать</a>
+                                {% if user.is_stuff or user.is_superuser%}
+                                <a href="{% url 'blogs:update_blog' %}" class="btn btn-warning m-1">Редактировать</a>
                                 {% endif %}
                             </div>
                         </div>
@@ -47,12 +47,5 @@
         </div>
         {% endfor %}
     </div>
-
-
-    {% if user.is_stuff %}
-    <div class="d-flex justify-content-center align-items-center mt-5">
-        <a href="#" class="btn btn-success">Создать новый пост</a>
-    </div>
-    {% endif %}
 </div>
 {% endblock %}

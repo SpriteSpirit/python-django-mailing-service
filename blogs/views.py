@@ -1,7 +1,8 @@
+from django.forms import inlineformset_factory
 from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.urls import reverse_lazy, reverse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from blogs.forms import BlogPostForm
 from blogs.models import BlogPost
@@ -20,7 +21,7 @@ class BlogPostListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self, *args, **kwargs):
         """ Фильтрация публичных постов """
-        queryset = super().get_queryset(*args, **kwargs)
+        queryset = super().get_queryset()
         queryset = queryset.filter(published=True)
         queryset = queryset.order_by('created_at')
 
@@ -70,3 +71,31 @@ class BlogPostCreateView(LoginRequiredMixin, CreateView):
             blog.save()
 
         return super().form_valid(form)
+
+
+class BlogPostUpdateView(LoginRequiredMixin, UpdateView):
+    model = BlogPost
+    form_class = BlogPostForm
+
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)
+        # Применяем класс CSS "form-control" ко всем полям формы
+        for field_name, field in form.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+            if field_name == 'published':
+                field.widget.attrs['class'] = 'form-check-input'
+        return form
+
+    def form_valid(self, form):
+        self.object = form.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('blogs:detail_blog', kwargs={'slug': self.object.slug})
+
+
+class BlogPostDeleteView(LoginRequiredMixin, DeleteView):
+    model = BlogPost
+    template_name = 'blogs/blogpost_confirm_delete.html'
+    success_url = reverse_lazy('blogs:blogpost_list')
+    permission_required = 'blogs.delete_blogpost'

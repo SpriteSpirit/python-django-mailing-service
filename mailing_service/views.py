@@ -3,8 +3,8 @@ from collections import Counter
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.utils import timezone
 
 from django.shortcuts import render, get_object_or_404, redirect
@@ -15,10 +15,8 @@ from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
 from mailing_service.services import MailingService, send_mailing
 from mailing_service.templatetags.custom_filters import translate_month_from_num
-from django.contrib.auth.mixins import UserPassesTestMixin
 
 from users.models import User
-from django.utils.translation import gettext_lazy as _
 
 
 @login_required
@@ -83,7 +81,7 @@ def dashboard(request):
 
 @login_required
 def moderator_dashboard(request):
-    user = request.user
+    # user = request.user
     all_users = User.objects.all()
     # Подсчет встречаемости каждой страны среди пользователей
     countries = Counter(user.country.name for user in all_users if user.country)
@@ -108,10 +106,10 @@ def moderator_dashboard(request):
     for user in all_users:
         total_messages += len(user.message_set.all())
 
-    total_users = len(all_users)  # Количество всех пользователей
-
+    # Количество всех пользователей
+    total_users = len(all_users)
     # Выбор топ-3 стран с наибольшим процентным соотношением
-    countries_percentage = countries_percentage[:3]  # Обрезаем до трех элементов
+    countries_percentage = countries_percentage[:3]
 
     # Подсчет общего количества клиентов для нормализации данных
     total_clients = 0
@@ -212,10 +210,11 @@ class ClientDeleteView(LoginRequiredMixin, DeleteView):
         return context
 
 
-class MailingListView(LoginRequiredMixin, ListView):
+class MailingListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     """ Просмотр списка клиентов """
     model = Mailing
     extra_context = {'title': 'РАССЫЛКИ'}
+    permission_required = 'can_view_mailing'
 
     def get_queryset(self):
         """ Просмотр рассылок только своих клиентов """
@@ -451,6 +450,7 @@ class MailingLogListView(LoginRequiredMixin, ListView):
         return queryset
 
 
+@permission_required('can_change_mailing_status')
 def toggle_mailing(request, pk):
     """ Публикация/снятие с публикации рассылки """
     mailing = get_object_or_404(Mailing, pk=pk)
