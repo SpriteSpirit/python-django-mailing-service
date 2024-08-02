@@ -118,3 +118,17 @@ class UserCheckBlockView(PermissionRequiredMixin, View):
     @staticmethod
     def get(request):
         return render(request, 'users/block_page.html')
+
+
+# def toggle_activity(request, pk):
+#     user_item = get_object_or_404(User, pk=pk)
+#
+#     if user_item.is_active:
+#         user_item.is_active = False
+#         send_deactivate_email(user_item) # Вызов сервисной функции
+#     else:
+#         user_item.is_active = True
+#
+#     user_item.save()
+#
+#     return redirect(reverse('users:profile', args=[user_item.pk]))

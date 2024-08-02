@@ -1,11 +1,12 @@
 from datetime import datetime
 
 import pytz
+from django.core.cache import cache
 from django.core.mail import send_mail
 from django_celery_beat.models import PeriodicTask, CrontabSchedule
 
 from config import settings
-from mailing_service.models import MailingLogs
+from mailing_service.models import MailingLogs, Mailing, Message, Client
 
 
 class MailingService:
@@ -109,3 +110,65 @@ def send_mailing(mailing):
                 mailing=mailing,
             )
             mailing_log.save()
+
+
+def get_cached_mailings():
+    """
+    Чтобы избежать избыточного запроса к базе данных, можно использовать метод get_or_set(),
+    который получает значение из кэша и, если его нет, помещает значение в кэш.
+
+    Чтобы избежать гонки при чтении/записи можно использовать метод add(),
+    который помещает значение в кэш только в случае, если значение не существует
+    """
+    # кеширование на 15 минут
+    cache_timeout = 60 * 15
+    cache_key = 'mailings'
+
+    if settings.CACHE_ENABLED:
+        mailings = cache.get_or_set(cache_key, Mailing.objects.all, cache_timeout)
+
+        if not mailings:
+            mailings = Mailing.objects.all()
+            cache.add(cache_key, mailings, cache_timeout)
+    else:
+        mailings = Mailing.objects.all()
+
+    print(f'Кэширование продуктов {cache.get(cache_key)}')
+
+    return Mailing
+
+
+def get_cached_messages():
+    # кеширование на 10 минут
+    cache_timeout = 10 * 60
+
+    cache_key = 'messages'
+    messages = cache.get(cache_key)
+
+    if not messages:
+        messages = Message.objects.all()
+        cache.set(cache_key, messages, cache_timeout)
+    else:
+        messages = Message.objects.all()
+
+    print(f'Кэширование категорий {cache.get(cache_key)}')
+
+    return messages
+
+
+def get_cached_clients():
+    # кеширование на 10 минут
+    cache_timeout = 10 * 60
+
+    cache_key = 'messages'
+    clients = cache.get(cache_key)
+
+    if not clients:
+        clients = Client.objects.all()
+        cache.set(cache_key, clients, cache_timeout)
+    else:
+        clients = Message.objects.all()
+
+    print(f'Кэширование категорий {cache.get(cache_key)}')
+
+    return clients
