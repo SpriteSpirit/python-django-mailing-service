@@ -140,10 +140,13 @@
                         <div class="card-body mt-3 mb-2">
                             <div class="chart-area text-center">
                                 {% for blog in blogposts %}
-                                <strong class="text-danger">{{ forloop.counter }}</strong><hr>
-                                <a href="{% url 'blogs:detail_blog' blog.slug %}" class="text-secondary" style="text-decoration: none;">
+                                <strong class="text-danger">{{ forloop.counter }}</strong>
+                                <hr>
+                                <a href="{% url 'blogs:detail_blog' blog.slug %}" class="text-secondary"
+                                   style="text-decoration: none;">
                                     {{ blog }}
-                                </a><hr>
+                                </a>
+                                <hr>
                                 {% endfor %}
                             </div>
                         </div>
@@ -151,14 +154,13 @@
                 </div>
             </div>
         </div>
-</div>
-</main>
+    </main>
 </div>
 <script type="text/javascript">
     var chart_data = JSON.parse('{{ month_mailing_count_list|safe }}');
     var mailing_per_day = JSON.parse('{{ mailing_per_day|safe }}');
     var last_week = JSON.parse('{{ last_week|safe }}');
-    var now_month = JSON.parse('{{ now_month|safe }}');
+    //    var now_month = JSON.parse('{{ now_month|safe }}');
     var last_half_year = JSON.parse('{{ last_half_year|safe }}');
     var clients_added_half_year = JSON.parse('{{ clients_added_half_year|safe }}');
 

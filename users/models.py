@@ -21,6 +21,8 @@ class User(AbstractUser):
     about_message = models.TextField(verbose_name="О себе", **NULLABLE)
     is_blocked = models.BooleanField(verbose_name="Заблокирован", default=False)
 
+    token = models.CharField(max_length=100, verbose_name='Token', **NULLABLE)
+
     # social messengers
     website = models.CharField(max_length=150, verbose_name="Сайт", default="https://", **NULLABLE)
     github = models.CharField(max_length=150, verbose_name="GitHub", default="", **NULLABLE)

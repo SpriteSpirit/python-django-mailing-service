@@ -2,10 +2,6 @@ from django.contrib.auth.forms import UserChangeForm, UserCreationForm, SetPassw
     AuthenticationForm
 from django import forms
 from django.core.exceptions import ValidationError
-from django_countries import countries
-from django_countries.widgets import CountrySelectWidget
-
-# from django.utils.translation import gettext_lazy as _
 
 from mailing_service.forms import FormStyleMixin
 from users.models import User

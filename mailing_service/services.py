@@ -135,7 +135,7 @@ def get_cached_mailings():
 
     print(f'Кэширование продуктов {cache.get(cache_key)}')
 
-    return Mailing
+    return mailings
 
 
 def get_cached_messages():

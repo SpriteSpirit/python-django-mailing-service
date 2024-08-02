@@ -1,12 +1,23 @@
+import secrets
+from random import randint
+
+from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.tokens import default_token_generator
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
+from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.template.loader import render_to_string
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth import login, authenticate
+from django.utils.encoding import force_bytes
+from django.utils.html import strip_tags
+from django.utils.http import urlsafe_base64_encode
 from django.views import View
 from django.views.generic import CreateView, DetailView, UpdateView, ListView
 
+from config.settings import EMAIL_HOST_USER
 from mailing_service.models import Client
 from users.forms import UserForm, UserRegisterForm, CustomAuthenticationForm, UserProfileForm
 from users.models import User
@@ -17,6 +28,13 @@ class UserCreateView(CreateView):
     model = User
     form_class = UserForm
     success_url = reverse_lazy('mailing:dashboard')
+
+
+def email_verification(token):
+    user = get_object_or_404(User, token=token)
+    user.is_active = True
+    user.save()
+    return redirect(reverse('users:login'))
 
 
 class UserUpdateView(UpdateView):
@@ -119,6 +137,51 @@ class UserCheckBlockView(PermissionRequiredMixin, View):
     def get(request):
         return render(request, 'users/block_page.html')
 
+
+class CustomPasswordResetView(PasswordResetView):
+    email_template_name = 'registration/password_reset_email.html'
+    html_email_template_name = None
+    form_class = PasswordResetForm
+
+    def form_valid(self, form):
+        email = form.cleaned_data['email']
+        user = User.objects.get(email=email)
+        new_password = generate_password()
+        user.set_password(new_password)
+        user.save()
+
+        # Token generation for password reset
+        token = default_token_generator.make_token(user)
+        uid = urlsafe_base64_encode(force_bytes(user.pk))
+
+        # Prepare email content
+        subject = 'Восстановление и сброс пароля'
+        reset_link = self.request.build_absolute_uri(reverse_lazy('users:password_reset_confirm', args=[uid, token]))
+
+        html_message = render_to_string('users/password_reset_email.html', {
+            'user': user,
+            'uid': uid,
+            'token': token,
+            'site_name': 'MAILING SERVICE',
+            'password': new_password,
+            'reset_link': reset_link,
+        })
+
+        plain_message = strip_tags(html_message)
+        send_mail(subject, plain_message, from_email=EMAIL_HOST_USER, recipient_list=[user.email],
+                  html_message=html_message)
+
+        return redirect(reverse('users:password_reset_done'))
+
+
+def generate_password():
+    password = ''
+    chars = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+
+    for i in range(randint(8, 12)):
+        password += secrets.choice(chars)
+
+    return password
 
 # def toggle_activity(request, pk):
 #     user_item = get_object_or_404(User, pk=pk)
