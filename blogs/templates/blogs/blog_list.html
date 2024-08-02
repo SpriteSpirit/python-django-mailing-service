@@ -5,12 +5,12 @@
 <div class="container">
     <div class="row">
         <div class="text-center">
-            <h1>{{ title }}</h1>
+            <h1 class="h2 display-6">{{ title }}</h1>
         </div>
 
-        <div class="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <div class="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-1 pb-2 mb-3 border-bottom">
              {% if user.is_staff %}
-            <a class="btn btn-success" href="{% url 'blogs:create_blog' %}" role="button"
+            <a class="btn text-white" style="background-color: #4682B4;" href="{% url 'blogs:create_blog' %}" role="button"
                aria-disabled="true">Добавить публикацию</a>
             {% endif %}
         </div>

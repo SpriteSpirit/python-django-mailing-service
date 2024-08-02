@@ -15,7 +15,7 @@ urlpatterns = [
     path('register/', UserCreateView.as_view(), name='register'),
     path('profile/<int:pk>', UserDetailView.as_view(), name='profile'),
     path('update/<int:pk>', UserUpdateView.as_view(), name='update'),
-    path('user_list/', cache_page(60)(UserListView.as_view()), name='user_list'),
+    path('user_list/', UserListView.as_view(), name='user_list'),
     path('block_page/', UserCheckBlockView.as_view(), name='block_page'),
 
     path('email_confirm/<str:token>/', email_verification, name='email_confirm'),

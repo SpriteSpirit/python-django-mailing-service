@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 px-0 text-center">
+                <h3>Ваше успешно сообщение отправлено</h3><br>
+                <p>Вам ответят в течение 24 часов на указанный email</p>
+                <img src="{% static 'images/site_images/message_email.svg' %}">
+                <br>
+                <a href="{% url 'main:index' %}" class="btn btn-warning btn-sm mt-3" style="text-decoration: none;">
+                    Вернуться назад
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

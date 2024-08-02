@@ -5,6 +5,7 @@ from dateutil.relativedelta import relativedelta
 
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.models import Permission
 from django.utils import timezone
 
 from django.shortcuts import render, get_object_or_404, redirect
@@ -13,7 +14,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DetailView, D
 
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
-from mailing_service.services import MailingService, send_mailing
+from mailing_service.services import MailingService, send_mailing, finish_task
 from mailing_service.templatetags.custom_filters import translate_month_from_num
 
 from users.models import User
@@ -221,11 +222,11 @@ class ClientDeleteView(LoginRequiredMixin, DeleteView):
         return context
 
 
-class MailingListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class MailingListView(LoginRequiredMixin, ListView):
     """ Просмотр списка клиентов """
     model = Mailing
     extra_context = {'title': 'РАССЫЛКИ'}
-    permission_required = 'can_view_mailing'
+    permission_required = 'mailing_service.can_view_mailing'
 
     def get_queryset(self):
         """ Просмотр рассылок только своих клиентов """
@@ -295,6 +296,7 @@ class MailingDetailView(LoginRequiredMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['mail'] = self.object
         context['clients'] = self.object.client.all()
+        print(self.request.user.user_permissions.all() | Permission.objects.filter(group__user=self.request.user))
 
         return context
 
@@ -461,13 +463,22 @@ class MailingLogListView(LoginRequiredMixin, ListView):
         return queryset
 
 
-@permission_required('can_change_mailing_status')
+@permission_required('mailing_service.can_off_mailing')
 def toggle_mailing(request, pk):
     """ Публикация/снятие с публикации рассылки """
     mailing = get_object_or_404(Mailing, pk=pk)
 
     if request.method == 'POST':
-        mailing.is_published = not mailing.is_published
+
+        if mailing.status == "created":
+            mailing.is_published = not mailing.is_published
+
+        if not mailing.is_published:
+            finish_task(mailing)
+        else:
+            mailing.status = "started"
+
         mailing.save()
+        print(mailing.status)
 
         return redirect('mailing:view_mail', pk=mailing.pk)

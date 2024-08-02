@@ -16,7 +16,7 @@ class Command(BaseCommand):
         # Определяем права для рассылок и пользователей
         mailing_permissions = (
             ('can_view_mailing', 'View mailing'),
-            ('can_change_mailing_status', 'Change mailing status'),
+            ('can_off_mailing', 'Change mailing status'),
         )
         user_permissions = (
             ('can_view_user', 'View user'),

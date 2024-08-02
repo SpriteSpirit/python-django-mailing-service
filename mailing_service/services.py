@@ -63,6 +63,7 @@ def finish_task(mailing):
 
     current_time = datetime.now(pytz.timezone('Europe/Moscow'))
     current_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+    mailing.status = 'completed'
 
     return current_time > end_time.strftime("%Y-%m-%d %H:%M:%S")
 

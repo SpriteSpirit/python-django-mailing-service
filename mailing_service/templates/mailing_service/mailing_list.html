@@ -43,18 +43,18 @@
                     <td class="text_content">{{ mail.finish_send }}</td>
                     <td class="text_content">{{ mail.message.message_subject|truncatewords:10 }}</td>
                     <td class="text_content_center">{{ mail.periodicity|translate_periodicity }}</td>
-                    <td class="text_content_center">{{ mail.status|translate_status }}</td>
+                    <td class="text_content_center">{{ mail.status }}</td>
                     {% if user.is_staff or user.is_superuser %}
                     <td class="text_content_center">{{ mail.user }}</td>
                     {% endif %}
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
                             <a href="{% url 'mailing:view_mail' mail.pk %}"
-                               class="btn btn-info text_button"
+                               class="btn text_button text-white" style="background-color: #4682B4;"
                                role="button">Смотреть</a>
                             {% if not user.is_staff %}
                             <a href="{% url 'mailing:update_mail' mail.pk %}"
-                               class="btn btn-warning text_button"
+                               class="btn btn-success text_button"
                                role="button">Изменить</a>
                             <a href="{% url 'mailing:delete_mail' mail.pk %}" class="btn btn-danger text_button"
                                role="button">Удалить</a>

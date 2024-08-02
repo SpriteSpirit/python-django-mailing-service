@@ -33,16 +33,16 @@
                 {% for query_user in user_list %}
                 {% if query_user != request.user %}
                 <tr class="align-middle" id="user-row-{{ user.id }}">
-                    <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                    <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% endif %}">
                         {{ forloop.counter }}
                     </td>
-                    <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                    <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% endif %}">
                         <p class="mx-2 mb-0">{{ query_user.last_name }} {{ query_user.first_name }} {{ query_user.middle_name }}</p>
                     </td>
-                    <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                    <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% endif %}">
                         <p class="mx-2 mb-0">{{ query_user.email }}</p>
                     </td>
-                    <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% else %} text-muted {% endif %}">
+                    <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% endif %}">
                         {{ query_user.country }}
                     </td>
                     {% if query_user.is_superuser %}
@@ -50,7 +50,7 @@
                     {% elif query_user.is_staff %}
                     <td class="text_content_center text-info">Модератор</td>
                     {% else %}
-                    <td class="text_content_center text-muted">Пользователь</td>
+                    <td class="text_content_center">Пользователь</td>
                     {% endif %}
                     <!--                    -->
                     {% if query_user.is_blocked %}

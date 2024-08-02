@@ -89,15 +89,15 @@
 
 {% include 'main/includes/inc_main_menu.html' %}
 
-<div class="container w-100">
+<div class="container w-100 mb-4">
     {% block content %}
     {% endblock %}
 </div>
 
-<footer class="py-3 text-center mt-auto text-body-secondary bg-body-tertiary">
-    <p class="mb-0">
-        <a href="#">НАВЕРХ</a>
-    </p>
+<footer class="py-4 text-center mt-auto text-body-secondary bg-body-tertiary">
+    <div class="mb-2 mt-2">
+        <a href="#" style="color: #4682B4; text-decoration: none;">НАВЕРХ</a>
+    </div>
 </footer>
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>

@@ -14,7 +14,7 @@
                                  class="rounded-circle" width="150" height="150">
                             <div class="mt-0">
                                 <h4>{{ user.first_name }}</h4>
-                                <p class="text-secondary mb-3">{{ user.phone_number }}</p>
+                                <p class="mb-3">{{ user.phone_number }}</p>
                                 <a href="{% url 'users:update' user.pk %}"
                                    class="btn btn-outline-success">Редактировать</a>
                             </div>
@@ -24,7 +24,7 @@
                 <div class="card mt-2">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0" style="color: #4682B4;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                      stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline">
@@ -35,13 +35,13 @@
                                 Website
                             </h6>
                             {% if user.website %}
-                                <span class="text-secondary">{{ user.website }}</span>
+                            <span>{{ user.website }}</span>
                             {% else %}
-                                <span class="text-secondary">---</span>
+                            <span">---</span>
                             {% endif %}
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0" style="color: #4682B4;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                      stroke-linejoin="round" class="feather feather-github mr-2 icon-inline">
@@ -50,39 +50,24 @@
                                 Github
                             </h6>
                             {% if user.github %}
-                                <span class="text-secondary">{{ user.github }}</span>
+                            <span>{{ user.github }}</span>
                             {% else %}
-                                <span class="text-secondary">---</span>
+                            <span>---</span>
                             {% endif %}
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-1">
-                                <svg id="Layer_1" width="24" height="24" enable-background="new 0 0 511.981 511.981"
-                                     viewBox="0 0 511.981 511.981" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <g>
-                                            <g>
-                                                <g>
-                                                    <g>
-                                                        <path d="m130.325 289.031 51.349 117.539c6.764 22.541 26.334 27.799 43.486 11.688l48.951-45.99 98.684-213.27z"
-                                                              fill="#8db9c4"/>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                            <g>
-                                                <path d="m130.319 289.028-98.246-36.003c-22.447-7.068-22.807-19.675-.801-28.015l433.454-164.229c22.006-8.338 36.113 3.695 31.348 26.742l-70.891 342.863c-4.768 23.046-24.094 30.381-42.951 16.299l-184.572-127.04 175.134-160.647z"
-                                                      fill="#e7f0ef"/>
-                                            </g>
-                                        </g>
-                                        <path d="m504.143 55.033c-6.249-7.673-15.628-11.897-26.411-11.897-5.818 0-11.982 1.217-18.32 3.619l-433.456 164.229c-23.047 8.734-26.149 21.881-25.947 28.94.201 7.023 4.012 19.877 27.21 27.297l91.925 33.688 48.447 110.896c4.87 15.338 15.046 26.098 28.034 29.588 2.994.805 6.051 1.201 9.13 1.201 10.548 0 21.348-4.645 30.675-13.404l40.138-37.711 97.935 67.408c8.82 6.518 18.417 9.961 27.775 9.959 18.993 0 34.143-13.904 38.594-35.423l70.891-342.862c2.914-14.092.562-26.709-6.62-35.528zm-354.534 240.671 125.091-67.081-87.181 79.969c-3.104 2.847-4.833 6.858-4.838 11.038-.006.154-.025.304-.026.459l-.301 50.572zm65.281 111.621c-.925.869-1.852 1.633-2.768 2.298l.367-61.561 37.791 26.012zm266.494-322.839-70.891 342.862c-.715 3.457-3.045 11.498-9.217 11.498-2.884.001-6.459-1.484-10.07-4.18-.154-.115-.311-.229-.471-.338l-107.969-74.314c-.015-.01-.029-.02-.045-.03l-61.043-42.017 161.255-147.916c5.571-5.111 6.469-13.57 2.093-19.736-4.377-6.165-12.658-8.109-19.321-4.537l-236.544 126.85-91.927-33.687c-.067-.024-.134-.049-.202-.073l433.008-164.061c3.649-1.383 6.197-1.672 7.691-1.672.74 0 2.53.082 3.148.842.794.973 1.792 4.282.505 10.509z"/>
-                                    </g>
+                            <h6 class="mb-1" style="color: #4682B4;">
+                                <svg width="24px" height="24px" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9932 1.58221C15.0223 1.40736 14.9567 1.23016 14.8208 1.11645C14.6848 1.00274 14.4988 0.969519 14.3318 1.02914L0.331836 6.02914C0.143209 6.0965 0.0129867 6.26994 0.000913704 6.46987C-0.0111592 6.6698 0.0972469 6.85765 0.276398 6.94722L4.2764 8.94722C4.43688 9.02746 4.62806 9.01556 4.77735 8.91603L8.09775 6.70244L6.10957 9.18766C6.02203 9.29709 5.98442 9.43824 6.00592 9.57672C6.02742 9.7152 6.10605 9.8383 6.22265 9.91603L12.2227 13.916C12.3638 14.0101 12.5431 14.0262 12.6988 13.9588C12.8545 13.8914 12.9653 13.7496 12.9932 13.5822L14.9932 1.58221Z"
+                                          fill="#4682B4"/>
                                 </svg>
                                 Telegram
                             </h6>
                             {% if user.telegram %}
-                                <span class="text-secondary">{{ user.telegram }}</span>
+                            <span>{{ user.telegram }}</span>
                             {% else %}
-                                <span class="text-secondary">---</span>
+                            <span>---</span>
                             {% endif %}
                         </li>
                     </ul>
@@ -93,36 +78,36 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Ф. И. О.</h6>
+                                <h6 class="mb-0" style="color: #4682B4;">Ф. И. О.</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div class="col-sm-9">
                                 {{ user.last_name }} {{ user.first_name }} {{ user.middle_name }}
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Email</h6>
+                                <h6 class="mb-0" style="color: #4682B4;">Email</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div class="col-sm-9">
                                 {{ user.email }}
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Телефон</h6>
+                                <h6 class="mb-0" style="color: #4682B4;">Телефон</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div class="col-sm-9">
                                 {{ user.phone_number }}
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Страна</h6>
+                                <h6 class="mb-0" style="color: #4682B4;">Страна</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div class="col-sm-9">
                                 {{ user.country.name }}
                             </div>
                         </div>
@@ -133,7 +118,8 @@
                     <div class="col-sm-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3 text-wsuccess">О себе</h6>
+                                <h6 class="d-flex align-items-center mb-3 text-wsuccess" style="color: #4682B4;">О
+                                    себе</h6>
                                 <span class="card w-100 border-0">
                                     {% if not user.about_message %}
                                         Нет описания.
@@ -147,7 +133,7 @@
                     <div class="col-sm-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3 text-success">Новые клиенты</h6>
+                                <h6 class="d-flex align-items-center mb-3" style="color: #4682B4;">Новые клиенты</h6>
                                 {% for client in clients|slice:"-3:" %}
                                 <small>{{ client.name }} <span class="text-success">[{{ client.email }}]</span></small>
                                 <div class="progress mb-3" style="height: 5px">

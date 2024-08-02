@@ -106,7 +106,7 @@ class UserListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     """ Просмотр списка пользователей """
     model = User
     extra_context = {'title': 'ПОЛЬЗОВАТЕЛИ'}
-    permission_required = 'can_view_user'
+    permission_required = 'auth.can_view_user'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -114,6 +114,13 @@ class UserListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
         context['active_page'] = 'user_list'
 
         return context
+
+    def get_queryset(self):
+        """ Просмотр только своих пользователей """
+        print(self.request.user.get_user_permissions())
+        print(self.request.user)
+
+        return super().get_queryset()
 
     @staticmethod
     def post(request):

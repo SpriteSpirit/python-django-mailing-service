@@ -1,7 +1,8 @@
 from django.core.mail import send_mail
-from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.shortcuts import render
 
-from config.settings import EMAIL_HOST_USER
+from config import settings
 
 
 def index(request):
@@ -12,19 +13,42 @@ def index(request):
 def contacts(request):
     """ Страница контактов сайта """
     if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        message = request.POST['message']
+        # Получение данных из формы
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
         phone = request.POST.get('phone', '')
         company = request.POST.get('company', '')
+        message_content = request.POST.get('message', '')
 
+        # Вывод значений в консоль для отладки
+        # print("Name:", name)
+        # print("Email:", email)
+        # print("Phone:", phone)
+        # print("Company:", company)
+        # print("Message:", message_content)
+
+        # Проверка, что поля не пустые
+        if not name or not email or not message_content:
+            return HttpResponse('Пожалуйста, заполните все обязательные поля.')
+
+        # Формирование сообщения
+        message = f"""
+               Имя: {name}
+               Email: {email}
+               Телефон: {phone}
+               Компания: {company}
+               Сообщение: {message_content}
+               """
+
+        # Отправка письма
         send_mail(
-            'Сообщение с сайта',
-            message=message,
-            recipient_list=[EMAIL_HOST_USER],
-            from_email=EMAIL_HOST_USER,
+            'Сообщение от пользователя с сайта Mailing Service',
+            message,
+            settings.EMAIL_HOST_USER,
+            [settings.EMAIL_HOST_USER],
         )
-        return redirect('main:index')  # заменить на URL благодарности
+        return render(request, 'main/success_send_message.html')
+
     return render(request, 'main/contacts.html')
 
 
