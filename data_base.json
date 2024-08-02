@@ -481,6 +481,45 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-08-02T10:27:42.304Z",
+        "user": 3,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-08-02T10:31:59.692Z",
+        "user": 3,
+        "content_type": 16,
+        "object_id": "14",
+        "object_repr": "moderator@gmail.com",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-08-02T10:32:11.019Z",
+        "user": 3,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -1303,6 +1342,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "7bccbgmsi9ty4pa5s3y4l6yy5pc64gdr",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlmxvP5R0nMGa9dr4wBypDipIu5OIqWA9s3M20TEdalx7XmOI4ursOLyuxGmV24H4Ce2xyTT1JZ5JHko8qRd3ifO79vp_h1U7HWvg7HKAWVfNLLz3pAqemAHQRtCCtaAGSwnJAe-7Ag0GsqUNAAXheLzBdqcOAs:1sZsVz:MVCl9a824cxoJcpbD9Qmj3_vRy32IcKIY2HpOkSRK1E",
+        "expire_date": "2024-08-16T13:40:15.942Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "cswsqm1gf2nzhn1v901n8qg2w9o1ike7",
     "fields": {
         "session_data": ".eJxVjEEOwiAQRe_C2pCBMlBcuvcMZOhMbdVAUtqV8e7apAvd_vfef6lE2zqlrcmSZlZn5dXpd8s0PKTsgO9UblUPtazLnPWu6IM2fa0sz8vh_h1M1KZvbSN4n3ugbGIIyLbrgiPpomRHHkZnuAcesQexlgNEAY6ISAFxMNmr9wfEIzcY:1sZBDd:nzS_o_samMRdHlidcFtaIto7MYupG6-KyUBLuMIZbZM",
@@ -1315,14 +1362,6 @@
     "fields": {
         "session_data": "e30:1sTSeP:CqRRzwR-4svI3pRnAIXpxg6ObsjmQ0og3LTeJuQNHt0",
         "expire_date": "2024-07-29T20:50:25.807Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "xpo7y8wubyryiu8mt930lnrgcrnkft75",
-    "fields": {
-        "session_data": ".eJxVjDsOwjAQBe_iGlmxvP5R0nMGa9dr4wBypDipIu5OIqWA9s3M20TEdalx7XmOI4ursOLyuxGmV24H4Ce2xyTT1JZ5JHko8qRd3ifO79vp_h1U7HWvg7HKAWVfNLLz3pAqemAHQRtCCtaAGSwnJAe-7Ag0GsqUNAAXheLzBdqcOAs:1sZoZY:2Gd0IqDnNOl89b7Qn_7wOlhVaOKKcqqNKRdVx5GPFYM",
-        "expire_date": "2024-08-16T09:27:40.639Z"
     }
 },
 {
@@ -2822,9 +2861,9 @@
         "first_send": "2024-07-26T15:42:00Z",
         "finish_send": "2024-07-26T15:43:00Z",
         "periodicity": "daily",
-        "status": "started",
+        "status": "completed",
         "message": 2,
-        "is_published": true,
+        "is_published": false,
         "user": 6,
         "client": [
             2,
@@ -2859,9 +2898,9 @@
         "first_send": "2024-07-28T17:26:00Z",
         "finish_send": "2024-07-29T17:25:00Z",
         "periodicity": "daily",
-        "status": "started",
+        "status": "completed",
         "message": 1,
-        "is_published": true,
+        "is_published": false,
         "user": 6,
         "client": [
             6,
@@ -2880,7 +2919,7 @@
         "periodicity": "daily",
         "status": "started",
         "message": 3,
-        "is_published": false,
+        "is_published": true,
         "user": 14,
         "client": [
             8
@@ -3072,7 +3111,7 @@
     "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$720000$CbFxSw455R3qJePPsHhnl5$ErSjkItraQWA/Rt/PjQ1An8s4DFwb92jypYmek8nIhc=",
-        "last_login": "2024-08-01T20:42:11.605Z",
+        "last_login": "2024-08-02T10:31:47.841Z",
         "is_superuser": true,
         "is_staff": true,
         "is_active": true,
@@ -3101,7 +3140,7 @@
     "pk": 6,
     "fields": {
         "password": "pbkdf2_sha256$720000$lPeslcWq5vUQPu7QIy3n7w$pDKt/Q9l6q0J8CM8cHBMEMEXFhMOiSwWwd9XMkPLV7Q=",
-        "last_login": "2024-08-02T09:27:40.638Z",
+        "last_login": "2024-08-02T13:40:15.939Z",
         "is_superuser": false,
         "is_staff": false,
         "is_active": true,
@@ -3182,7 +3221,7 @@
     "pk": 14,
     "fields": {
         "password": "pbkdf2_sha256$720000$yNvPWwFXmurKrZ5QtuSq5D$PEjDudPNUvrn8T8LMnAKAgLTUAuw0BsdlEEnfnjlfXs=",
-        "last_login": "2024-08-02T06:43:41.077Z",
+        "last_login": "2024-08-02T11:06:56.842Z",
         "is_superuser": false,
         "is_staff": true,
         "is_active": true,
@@ -3197,7 +3236,7 @@
         "about_message": "This is moderator profile",
         "is_blocked": false,
         "token": null,
-        "website": "https://not_stuff_and_its_ok.com",
+        "website": "https://i_am_staff_and_its_ok.com",
         "github": "guru_duru",
         "telegram": "@guru_duru",
         "groups": [
@@ -3216,7 +3255,7 @@
         "image": "blog_image/scale_1200.png",
         "created_at": "2024-08-01T19:27:51.236Z",
         "published": true,
-        "view_count": 43
+        "view_count": 48
     }
 },
 {
@@ -3242,7 +3281,7 @@
         "image": "blog_image/WdOy2Ch5RyY.jpg",
         "created_at": "2024-08-01T20:58:42.553Z",
         "published": true,
-        "view_count": 6
+        "view_count": 11
     }
 },
 {
