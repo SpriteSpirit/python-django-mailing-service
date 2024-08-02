@@ -1,2327 +1,3261 @@
 [
-  {
+{
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-      "action_time": "2024-07-26T13:57:36.965Z",
-      "user": 3,
-      "object_id": "4",
-      "object_repr": "Всегдажрун Борисович [omnomnom@bigcat.com]",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+        "action_time": "2024-07-26T13:57:36.965Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "4",
+        "object_repr": "Всегдажрун Борисович [omnomnom@bigcat.com]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 2,
     "fields": {
-      "action_time": "2024-07-26T18:22:43.300Z",
-      "user": 3,
-      "object_id": "1",
-      "object_repr": "Котофей Кусьминович [sprite.spirit.t.me@gmail.com]",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-26T18:22:43.300Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "1",
+        "object_repr": "Котофей Кусьминович [sprite.spirit.t.me@gmail.com]",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 3,
     "fields": {
-      "action_time": "2024-07-26T18:22:46.941Z",
-      "user": 3,
-      "object_id": "5",
-      "object_repr": "Котофей Кусьминович [sprite.spirit.t.me@gmail.com]",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+        "action_time": "2024-07-26T18:22:46.941Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "5",
+        "object_repr": "Котофей Кусьминович [sprite.spirit.t.me@gmail.com]",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 4,
     "fields": {
-      "action_time": "2024-07-28T17:55:40.033Z",
-      "user": 3,
-      "object_id": "11",
-      "object_repr": "boom_daboom@gmail.com",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-28T17:55:40.033Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "11",
+        "object_repr": "boom_daboom@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 5,
     "fields": {
-      "action_time": "2024-07-28T17:55:40.040Z",
-      "user": 3,
-      "object_id": "10",
-      "object_repr": "giga_boom@gmail.com",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-28T17:55:40.040Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "10",
+        "object_repr": "giga_boom@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 6,
     "fields": {
-      "action_time": "2024-07-28T17:55:40.041Z",
-      "user": 3,
-      "object_id": "9",
-      "object_repr": "one12@gmail.com",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-28T17:55:40.041Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "9",
+        "object_repr": "one12@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 7,
     "fields": {
-      "action_time": "2024-07-28T17:55:40.042Z",
-      "user": 3,
-      "object_id": "8",
-      "object_repr": "zero@gmail.com",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-28T17:55:40.042Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "8",
+        "object_repr": "zero@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 8,
     "fields": {
-      "action_time": "2024-07-28T17:55:50.469Z",
-      "user": 3,
-      "object_id": "7",
-      "object_repr": "dev.patient.zero@gmail.com",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-28T17:55:50.469Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "7",
+        "object_repr": "dev.patient.zero@gmail.com",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 9,
     "fields": {
-      "action_time": "2024-07-28T18:05:01.601Z",
-      "user": 3,
-      "object_id": "1",
-      "object_repr": "А вы рыбов продаете?",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+        "action_time": "2024-07-28T18:05:01.601Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "1",
+        "object_repr": "А вы рыбов продаете?",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 10,
     "fields": {
-      "action_time": "2024-07-28T18:05:05.683Z",
-      "user": 3,
-      "object_id": "2",
-      "object_repr": "Запах марта. Голос весны",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+        "action_time": "2024-07-28T18:05:05.683Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "2",
+        "object_repr": "Запах марта. Голос весны",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 11,
     "fields": {
-      "action_time": "2024-07-28T18:51:31.771Z",
-      "user": 3,
-      "object_id": "40",
-      "object_repr": "Рассылка: 40",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:51:31.771Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "40",
+        "object_repr": "Рассылка: 40",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 12,
     "fields": {
-      "action_time": "2024-07-28T18:51:36.182Z",
-      "user": 3,
-      "object_id": "39",
-      "object_repr": "Рассылка: 39",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:51:36.182Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "39",
+        "object_repr": "Рассылка: 39",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 13,
     "fields": {
-      "action_time": "2024-07-28T18:51:41.799Z",
-      "user": 3,
-      "object_id": "38",
-      "object_repr": "Рассылка: 38",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:51:41.799Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "38",
+        "object_repr": "Рассылка: 38",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 14,
     "fields": {
-      "action_time": "2024-07-28T18:51:46.266Z",
-      "user": 3,
-      "object_id": "37",
-      "object_repr": "Рассылка: 37",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:51:46.266Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "37",
+        "object_repr": "Рассылка: 37",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 15,
     "fields": {
-      "action_time": "2024-07-28T18:51:50.543Z",
-      "user": 3,
-      "object_id": "36",
-      "object_repr": "Рассылка: 36",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:51:50.543Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "36",
+        "object_repr": "Рассылка: 36",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 16,
     "fields": {
-      "action_time": "2024-07-28T18:51:57.701Z",
-      "user": 3,
-      "object_id": "36",
-      "object_repr": "Рассылка: 36",
-      "action_flag": 2,
-      "change_message": "[]"
+        "action_time": "2024-07-28T18:51:57.701Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "36",
+        "object_repr": "Рассылка: 36",
+        "action_flag": 2,
+        "change_message": "[]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 17,
     "fields": {
-      "action_time": "2024-07-28T18:52:01.194Z",
-      "user": 3,
-      "object_id": "35",
-      "object_repr": "Рассылка: 35",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:52:01.194Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "35",
+        "object_repr": "Рассылка: 35",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 18,
     "fields": {
-      "action_time": "2024-07-28T18:52:05.010Z",
-      "user": 3,
-      "object_id": "34",
-      "object_repr": "Рассылка: 34",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T18:52:05.010Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "34",
+        "object_repr": "Рассылка: 34",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 19,
     "fields": {
-      "action_time": "2024-07-28T20:54:53.183Z",
-      "user": 3,
-      "object_id": "1",
-      "object_repr": "Manager",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+        "action_time": "2024-07-28T20:54:53.183Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "1",
+        "object_repr": "Manager",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 20,
     "fields": {
-      "action_time": "2024-07-28T21:06:29.836Z",
-      "user": 3,
-      "object_id": "1",
-      "object_repr": "Moderator",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        "action_time": "2024-07-28T21:06:29.836Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 21,
     "fields": {
-      "action_time": "2024-07-28T21:06:47.428Z",
-      "user": 3,
-      "object_id": "1",
-      "object_repr": "Moderator",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+        "action_time": "2024-07-28T21:06:47.428Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 22,
     "fields": {
-      "action_time": "2024-07-28T21:07:52.185Z",
-      "user": 3,
-      "object_id": "3",
-      "object_repr": "admin@localhost",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0430\", \"GitHub\"]}}]"
+        "action_time": "2024-07-28T21:07:52.185Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "3",
+        "object_repr": "admin@localhost",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0430\", \"GitHub\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 23,
     "fields": {
-      "action_time": "2024-07-28T21:37:08.458Z",
-      "user": 3,
-      "object_id": "3",
-      "object_repr": "admin@localhost",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0431\\u043b\\u043e\\u043a\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\"]}}]"
+        "action_time": "2024-07-28T21:37:08.458Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "3",
+        "object_repr": "admin@localhost",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0431\\u043b\\u043e\\u043a\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 24,
     "fields": {
-      "action_time": "2024-07-29T17:32:13.136Z",
-      "user": 3,
-      "object_id": "14",
-      "object_repr": "test3@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+        "action_time": "2024-07-29T17:32:13.136Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "14",
+        "object_repr": "test3@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 25,
     "fields": {
-      "action_time": "2024-07-30T18:44:57.099Z",
-      "user": 3,
-      "object_id": "14",
-      "object_repr": "test3@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+        "action_time": "2024-07-30T18:44:57.099Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "14",
+        "object_repr": "test3@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 26,
     "fields": {
-      "action_time": "2024-07-31T10:18:47.576Z",
-      "user": 3,
-      "object_id": "14",
-      "object_repr": "moderator@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u041e \\u0441\\u0435\\u0431\\u0435\"]}}]"
+        "action_time": "2024-07-31T10:18:47.576Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "14",
+        "object_repr": "moderator@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u041e \\u0441\\u0435\\u0431\\u0435\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 27,
     "fields": {
-      "action_time": "2024-07-31T10:19:31.219Z",
-      "user": 3,
-      "object_id": "13",
-      "object_repr": "user1@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+        "action_time": "2024-07-31T10:19:31.219Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "13",
+        "object_repr": "user1@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 28,
     "fields": {
-      "action_time": "2024-07-31T10:19:54.600Z",
-      "user": 3,
-      "object_id": "12",
-      "object_repr": "user2@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+        "action_time": "2024-07-31T10:19:54.600Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "12",
+        "object_repr": "user2@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 29,
     "fields": {
-      "action_time": "2024-07-31T10:21:35.555Z",
-      "user": 3,
-      "object_id": "13",
-      "object_repr": "user1@gmail.com",
-      "action_flag": 2,
-      "change_message": "[]"
+        "action_time": "2024-07-31T10:21:35.555Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "13",
+        "object_repr": "user1@gmail.com",
+        "action_flag": 2,
+        "change_message": "[]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 30,
     "fields": {
-      "action_time": "2024-07-31T10:23:47.165Z",
-      "user": 3,
-      "object_id": "14",
-      "object_repr": "moderator@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        "action_time": "2024-07-31T10:23:47.165Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "14",
+        "object_repr": "moderator@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 31,
     "fields": {
-      "action_time": "2024-07-31T10:24:12.693Z",
-      "user": 3,
-      "object_id": "13",
-      "object_repr": "user1@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        "action_time": "2024-07-31T10:24:12.693Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "13",
+        "object_repr": "user1@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 32,
     "fields": {
-      "action_time": "2024-07-31T10:24:30.301Z",
-      "user": 3,
-      "object_id": "12",
-      "object_repr": "user2@gmail.com",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        "action_time": "2024-07-31T10:24:30.301Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "12",
+        "object_repr": "user2@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 33,
     "fields": {
-      "action_time": "2024-07-31T10:25:19.600Z",
-      "user": 3,
-      "object_id": "3",
-      "object_repr": "admin@localhost",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        "action_time": "2024-07-31T10:25:19.600Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "3",
+        "object_repr": "admin@localhost",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
     }
-  },
-  {
+},
+{
     "model": "admin.logentry",
     "pk": 34,
     "fields": {
-      "action_time": "2024-07-31T10:59:09.391Z",
-      "user": 3,
-      "object_id": "2",
-      "object_repr": "moderator",
-      "action_flag": 3,
-      "change_message": ""
+        "action_time": "2024-07-31T10:59:09.391Z",
+        "user": 3,
+        "content_type": null,
+        "object_id": "2",
+        "object_repr": "moderator",
+        "action_flag": 3,
+        "change_message": ""
     }
-  },
-  {
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-07-31T20:39:37.276Z",
+        "user": 3,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "admin@localhost",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-07-31T20:39:48.990Z",
+        "user": 3,
+        "content_type": 16,
+        "object_id": "14",
+        "object_repr": "moderator@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-08-01T19:53:50.415Z",
+        "user": 3,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Moderator",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add crontab",
+        "content_type": 6,
+        "codename": "add_crontabschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change crontab",
+        "content_type": 6,
+        "codename": "change_crontabschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete crontab",
+        "content_type": 6,
+        "codename": "delete_crontabschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view crontab",
+        "content_type": 6,
+        "codename": "view_crontabschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add interval",
+        "content_type": 7,
+        "codename": "add_intervalschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change interval",
+        "content_type": 7,
+        "codename": "change_intervalschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete interval",
+        "content_type": 7,
+        "codename": "delete_intervalschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view interval",
+        "content_type": 7,
+        "codename": "view_intervalschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add periodic task",
+        "content_type": 8,
+        "codename": "add_periodictask"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change periodic task",
+        "content_type": 8,
+        "codename": "change_periodictask"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete periodic task",
+        "content_type": 8,
+        "codename": "delete_periodictask"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view periodic task",
+        "content_type": 8,
+        "codename": "view_periodictask"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add periodic tasks",
+        "content_type": 9,
+        "codename": "add_periodictasks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change periodic tasks",
+        "content_type": 9,
+        "codename": "change_periodictasks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete periodic tasks",
+        "content_type": 9,
+        "codename": "delete_periodictasks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view periodic tasks",
+        "content_type": 9,
+        "codename": "view_periodictasks"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add solar event",
+        "content_type": 10,
+        "codename": "add_solarschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change solar event",
+        "content_type": 10,
+        "codename": "change_solarschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete solar event",
+        "content_type": 10,
+        "codename": "delete_solarschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view solar event",
+        "content_type": 10,
+        "codename": "view_solarschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add clocked",
+        "content_type": 11,
+        "codename": "add_clockedschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change clocked",
+        "content_type": 11,
+        "codename": "change_clockedschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete clocked",
+        "content_type": 11,
+        "codename": "delete_clockedschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view clocked",
+        "content_type": 11,
+        "codename": "view_clockedschedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add Клиент",
+        "content_type": 12,
+        "codename": "add_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change Клиент",
+        "content_type": 12,
+        "codename": "change_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete Клиент",
+        "content_type": 12,
+        "codename": "delete_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view Клиент",
+        "content_type": 12,
+        "codename": "view_client"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Сообщение",
+        "content_type": 13,
+        "codename": "add_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Сообщение",
+        "content_type": 13,
+        "codename": "change_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Сообщение",
+        "content_type": 13,
+        "codename": "delete_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view Сообщение",
+        "content_type": 13,
+        "codename": "view_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add Рассылка",
+        "content_type": 14,
+        "codename": "add_mailing"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change Рассылка",
+        "content_type": 14,
+        "codename": "change_mailing"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete Рассылка",
+        "content_type": 14,
+        "codename": "delete_mailing"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view Рассылка",
+        "content_type": 14,
+        "codename": "view_mailing"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add Лог рассылки",
+        "content_type": 15,
+        "codename": "add_mailinglogs"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change Лог рассылки",
+        "content_type": 15,
+        "codename": "change_mailinglogs"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete Лог рассылки",
+        "content_type": 15,
+        "codename": "delete_mailinglogs"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view Лог рассылки",
+        "content_type": 15,
+        "codename": "view_mailinglogs"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add Пользователь",
+        "content_type": 16,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change Пользователь",
+        "content_type": 16,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete Пользователь",
+        "content_type": 16,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view Пользователь",
+        "content_type": 16,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add Публикация",
+        "content_type": 17,
+        "codename": "add_blogpost"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change Публикация",
+        "content_type": 17,
+        "codename": "change_blogpost"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete Публикация",
+        "content_type": 17,
+        "codename": "delete_blogpost"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view Публикация",
+        "content_type": 17,
+        "codename": "view_blogpost"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "View mailing",
+        "content_type": 14,
+        "codename": "can_view_mailing"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Change mailing status",
+        "content_type": 14,
+        "codename": "can_off_mailing"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "View user",
+        "content_type": 18,
+        "codename": "can_view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Block user",
+        "content_type": 18,
+        "codename": "can_block_user"
+    }
+},
+{
     "model": "auth.group",
     "pk": 1,
     "fields": {
-      "name": "Moderator",
-      "permissions": [
-      ]
+        "name": "Moderator",
+        "permissions": [
+            72,
+            71,
+            70,
+            69
+        ]
     }
-  },
-  {
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "django_celery_beat",
+        "model": "crontabschedule"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "django_celery_beat",
+        "model": "intervalschedule"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "django_celery_beat",
+        "model": "periodictask"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "django_celery_beat",
+        "model": "periodictasks"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "django_celery_beat",
+        "model": "solarschedule"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "django_celery_beat",
+        "model": "clockedschedule"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "mailing_service",
+        "model": "client"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "mailing_service",
+        "model": "message"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "mailing_service",
+        "model": "mailing"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "mailing_service",
+        "model": "mailinglogs"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "users",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "blogs",
+        "model": "blogpost"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
     "model": "sessions.session",
     "pk": "1inzbxpppo14iqk5xdim5lt87mdh33oo",
     "fields": {
-      "session_data": "e30:1sTSge:Vly2Jgjimx82wAMghxRKJCWGf7l8CnvxrERjIxFAwCE",
-      "expire_date": "2024-07-29T20:52:44.954Z"
+        "session_data": "e30:1sTSge:Vly2Jgjimx82wAMghxRKJCWGf7l8CnvxrERjIxFAwCE",
+        "expire_date": "2024-07-29T20:52:44.954Z"
     }
-  },
-  {
+},
+{
     "model": "sessions.session",
     "pk": "24q7g2uxjcnsi95uspfmb5gmv7sgl4ko",
     "fields": {
-      "session_data": "e30:1sTShq:myrht9Vy_uFSQhLmudizHGRn4rR7L58M0LQZ43hQqsc",
-      "expire_date": "2024-07-29T20:53:58.258Z"
+        "session_data": "e30:1sTShq:myrht9Vy_uFSQhLmudizHGRn4rR7L58M0LQZ43hQqsc",
+        "expire_date": "2024-07-29T20:53:58.258Z"
     }
-  },
-  {
+},
+{
     "model": "sessions.session",
     "pk": "cswsqm1gf2nzhn1v901n8qg2w9o1ike7",
     "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2pCBMlBcuvcMZOhMbdVAUtqV8e7apAvd_vfef6lE2zqlrcmSZlZn5dXpd8s0PKTsgO9UblUPtazLnPWu6IM2fa0sz8vh_h1M1KZvbSN4n3ugbGIIyLbrgiPpomRHHkZnuAcesQexlgNEAY6ISAFxMNmr9wfEIzcY:1sZBDd:nzS_o_samMRdHlidcFtaIto7MYupG6-KyUBLuMIZbZM",
-      "expire_date": "2024-08-14T15:26:25.442Z"
+        "session_data": ".eJxVjEEOwiAQRe_C2pCBMlBcuvcMZOhMbdVAUtqV8e7apAvd_vfef6lE2zqlrcmSZlZn5dXpd8s0PKTsgO9UblUPtazLnPWu6IM2fa0sz8vh_h1M1KZvbSN4n3ugbGIIyLbrgiPpomRHHkZnuAcesQexlgNEAY6ISAFxMNmr9wfEIzcY:1sZBDd:nzS_o_samMRdHlidcFtaIto7MYupG6-KyUBLuMIZbZM",
+        "expire_date": "2024-08-14T15:26:25.442Z"
     }
-  },
-  {
+},
+{
     "model": "sessions.session",
     "pk": "fghttdxia8r77229ulv9hanpg8dz9vd7",
     "fields": {
-      "session_data": "e30:1sTSeP:CqRRzwR-4svI3pRnAIXpxg6ObsjmQ0og3LTeJuQNHt0",
-      "expire_date": "2024-07-29T20:50:25.807Z"
+        "session_data": "e30:1sTSeP:CqRRzwR-4svI3pRnAIXpxg6ObsjmQ0og3LTeJuQNHt0",
+        "expire_date": "2024-07-29T20:50:25.807Z"
     }
-  },
-  {
+},
+{
+    "model": "sessions.session",
+    "pk": "xpo7y8wubyryiu8mt930lnrgcrnkft75",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlmxvP5R0nMGa9dr4wBypDipIu5OIqWA9s3M20TEdalx7XmOI4ursOLyuxGmV24H4Ce2xyTT1JZ5JHko8qRd3ifO79vp_h1U7HWvg7HKAWVfNLLz3pAqemAHQRtCCtaAGSwnJAe-7Ag0GsqUNAAXheLzBdqcOAs:1sZoZY:2Gd0IqDnNOl89b7Qn_7wOlhVaOKKcqqNKRdVx5GPFYM",
+        "expire_date": "2024-08-16T09:27:40.639Z"
+    }
+},
+{
     "model": "sessions.session",
     "pk": "zz605ktnyc6klc30omk18yerhkbkbszr",
     "fields": {
-      "session_data": "e30:1sTSiJ:ynXJs24RaGlaAyxZMW91Wf0BLsSHAGOW4J1IvM8m4zg",
-      "expire_date": "2024-07-29T20:54:27.155Z"
+        "session_data": "e30:1sTSiJ:ynXJs24RaGlaAyxZMW91Wf0BLsSHAGOW4J1IvM8m4zg",
+        "expire_date": "2024-07-29T20:54:27.155Z"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 1,
     "fields": {
-      "minute": "23",
-      "hour": "0",
-      "day_of_month": "26",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "23",
+        "hour": "0",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 2,
     "fields": {
-      "minute": "0",
-      "hour": "4",
-      "day_of_month": "*",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "0",
+        "hour": "4",
+        "day_of_month": "*",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 3,
     "fields": {
-      "minute": "5",
-      "hour": "18",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "5",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 4,
     "fields": {
-      "minute": "15",
-      "hour": "18",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "15",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 5,
     "fields": {
-      "minute": "28",
-      "hour": "18",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "28",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 6,
     "fields": {
-      "minute": "45",
-      "hour": "18",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "45",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 7,
     "fields": {
-      "minute": "47",
-      "hour": "18",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "47",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 8,
     "fields": {
-      "minute": "57",
-      "hour": "18",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "57",
+        "hour": "18",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 9,
     "fields": {
-      "minute": "1",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "1",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 10,
     "fields": {
-      "minute": "2",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "2",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 11,
     "fields": {
-      "minute": "4",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "4",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 12,
     "fields": {
-      "minute": "11",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "11",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 13,
     "fields": {
-      "minute": "20",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "20",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 14,
     "fields": {
-      "minute": "26",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "26",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 15,
     "fields": {
-      "minute": "32",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "32",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 16,
     "fields": {
-      "minute": "34",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "34",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 17,
     "fields": {
-      "minute": "45",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "45",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 18,
     "fields": {
-      "minute": "49",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "49",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 19,
     "fields": {
-      "minute": "50",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "50",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 20,
     "fields": {
-      "minute": "52",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "52",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 21,
     "fields": {
-      "minute": "53",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "53",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 22,
     "fields": {
-      "minute": "54",
-      "hour": "19",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "54",
+        "hour": "19",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 23,
     "fields": {
-      "minute": "3",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "3",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 24,
     "fields": {
-      "minute": "6",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "6",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 25,
     "fields": {
-      "minute": "9",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "9",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 26,
     "fields": {
-      "minute": "21",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "21",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 27,
     "fields": {
-      "minute": "26",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "26",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 28,
     "fields": {
-      "minute": "28",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "28",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 29,
     "fields": {
-      "minute": "29",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "29",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 30,
     "fields": {
-      "minute": "30",
-      "hour": "20",
-      "day_of_month": "13",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "30",
+        "hour": "20",
+        "day_of_month": "13",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 31,
     "fields": {
-      "minute": "4",
-      "hour": "0",
-      "day_of_month": "17",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "4",
+        "hour": "0",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 32,
     "fields": {
-      "minute": "58",
-      "hour": "21",
-      "day_of_month": "17",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "58",
+        "hour": "21",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 33,
     "fields": {
-      "minute": "13",
-      "hour": "22",
-      "day_of_month": "17",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "13",
+        "hour": "22",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 34,
     "fields": {
-      "minute": "23",
-      "hour": "22",
-      "day_of_month": "17",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "23",
+        "hour": "22",
+        "day_of_month": "17",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 35,
     "fields": {
-      "minute": "36",
-      "hour": "18",
-      "day_of_month": "26",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "36",
+        "hour": "18",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 36,
     "fields": {
-      "minute": "42",
-      "hour": "18",
-      "day_of_month": "26",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "42",
+        "hour": "18",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 37,
     "fields": {
-      "minute": "59",
-      "hour": "22",
-      "day_of_month": "26",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "59",
+        "hour": "22",
+        "day_of_month": "26",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 38,
     "fields": {
-      "minute": "26",
-      "hour": "20",
-      "day_of_month": "28",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "26",
+        "hour": "20",
+        "day_of_month": "28",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 39,
     "fields": {
-      "minute": "0",
-      "hour": "21",
-      "day_of_month": "28",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "0",
+        "hour": "21",
+        "day_of_month": "28",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.crontabschedule",
     "pk": 40,
     "fields": {
-      "minute": "18",
-      "hour": "23",
-      "day_of_month": "28",
-      "month_of_year": "*",
-      "day_of_week": "*",
-      "timezone": "Europe/Moscow"
+        "minute": "18",
+        "hour": "23",
+        "day_of_month": "28",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictasks",
     "pk": 1,
     "fields": {
-      "last_update": "2024-07-30T19:43:06.964Z"
+        "last_update": "2024-07-31T19:30:52.022Z"
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 1,
     "fields": {
-      "name": "Mailing_1_1719350583.04923",
-      "task": "mailing_service.services.send_mailing",
-      "interval": null,
-      "crontab": 1,
-      "solar": null,
-      "clocked": null,
-      "args": "[1]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-06-25T21:23:03.051Z",
-      "description": ""
+        "name": "Mailing_1_1719350583.04923",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 1,
+        "solar": null,
+        "clocked": null,
+        "args": "[1]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-06-25T21:23:03.051Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 2,
     "fields": {
-      "name": "celery.backend_cleanup",
-      "task": "celery.backend_cleanup",
-      "interval": null,
-      "crontab": 2,
-      "solar": null,
-      "clocked": null,
-      "args": "[]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": 43200,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-31T01:58:59.128Z",
-      "total_run_count": 4,
-      "date_changed": "2024-07-31T02:30:04.576Z",
-      "description": ""
+        "name": "celery.backend_cleanup",
+        "task": "celery.backend_cleanup",
+        "interval": null,
+        "crontab": 2,
+        "solar": null,
+        "clocked": null,
+        "args": "[]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": 43200,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-31T01:58:59.128Z",
+        "total_run_count": 4,
+        "date_changed": "2024-07-31T02:30:04.576Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 3,
     "fields": {
-      "name": "Mailing_3_1720883681.100807",
-      "task": "mailing_service.services.send_mailing",
-      "interval": null,
-      "crontab": 3,
-      "solar": null,
-      "clocked": null,
-      "args": "[3]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T15:14:41.102Z",
-      "description": ""
+        "name": "Mailing_3_1720883681.100807",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 3,
+        "solar": null,
+        "clocked": null,
+        "args": "[3]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T15:14:41.102Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 4,
     "fields": {
-      "name": "Mailing_4_1720883703.356068",
-      "task": "mailing_service.services.send_mailing",
-      "interval": null,
-      "crontab": 4,
-      "solar": null,
-      "clocked": null,
-      "args": "[4]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T15:15:03.362Z",
-      "description": ""
+        "name": "Mailing_4_1720883703.356068",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 4,
+        "solar": null,
+        "clocked": null,
+        "args": "[4]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T15:15:03.362Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 5,
     "fields": {
-      "name": "Mailing_5_1720884462.095804",
-      "task": "mailing_service.services.send_mailing",
-      "interval": null,
-      "crontab": 5,
-      "solar": null,
-      "clocked": null,
-      "args": "[5]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T15:28:00.021Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T15:29:35.666Z",
-      "description": ""
+        "name": "Mailing_5_1720884462.095804",
+        "task": "mailing_service.services.send_mailing",
+        "interval": null,
+        "crontab": 5,
+        "solar": null,
+        "clocked": null,
+        "args": "[5]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:28:00.021Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:29:35.666Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 6,
     "fields": {
-      "name": "Рассылка #6 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 6,
-      "solar": null,
-      "clocked": null,
-      "args": "[6]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T15:45:00.026Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T15:46:35.606Z",
-      "description": ""
+        "name": "Рассылка #6 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 6,
+        "solar": null,
+        "clocked": null,
+        "args": "[6]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:45:00.026Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:46:35.606Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 7,
     "fields": {
-      "name": "Рассылка #7 || Статус: created",
-      "task": "send_mailing",
-      "interval": null,
-      "crontab": 7,
-      "solar": null,
-      "clocked": null,
-      "args": "[7]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T15:47:00.014Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T15:47:45.311Z",
-      "description": ""
+        "name": "Рассылка #7 || Статус: created",
+        "task": "send_mailing",
+        "interval": null,
+        "crontab": 7,
+        "solar": null,
+        "clocked": null,
+        "args": "[7]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:47:00.014Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:47:45.311Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 8,
     "fields": {
-      "name": "Рассылка #8 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 8,
-      "solar": null,
-      "clocked": null,
-      "args": "[8]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T15:57:00.013Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T15:59:51.145Z",
-      "description": ""
+        "name": "Рассылка #8 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 8,
+        "solar": null,
+        "clocked": null,
+        "args": "[8]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T15:57:00.013Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T15:59:51.145Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 9,
     "fields": {
-      "name": "Рассылка #9 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 9,
-      "solar": null,
-      "clocked": null,
-      "args": "[9]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T16:01:07.578Z",
-      "description": ""
+        "name": "Рассылка #9 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 9,
+        "solar": null,
+        "clocked": null,
+        "args": "[9]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T16:01:07.578Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 10,
     "fields": {
-      "name": "Рассылка #10 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 10,
-      "solar": null,
-      "clocked": null,
-      "args": "[10]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T16:01:59.441Z",
-      "description": ""
+        "name": "Рассылка #10 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 10,
+        "solar": null,
+        "clocked": null,
+        "args": "[10]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T16:01:59.441Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 11,
     "fields": {
-      "name": "Рассылка #11 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 11,
-      "solar": null,
-      "clocked": null,
-      "args": "[11]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T16:04:00.015Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T16:05:55.659Z",
-      "description": ""
+        "name": "Рассылка #11 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 11,
+        "solar": null,
+        "clocked": null,
+        "args": "[11]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:04:00.015Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:05:55.659Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 12,
     "fields": {
-      "name": "Рассылка #12 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 12,
-      "solar": null,
-      "clocked": null,
-      "args": "[12]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T16:11:00.015Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T16:12:00.441Z",
-      "description": ""
+        "name": "Рассылка #12 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 12,
+        "solar": null,
+        "clocked": null,
+        "args": "[12]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:11:00.015Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:12:00.441Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 13,
     "fields": {
-      "name": "Рассылка #13 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 13,
-      "solar": null,
-      "clocked": null,
-      "args": "[13]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T16:20:00.015Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T16:21:05.402Z",
-      "description": ""
+        "name": "Рассылка #13 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 13,
+        "solar": null,
+        "clocked": null,
+        "args": "[13]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:20:00.015Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:21:05.402Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 14,
     "fields": {
-      "name": "Рассылка #14 || Статус: created",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 14,
-      "solar": null,
-      "clocked": null,
-      "args": "[14]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T16:26:00.028Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T16:27:10.408Z",
-      "description": ""
+        "name": "Рассылка #14 || Статус: created",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 14,
+        "solar": null,
+        "clocked": null,
+        "args": "[14]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:26:00.028Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:27:10.408Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 15,
     "fields": {
-      "name": "Рассылка #15",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 15,
-      "solar": null,
-      "clocked": null,
-      "args": "[15]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T16:32:00.008Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T16:32:50.389Z",
-      "description": ""
+        "name": "Рассылка #15",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 15,
+        "solar": null,
+        "clocked": null,
+        "args": "[15]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:32:00.008Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:32:50.389Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 19,
     "fields": {
-      "name": "Рассылка #19",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 19,
-      "solar": null,
-      "clocked": null,
-      "args": "[19]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": "2024-07-13T16:50:00.010Z",
-      "total_run_count": 1,
-      "date_changed": "2024-07-13T16:50:55.391Z",
-      "description": ""
+        "name": "Рассылка #19",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 19,
+        "solar": null,
+        "clocked": null,
+        "args": "[19]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": "2024-07-13T16:50:00.010Z",
+        "total_run_count": 1,
+        "date_changed": "2024-07-13T16:50:55.391Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 21,
     "fields": {
-      "name": "Рассылка #21",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 21,
-      "solar": null,
-      "clocked": null,
-      "args": "[21]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T16:53:07.089Z",
-      "description": ""
+        "name": "Рассылка #21",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 21,
+        "solar": null,
+        "clocked": null,
+        "args": "[21]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T16:53:07.089Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 27,
     "fields": {
-      "name": "Рассылка #29",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 27,
-      "solar": null,
-      "clocked": null,
-      "args": "[29]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T17:27:50.915Z",
-      "description": ""
+        "name": "Рассылка #29",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 27,
+        "solar": null,
+        "clocked": null,
+        "args": "[29]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T17:27:50.915Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 28,
     "fields": {
-      "name": "Рассылка #30",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 28,
-      "solar": null,
-      "clocked": null,
-      "args": "[30]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-13T17:28:04.835Z",
-      "description": ""
+        "name": "Рассылка #30",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 28,
+        "solar": null,
+        "clocked": null,
+        "args": "[30]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-13T17:28:04.835Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 31,
     "fields": {
-      "name": "Рассылка #33",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 31,
-      "solar": null,
-      "clocked": null,
-      "args": "[33]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-16T21:04:02.808Z",
-      "description": ""
+        "name": "Рассылка #33",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 31,
+        "solar": null,
+        "clocked": null,
+        "args": "[33]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-16T21:04:02.808Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 32,
     "fields": {
-      "name": "Рассылка: 34",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 32,
-      "solar": null,
-      "clocked": null,
-      "args": "[34]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-17T18:58:00.273Z",
-      "description": ""
+        "name": "Рассылка: 34",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 32,
+        "solar": null,
+        "clocked": null,
+        "args": "[34]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-17T18:58:00.273Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 33,
     "fields": {
-      "name": "Рассылка: 35",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 33,
-      "solar": null,
-      "clocked": null,
-      "args": "[35]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-17T19:12:29.222Z",
-      "description": ""
+        "name": "Рассылка: 35",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 33,
+        "solar": null,
+        "clocked": null,
+        "args": "[35]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-17T19:12:29.222Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 34,
     "fields": {
-      "name": "Рассылка: 36",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 34,
-      "solar": null,
-      "clocked": null,
-      "args": "[36]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-17T19:21:35.119Z",
-      "description": ""
+        "name": "Рассылка: 36",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 34,
+        "solar": null,
+        "clocked": null,
+        "args": "[36]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-17T19:21:35.119Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 35,
     "fields": {
-      "name": "Рассылка: 37",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 35,
-      "solar": null,
-      "clocked": null,
-      "args": "[37]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-26T15:35:20.421Z",
-      "description": ""
+        "name": "Рассылка: 37",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 35,
+        "solar": null,
+        "clocked": null,
+        "args": "[37]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-26T15:35:20.421Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 36,
     "fields": {
-      "name": "Рассылка: 38",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 36,
-      "solar": null,
-      "clocked": null,
-      "args": "[38]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-26T15:41:48.787Z",
-      "description": ""
+        "name": "Рассылка: 38",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 36,
+        "solar": null,
+        "clocked": null,
+        "args": "[38]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-26T15:41:48.787Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 37,
     "fields": {
-      "name": "Рассылка: 39",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 37,
-      "solar": null,
-      "clocked": null,
-      "args": "[39]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-26T19:58:46.421Z",
-      "description": ""
+        "name": "Рассылка: 39",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 37,
+        "solar": null,
+        "clocked": null,
+        "args": "[39]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-26T19:58:46.421Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 38,
     "fields": {
-      "name": "Рассылка: 40",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 38,
-      "solar": null,
-      "clocked": null,
-      "args": "[40]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-28T17:25:32.447Z",
-      "description": ""
+        "name": "Рассылка: 40",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 38,
+        "solar": null,
+        "clocked": null,
+        "args": "[40]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-28T17:25:32.447Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 39,
     "fields": {
-      "name": "Рассылка: 41",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 39,
-      "solar": null,
-      "clocked": null,
-      "args": "[41]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-28T18:58:17.805Z",
-      "description": ""
+        "name": "Рассылка: 41",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 39,
+        "solar": null,
+        "clocked": null,
+        "args": "[41]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-28T18:58:17.805Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "django_celery_beat.periodictask",
     "pk": 40,
     "fields": {
-      "name": "Рассылка: 42",
-      "task": "send_message",
-      "interval": null,
-      "crontab": 40,
-      "solar": null,
-      "clocked": null,
-      "args": "[42]",
-      "kwargs": "{}",
-      "queue": null,
-      "exchange": null,
-      "routing_key": null,
-      "headers": "{}",
-      "priority": null,
-      "expires": null,
-      "expire_seconds": null,
-      "one_off": false,
-      "start_time": null,
-      "enabled": true,
-      "last_run_at": null,
-      "total_run_count": 0,
-      "date_changed": "2024-07-28T20:18:00.882Z",
-      "description": ""
+        "name": "Рассылка: 42",
+        "task": "send_message",
+        "interval": null,
+        "crontab": 40,
+        "solar": null,
+        "clocked": null,
+        "args": "[42]",
+        "kwargs": "{}",
+        "queue": null,
+        "exchange": null,
+        "routing_key": null,
+        "headers": "{}",
+        "priority": null,
+        "expires": null,
+        "expire_seconds": null,
+        "one_off": false,
+        "start_time": null,
+        "enabled": true,
+        "last_run_at": null,
+        "total_run_count": 0,
+        "date_changed": "2024-07-28T20:18:00.882Z",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 2,
     "fields": {
-      "name": "Вездепух Мявкович",
-      "email": "dev.patient.zero@gmail.com",
-      "comment": "Очень разговорчив во время линьки",
-      "is_active": true,
-      "user": 6,
-      "added_at": "2024-07-26"
+        "name": "Вездепух Мявкович",
+        "email": "dev.patient.zero@gmail.com",
+        "comment": "Очень разговорчив во время линьки",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 3,
     "fields": {
-      "name": "Кот Бегемот",
-      "email": "mr.begemot@bigcat.com",
-      "comment": "Мастер спорта по Тыгыдычному бегу",
-      "is_active": true,
-      "user": 6,
-      "added_at": "2024-07-26"
+        "name": "Кот Бегемот",
+        "email": "mr.begemot@bigcat.com",
+        "comment": "Мастер спорта по Тыгыдычному бегу",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 4,
     "fields": {
-      "name": "Всегдажрун Борисович",
-      "email": "omnomnom@bigcat.com",
-      "comment": "Гурман",
-      "is_active": true,
-      "user": 3,
-      "added_at": "2024-07-26"
+        "name": "Всегдажрун Борисович",
+        "email": "omnomnom@bigcat.com",
+        "comment": "Гурман",
+        "is_active": true,
+        "user": 3,
+        "added_at": "2024-07-26"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 5,
     "fields": {
-      "name": "Котофей Куськоыч",
-      "email": "sprite.spirit.t.me@gmail.com",
-      "comment": "Любит делать кусь",
-      "is_active": true,
-      "user": 6,
-      "added_at": "2024-07-26"
+        "name": "Котофей Куськоыч",
+        "email": "sprite.spirit.t.me@gmail.com",
+        "comment": "Любит делать кусь",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 6,
     "fields": {
-      "name": "Барсик Тыгыдык",
-      "email": "runner_in_the_night@catswiil.com",
-      "comment": "Активный",
-      "is_active": true,
-      "user": 6,
-      "added_at": "2024-07-26"
+        "name": "Барсик Тыгыдык",
+        "email": "runner_in_the_night@catswiil.com",
+        "comment": "Активный",
+        "is_active": true,
+        "user": 6,
+        "added_at": "2024-07-26"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 8,
     "fields": {
-      "name": "Котан Куськов",
-      "email": "kus_kotan@catswill.com",
-      "comment": "",
-      "is_active": true,
-      "user": 14,
-      "added_at": "2024-07-28"
+        "name": "Котан Куськов",
+        "email": "kus_kotan@catswill.com",
+        "comment": "",
+        "is_active": true,
+        "user": 14,
+        "added_at": "2024-07-28"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.client",
     "pk": 9,
     "fields": {
-      "name": "Василий Мурлыка",
-      "email": "mur_mur_mother_fucker@catswiil.com",
-      "comment": "",
-      "is_active": false,
-      "user": 14,
-      "added_at": "2024-07-28"
+        "name": "Василий Мурлыка",
+        "email": "mur_mur_mother_fucker@catswiil.com",
+        "comment": "",
+        "is_active": false,
+        "user": 14,
+        "added_at": "2024-07-28"
     }
-  },
-  {
+},
+{
     "model": "mailing_service.message",
     "pk": 1,
     "fields": {
-      "message_subject": "А вы рыбов продаете?",
-      "message_body": "Показываем. Красивое",
-      "user": 6
+        "message_subject": "А вы рыбов продаете?",
+        "message_body": "Показываем. Красивое",
+        "user": 6
     }
-  },
-  {
+},
+{
     "model": "mailing_service.message",
     "pk": 2,
     "fields": {
-      "message_subject": "Запах марта. Голос весны",
-      "message_body": "Как кричать весной, чтобы не сорвать голос вам расскажет нас специалист по мартовскому горловому пению Василий Котеевич",
-      "user": 6
+        "message_subject": "Запах марта. Голос весны",
+        "message_body": "Как кричать весной, чтобы не сорвать голос вам расскажет нас специалист по мартовскому горловому пению Василий Котеевич",
+        "user": 6
     }
-  },
-  {
+},
+{
     "model": "mailing_service.message",
     "pk": 3,
     "fields": {
-      "message_subject": "Тапочные войны",
-      "message_body": "Драть или не драть? Вот в чем вопрос",
-      "user": 14
+        "message_subject": "Тапочные войны",
+        "message_body": "Драть или не драть? Вот в чем вопрос",
+        "user": 14
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 34,
     "fields": {
-      "created_at": "2024-07-17T18:57:56.787Z",
-      "first_send": "2024-07-17T18:58:00Z",
-      "finish_send": "2024-07-18T18:57:00Z",
-      "periodicity": "daily",
-      "status": "started",
-      "message": 2,
-      "is_published": false,
-      "user": 6,
-      "client": [
-        2,
-        4,
-        3
-      ]
+        "created_at": "2024-07-17T18:57:56.787Z",
+        "first_send": "2024-07-17T18:58:00Z",
+        "finish_send": "2024-07-18T18:57:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 2,
+        "is_published": false,
+        "user": 6,
+        "client": [
+            2,
+            4,
+            3
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 35,
     "fields": {
-      "created_at": "2024-07-17T19:12:26.713Z",
-      "first_send": "2024-07-17T19:13:00Z",
-      "finish_send": "2024-07-25T19:11:00Z",
-      "periodicity": "weekly",
-      "status": "started",
-      "message": 1,
-      "is_published": true,
-      "user": 6,
-      "client": [
-        4,
-        3
-      ]
+        "created_at": "2024-07-17T19:12:26.713Z",
+        "first_send": "2024-07-17T19:13:00Z",
+        "finish_send": "2024-07-25T19:11:00Z",
+        "periodicity": "weekly",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            4,
+            3
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 36,
     "fields": {
-      "created_at": "2024-07-17T19:21:33.645Z",
-      "first_send": "2024-07-17T19:23:00Z",
-      "finish_send": "2024-08-01T19:21:00Z",
-      "periodicity": "weekly",
-      "status": "started",
-      "message": 2,
-      "is_published": true,
-      "user": 6,
-      "client": [
-        2
-      ]
+        "created_at": "2024-07-17T19:21:33.645Z",
+        "first_send": "2024-07-17T19:23:00Z",
+        "finish_send": "2024-08-01T19:21:00Z",
+        "periodicity": "weekly",
+        "status": "started",
+        "message": 2,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 37,
     "fields": {
-      "created_at": "2024-07-26T15:35:19.786Z",
-      "first_send": "2024-07-26T15:36:00Z",
-      "finish_send": "2024-07-27T15:35:00Z",
-      "periodicity": "daily",
-      "status": "started",
-      "message": 1,
-      "is_published": true,
-      "user": 6,
-      "client": [
-        2
-      ]
+        "created_at": "2024-07-26T15:35:19.786Z",
+        "first_send": "2024-07-26T15:36:00Z",
+        "finish_send": "2024-07-27T15:35:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 38,
     "fields": {
-      "created_at": "2024-07-26T15:41:46.831Z",
-      "first_send": "2024-07-26T15:42:00Z",
-      "finish_send": "2024-07-26T15:43:00Z",
-      "periodicity": "daily",
-      "status": "started",
-      "message": 2,
-      "is_published": true,
-      "user": 6,
-      "client": [
-        2,
-        3
-      ]
+        "created_at": "2024-07-26T15:41:46.831Z",
+        "first_send": "2024-07-26T15:42:00Z",
+        "finish_send": "2024-07-26T15:43:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 2,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            2,
+            3
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 39,
     "fields": {
-      "created_at": "2024-07-26T19:58:43.549Z",
-      "first_send": "2024-07-26T19:59:00Z",
-      "finish_send": "2024-07-27T19:58:00Z",
-      "periodicity": "daily",
-      "status": "started",
-      "message": 1,
-      "is_published": false,
-      "user": 6,
-      "client": [
-        6,
-        2,
-        4
-      ]
+        "created_at": "2024-07-26T19:58:43.549Z",
+        "first_send": "2024-07-26T19:59:00Z",
+        "finish_send": "2024-07-27T19:58:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 1,
+        "is_published": false,
+        "user": 6,
+        "client": [
+            6,
+            2,
+            4
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 40,
     "fields": {
-      "created_at": "2024-07-28T17:25:29.624Z",
-      "first_send": "2024-07-28T17:26:00Z",
-      "finish_send": "2024-07-29T17:25:00Z",
-      "periodicity": "daily",
-      "status": "started",
-      "message": 1,
-      "is_published": true,
-      "user": 6,
-      "client": [
-        6,
-        2,
-        4
-      ]
+        "created_at": "2024-07-28T17:25:29.624Z",
+        "first_send": "2024-07-28T17:26:00Z",
+        "finish_send": "2024-07-29T17:25:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            6,
+            2,
+            4
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailing",
     "pk": 42,
     "fields": {
-      "created_at": "2024-07-28T20:17:59.732Z",
-      "first_send": "2024-07-28T20:18:00Z",
-      "finish_send": "2024-07-29T20:17:00Z",
-      "periodicity": "daily",
-      "status": "started",
-      "message": 3,
-      "is_published": true,
-      "user": 14,
-      "client": [
-        8
-      ]
+        "created_at": "2024-07-28T20:17:59.732Z",
+        "first_send": "2024-07-28T20:18:00Z",
+        "finish_send": "2024-07-29T20:17:00Z",
+        "periodicity": "daily",
+        "status": "started",
+        "message": 3,
+        "is_published": false,
+        "user": 14,
+        "client": [
+            8
+        ]
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 29,
     "fields": {
-      "date_time": "2024-07-17T18:57:57.495Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 34
+        "date_time": "2024-07-17T18:57:57.495Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 30,
     "fields": {
-      "date_time": "2024-07-17T18:57:58.624Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 34
+        "date_time": "2024-07-17T18:57:58.624Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 31,
     "fields": {
-      "date_time": "2024-07-17T18:57:59.754Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 34
+        "date_time": "2024-07-17T18:57:59.754Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 32,
     "fields": {
-      "date_time": "2024-07-17T18:58:00.231Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 34
+        "date_time": "2024-07-17T18:58:00.231Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 34
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 33,
     "fields": {
-      "date_time": "2024-07-17T19:12:28.156Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 35
+        "date_time": "2024-07-17T19:12:28.156Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 35
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 34,
     "fields": {
-      "date_time": "2024-07-17T19:12:29.182Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 35
+        "date_time": "2024-07-17T19:12:29.182Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 35
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 35,
     "fields": {
-      "date_time": "2024-07-17T19:21:34.374Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 36
+        "date_time": "2024-07-17T19:21:34.374Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 36
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 36,
     "fields": {
-      "date_time": "2024-07-17T19:21:35.085Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 36
+        "date_time": "2024-07-17T19:21:35.085Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 36
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 37,
     "fields": {
-      "date_time": "2024-07-26T15:35:20.380Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 37
+        "date_time": "2024-07-26T15:35:20.380Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 37
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 38,
     "fields": {
-      "date_time": "2024-07-26T15:41:47.425Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 38
+        "date_time": "2024-07-26T15:41:47.425Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 38
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 39,
     "fields": {
-      "date_time": "2024-07-26T15:41:48.758Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 38
+        "date_time": "2024-07-26T15:41:48.758Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 38
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 40,
     "fields": {
-      "date_time": "2024-07-26T19:58:44.499Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 39
+        "date_time": "2024-07-26T19:58:44.499Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 39
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 41,
     "fields": {
-      "date_time": "2024-07-26T19:58:45.214Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 39
+        "date_time": "2024-07-26T19:58:45.214Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 39
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 42,
     "fields": {
-      "date_time": "2024-07-26T19:58:46.392Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 39
+        "date_time": "2024-07-26T19:58:46.392Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 39
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 43,
     "fields": {
-      "date_time": "2024-07-28T17:25:30.456Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 40
+        "date_time": "2024-07-28T17:25:30.456Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 40
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 44,
     "fields": {
-      "date_time": "2024-07-28T17:25:31.169Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 40
+        "date_time": "2024-07-28T17:25:31.169Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 40
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 45,
     "fields": {
-      "date_time": "2024-07-28T17:25:32.406Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 40
+        "date_time": "2024-07-28T17:25:32.406Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 40
     }
-  },
-  {
+},
+{
     "model": "mailing_service.mailinglogs",
     "pk": 50,
     "fields": {
-      "date_time": "2024-07-28T20:18:00.850Z",
-      "status": "success",
-      "server_response": "Сообщение успешно отправлено",
-      "mailing": 42
+        "date_time": "2024-07-28T20:18:00.850Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 42
     }
-  },
-  {
+},
+{
     "model": "users.user",
     "pk": 3,
     "fields": {
-      "password": "pbkdf2_sha256$720000$CbFxSw455R3qJePPsHhnl5$ErSjkItraQWA/Rt/PjQ1An8s4DFwb92jypYmek8nIhc=",
-      "last_login": "2024-07-31T10:47:08.941Z",
-      "is_superuser": true,
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2024-07-14T20:43:57Z",
-      "email": "admin@localhost",
-      "first_name": "Admin",
-      "last_name": "Best",
-      "middle_name": "Ever",
-      "phone_number": "+79668772222",
-      "avatar": "",
-      "country": "RU",
-      "about_message": "",
-      "is_blocked": false,
-      "website": "https://",
-      "github": "SpriteSpirit",
-      "telegram": "@",
-      "groups": [
-        1
-      ],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$CbFxSw455R3qJePPsHhnl5$ErSjkItraQWA/Rt/PjQ1An8s4DFwb92jypYmek8nIhc=",
+        "last_login": "2024-08-01T20:42:11.605Z",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-07-14T20:43:57Z",
+        "email": "admin@localhost",
+        "first_name": "Admin",
+        "last_name": "Best",
+        "middle_name": "Ever",
+        "phone_number": "+79668772222",
+        "avatar": "",
+        "country": "NO",
+        "about_message": "",
+        "is_blocked": false,
+        "token": null,
+        "website": "https://",
+        "github": "SpriteSpirit",
+        "telegram": "@",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
     }
-  },
-  {
+},
+{
     "model": "users.user",
     "pk": 6,
     "fields": {
-      "password": "pbkdf2_sha256$720000$BazxcQFa6sopyHsX7Y3Pet$uOuJc7nJCTj8eYUy7dKN1xI13Z8g3pbEiJzdBSkq9t4=",
-      "last_login": "2024-07-31T15:26:25.440Z",
-      "is_superuser": false,
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2024-07-16T15:45:36.620Z",
-      "email": "a.backer@yandex.ru",
-      "first_name": "Ангелина",
-      "last_name": "Халуева",
-      "middle_name": "Николаевна",
-      "phone_number": "+79668772222",
-      "avatar": "users/avatars/UniverseBless_dKCr3UW.jpg",
-      "country": "RU",
-      "about_message": "Это мой профиль",
-      "is_blocked": false,
-      "website": "https://admin.com",
-      "github": "SpriteSpirit",
-      "telegram": "@sprite_spirit",
-      "groups": [],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$lPeslcWq5vUQPu7QIy3n7w$pDKt/Q9l6q0J8CM8cHBMEMEXFhMOiSwWwd9XMkPLV7Q=",
+        "last_login": "2024-08-02T09:27:40.638Z",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-16T15:45:36.620Z",
+        "email": "a.backer@yandex.ru",
+        "first_name": "Ангелина",
+        "last_name": "Халуева",
+        "middle_name": "Николаевна",
+        "phone_number": "+79668772222",
+        "avatar": "users/avatars/UniverseBless_dKCr3UW.jpg",
+        "country": "RU",
+        "about_message": "Это мой профиль",
+        "is_blocked": false,
+        "token": null,
+        "website": "https://admin.com",
+        "github": "SpriteSpirit",
+        "telegram": "@sprite_spirit",
+        "groups": [],
+        "user_permissions": []
     }
-  },
-  {
+},
+{
     "model": "users.user",
     "pk": 12,
     "fields": {
-      "password": "pbkdf2_sha256$720000$0VM491vQjQ0G99JzQIeWpc$cTG5gOVmwM/ca9umEClUD3GJF5FlJ2gWh6IZvOq6HlA=",
-      "last_login": null,
-      "is_superuser": false,
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2024-07-28T17:46:44Z",
-      "email": "user2@gmail.com",
-      "first_name": "User",
-      "last_name": "Two",
-      "middle_name": "ByTwo",
-      "phone_number": "+79234567890",
-      "avatar": "",
-      "country": "RU",
-      "about_message": "",
-      "is_blocked": false,
-      "website": "https://",
-      "github": null,
-      "telegram": "@",
-      "groups": [],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$0VM491vQjQ0G99JzQIeWpc$cTG5gOVmwM/ca9umEClUD3GJF5FlJ2gWh6IZvOq6HlA=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-28T17:46:44Z",
+        "email": "user2@gmail.com",
+        "first_name": "User",
+        "last_name": "Two",
+        "middle_name": "ByTwo",
+        "phone_number": "+79234567890",
+        "avatar": "",
+        "country": "RU",
+        "about_message": "",
+        "is_blocked": false,
+        "token": null,
+        "website": "https://",
+        "github": null,
+        "telegram": "@",
+        "groups": [],
+        "user_permissions": []
     }
-  },
-  {
+},
+{
     "model": "users.user",
     "pk": 13,
     "fields": {
-      "password": "pbkdf2_sha256$720000$KiTXsuXSKbxObBfvkD6uHY$8c5sEQ/kgdmE3kMPQjPTihnO+UHk7nPK9fHA8RWo9PA=",
-      "last_login": null,
-      "is_superuser": false,
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2024-07-28T17:48:29Z",
-      "email": "user1@gmail.com",
-      "first_name": "User",
-      "last_name": "One",
-      "middle_name": "ByOne",
-      "phone_number": "+79234567890",
-      "avatar": "",
-      "country": "RU",
-      "about_message": "",
-      "is_blocked": false,
-      "website": "https://",
-      "github": null,
-      "telegram": "@",
-      "groups": [],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$KiTXsuXSKbxObBfvkD6uHY$8c5sEQ/kgdmE3kMPQjPTihnO+UHk7nPK9fHA8RWo9PA=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-28T17:48:29Z",
+        "email": "user1@gmail.com",
+        "first_name": "User",
+        "last_name": "One",
+        "middle_name": "ByOne",
+        "phone_number": "+79234567890",
+        "avatar": "",
+        "country": "RU",
+        "about_message": "",
+        "is_blocked": false,
+        "token": null,
+        "website": "https://",
+        "github": null,
+        "telegram": "@",
+        "groups": [],
+        "user_permissions": []
     }
-  },
-  {
+},
+{
     "model": "users.user",
     "pk": 14,
     "fields": {
-      "password": "pbkdf2_sha256$720000$yNvPWwFXmurKrZ5QtuSq5D$PEjDudPNUvrn8T8LMnAKAgLTUAuw0BsdlEEnfnjlfXs=",
-      "last_login": "2024-07-31T15:21:39.515Z",
-      "is_superuser": false,
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2024-07-28T17:52:22Z",
-      "email": "moderator@gmail.com",
-      "first_name": "Moderator",
-      "last_name": "Best",
-      "middle_name": "OfTheBest",
-      "phone_number": "+79234567890",
-      "avatar": "users/avatars/sea2_GGm0BpA.jpeg",
-      "country": "RU",
-      "about_message": "This is moderator profile",
-      "is_blocked": false,
-      "website": "https://not_stuff_and_its_ok.com",
-      "github": "guru_duru",
-      "telegram": "@guru_duru",
-      "groups": [
-        1
-      ],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$yNvPWwFXmurKrZ5QtuSq5D$PEjDudPNUvrn8T8LMnAKAgLTUAuw0BsdlEEnfnjlfXs=",
+        "last_login": "2024-08-02T06:43:41.077Z",
+        "is_superuser": false,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-07-28T17:52:22Z",
+        "email": "moderator@gmail.com",
+        "first_name": "Moderator",
+        "last_name": "Best",
+        "middle_name": "OfTheBest",
+        "phone_number": "+79234567890",
+        "avatar": "users/avatars/sea2_GGm0BpA.jpeg",
+        "country": "HT",
+        "about_message": "This is moderator profile",
+        "is_blocked": false,
+        "token": null,
+        "website": "https://not_stuff_and_its_ok.com",
+        "github": "guru_duru",
+        "telegram": "@guru_duru",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
     }
-  }
+},
+{
+    "model": "blogs.blogpost",
+    "pk": 1,
+    "fields": {
+        "title": "Тайна июльского пуха: Тополиный или Кошачий?",
+        "slug": "tajna-iyulskogo-pukha-topolinij-ili-koshachij-ili-kak-prinesti-leto-v-dom",
+        "content": "С приближением самого жаркого месяца года, июльская температура не только растет, но и... пухнет. Да, вы не ослышались – пухнет! Ведь именно в это время на улицах города разгуливает два главных источника летнего комфорта: тополиный пух и кошачий пух. Но какой из них правомерно называть истинным символом июля?\r\n\r\nТополиный пух: королевская роскошь или пыльная проблема?\r\n\r\nС одной стороны, тополиный пух – это настоящая летняя роскошь. Он парит в воздухе, создавая волшебную, романтическую атмосферу. Стоит только выглянуть в окно, и вы окунетесь в облако белоснежных хлопьев, словно в снег зимы, только гораздо более приятно. Однако, если вам не хватает романтики, а есть аллергия, то тополиный пух может превратиться в пыльную проблему. Неприятные симптомы, от зуда в глазах до постоянного чихания, – вот что ожидает тех, кто не готов к атаки белого зла.\r\n\r\nКошачий пух: домашний комфорт или фелинская интрига?\r\n\r\nС другой стороны, кошачий пух – это то, что многие из нас ассоциируют с домашним уютом. Он тихо расстилается на диванах, креслах и даже на клавиатуре вашего компьютера. Кошачий пух – это знак того, что у вас есть верный друг и компаньон, готовый разделить с вами жаркие июльские дни. Однако, если ваш питомец решил отметить лето массовым линькой, то ваш дом может превратиться в кошачий пуховой бурлеск. Вам предстоит решать, является ли это комфортом или интригой с целью заработать больше внимания и лакомств.\r\n\r\nИтог: пусть пух летит!\r\n\r\nВ конце концов, какой пух правомерно называть истинным символом июля – тополиный или кошачий? Ответ прост: оба! Июль – месяц контраста, когда жаркое солнце сочетается с легким ветром, а романтика соседствует с домашним уютом. Тополиный пух приносит в нашу жизнь воздушную легкость, а кошачий – тепло и привязанность. Поэтому пусть пух летит, пусть он окружает нас, напоминая о том, что лето – это время не только солнца, но и тепла человеческих (и животных) связей. А если аллергия или домашняя чистота станут проблемой, то вспомните: июля не бывает без пуха, а пуха – без июля!",
+        "image": "blog_image/scale_1200.png",
+        "created_at": "2024-08-01T19:27:51.236Z",
+        "published": true,
+        "view_count": 43
+    }
+},
+{
+    "model": "blogs.blogpost",
+    "pk": 2,
+    "fields": {
+        "title": "Всегдажрун: Пушистый гурман с неутолимым аппетитом",
+        "slug": "vsegdazhrun-pushistij-gurman-s-neutolimim-appetitom",
+        "content": "Встречайте Всегдажруна, кота, который переписал правила сна. Он не просто любит спать – он сделал это своим призванием. Его рекорд – 23 часа 59 минут беспробудного сна в сутки, с кратковременными пробуждениями только для поедания вкусной еды или ласк от хозяев.\r\n\r\nВсегдажрун умудрился превратить сон в искусство. Он выбирает самые необычные позы, оборачиваясь спиралью, как улитка в своей раковине, или заворачиваясь в клубок, словно живой ковер. Его дыхание – это едва слышный шёпот, а приятное урчание создает уютную атмосферу в любой комнате.\r\n\r\nХозяева Всегдажруна признаются, что он научил их ценить тишину и покой. \"Он как живой Тайм-аут от суеты жизни\", – шутят они. Несмотря на его ленивый образ жизни, Всегдажрун остается любимцем семьи, и его сон стал семейной традицией – каждый член семьи старается подражать ему, если не по продолжительности, то по качеству отдыха. Благодаря Всегдажруну, дом преобразился в оазис релаксации, где время течет медленнее, а счастье – быстрее. Спасибо, Всегдажрун, за уроки искусства сна!",
+        "image": "blog_image/котэ-омномном-4625799.jpeg",
+        "created_at": "2024-08-01T20:56:12.862Z",
+        "published": true,
+        "view_count": 25
+    }
+},
+{
+    "model": "blogs.blogpost",
+    "pk": 3,
+    "fields": {
+        "title": "Барсик Тыгыдык: Мелодия физики на лапках",
+        "slug": "barsik-tigidik-melodiya-fiziki-na-lapkakh",
+        "content": "Встречайте Барсика Тыгыдыка, кота, который бросил вызов законам физики. Его жизнь – это постоянное нарушение принципов гравитации, пространства и времени. Барсик может:\r\n\r\nЗанимать несколько мест одновременно: он может лежать на диване, а также одновременно сидеть на подоконнике и наблюдать за птицами.\r\nПревращать воздух в твердь: его взгляд способен зафиксировать в воздухе даже невидимые частицы, создавая эффект \"воздушных скульптур\".\r\nИгнорировать временные ограничения: Барсик может спать целый день, а затем проснуться, как будто только что пообедал, и требовать корма с тем же аппетитом.\r\nХозяева Барсика Тыгыдыка признаются, что его присутствие в доме стало причиной неожиданных открытий. \"Он научил нас видеть мир под другим углом – или, точнее, без углов\", – шутят они. Барсик – это живой пример того, что физика – это всего лишь теория, а на самом деле все возможно, если ты готов поверить в чудо. Его жизнь – это вдохновляющее напоминание о том, что иногда нужно отбросить правила и просто насладиться магией момента.",
+        "image": "blog_image/WdOy2Ch5RyY.jpg",
+        "created_at": "2024-08-01T20:58:42.553Z",
+        "published": true,
+        "view_count": 6
+    }
+},
+{
+    "model": "blogs.blogpost",
+    "pk": 4,
+    "fields": {
+        "title": "Кот-блогер Джон Кетсвилл: жизнь, любовь и интернет",
+        "slug": "kot-bloger-dzhon-ketsvill-zhizn-lyubov-i-internet",
+        "content": "Джон Кетсвилл - пушистая звезда социальных сетей, покорившая сердца миллионов пользователей по всему миру. Этот очаровательный британский короткошерстный кот начал свою карьеру блогера в 2018 году, когда его хозяйка, Сара Джонсон, решила поделиться забавными фотографиями питомца в Instagram.\r\n\r\nБлагодаря своему харизматичному внешнему виду и уникальным выражениям мордочки, Джон быстро стал интернет-сенсацией. Его аккаунт @john_catswell насчитывает более 2 миллионов подписчиков, которые ежедневно следят за приключениями пушистого блогера.\r\n\r\nОсобую популярность Джону принесли его тематические фотосессии, где он предстает в различных образах: от шеф-повара до супергероя. Кот также известен своими \"обзорами\" игрушек и лакомств для животных, которые неизменно вызывают улыбку у его поклонников.\r\n\r\nПомимо развлекательного контента, Джон Кетсвилл участвует в благотворительных акциях, привлекая внимание к проблемам бездомных животных. Его популярность помогла собрать значительные средства для приютов и организаций по защите животных.\r\n\r\nСегодня Джон Кетсвилл - не просто домашний питомец, а настоящий бренд с собственной линейкой товаров для кошек и их владельцев. Его история успеха вдохновляет многих и доказывает, что в мире социальных медиа звездой может стать каждый, даже если у тебя четыре лапы и хвост.",
+        "image": "blog_image/scale_1200.jpeg",
+        "created_at": "2024-08-02T07:12:43.760Z",
+        "published": true,
+        "view_count": 1
+    }
+}
 ]
