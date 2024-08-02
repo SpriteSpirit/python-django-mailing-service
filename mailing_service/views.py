@@ -17,12 +17,16 @@ from mailing_service.services import MailingService, send_mailing
 from mailing_service.templatetags.custom_filters import translate_month_from_num
 
 from users.models import User
+from blogs.models import BlogPost
 
 
 @login_required
 def dashboard(request):
     user = request.user
     mailing_list = Mailing.objects.filter(user=user)
+    blogposts = BlogPost.objects.all().order_by('-view_count')[:3]
+
+    print(blogposts)
 
     today = timezone.now().date()
     now_month = timezone.now().month
@@ -62,7 +66,7 @@ def dashboard(request):
 
     mailing_per_day = list(mailing_per_day.values())
     now_month = translate_month_from_num(now_month)
-    print(clients_added_half_year)
+
     context = {
         'active_page': 'dashboard',
         'mailing_list': mailing_list,
@@ -74,7 +78,9 @@ def dashboard(request):
         'now_month': json.dumps(now_month, ensure_ascii=False),
         'last_half_year': json.dumps(last_half_year, ensure_ascii=False),
         'clients_added_half_year': clients_added_half_year,
+        'blogposts': blogposts,
     }
+    print(now_month)
 
     return render(request, 'mailing_service/dashboard.html', context)
 
@@ -116,6 +122,9 @@ def moderator_dashboard(request):
     for user in all_users:
         total_clients += len(user.client_set.all())
 
+    blogposts = BlogPost.objects.all().order_by('-view_count')[:3]
+    total_blogs = len(BlogPost.objects.all())
+
     context = {
         'title': "КАБИНЕТ МОДЕРАТОРА",
         'active_page': 'moderator_dashboard',
@@ -129,6 +138,8 @@ def moderator_dashboard(request):
         'total_mailings': total_mailings,
         'total_messages': total_messages,
         'total_users': total_users,
+        'total_blogs': total_blogs,
+        'blogposts': blogposts,
     }
 
     return render(request, 'mailing_service/moderator_dashboard.html', context)

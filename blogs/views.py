@@ -1,6 +1,4 @@
-from django.forms import inlineformset_factory
-from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
@@ -76,6 +74,9 @@ class BlogPostCreateView(LoginRequiredMixin, CreateView):
 class BlogPostUpdateView(LoginRequiredMixin, UpdateView):
     model = BlogPost
     form_class = BlogPostForm
+
+    def __init__(self, **kwargs):
+        super().__init__(kwargs)
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class)

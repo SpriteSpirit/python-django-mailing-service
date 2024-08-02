@@ -13,7 +13,7 @@ class BlogPost(models.Model):
     image = models.ImageField(upload_to='blog_image/', blank=True, null=True, verbose_name='Изображение')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     published = models.BooleanField(default=False, verbose_name='Опубликовано')
-    view_count = models.PositiveIntegerField(default=0, verbose_name='Количеств просмотров')
+    view_count = models.PositiveIntegerField(default=0, verbose_name='Количество просмотров')
 
     class Meta:
         ordering = ['-created_at']
