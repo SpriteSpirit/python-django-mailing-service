@@ -54,7 +54,7 @@
             </div>
 
             {% if user.is_staff or user.is_superuser %}
-
+            {% if mailing.status == 'created' or mailing.status == 'started' %}
             <form method="post" action="{% url 'mailing:toggle_mailing' mailing.id %}">
                 {% csrf_token %}
                 <!--                                <input type="hidden" name="mailing_id" value="{{ mailing.id }}">-->
@@ -63,6 +63,7 @@
                     {% if mailing.is_published %}Отключить{% else %}Включить{% endif %}
                 </button>
             </form>
+            {% endif %}
             {% endif %}
 
             <span class="submitting"></span> <br>

@@ -12,8 +12,8 @@ app_name = MailingServiceConfig.name
 
 
 urlpatterns = [
-    path('dashboard/', cache_page(5)(dashboard), name='dashboard'),
-    path('moderator_dashboard/', cache_page(5)(moderator_dashboard), name='moderator_dashboard'),
+    path('dashboard/', dashboard, name='dashboard'),  # кеширование убрала потому что можно снова попасть в ЛК
+    path('moderator_dashboard/', moderator_dashboard, name='moderator_dashboard'),
 
     path('client_list/', cache_page(5)(ClientListView.as_view()), name='client_list'),
     path('create_client/', ClientCreateView.as_view(), name='create_client'),

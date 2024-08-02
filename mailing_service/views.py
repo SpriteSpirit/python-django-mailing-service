@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 from django.contrib.auth.decorators import login_required, permission_required
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import Permission
 from django.utils import timezone
 
@@ -14,7 +14,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DetailView, D
 
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
-from mailing_service.services import MailingService, send_mailing, finish_task
+from mailing_service.services import MailingService, send_mailing, finish_task, delete_task
 from mailing_service.templatetags.custom_filters import translate_month_from_num
 
 from users.models import User
@@ -26,8 +26,6 @@ def dashboard(request):
     user = request.user
     mailing_list = Mailing.objects.filter(user=user)
     blogposts = BlogPost.objects.all().order_by('-view_count')[:3]
-
-    print(blogposts)
 
     today = timezone.now().date()
     now_month = timezone.now().month
@@ -327,6 +325,7 @@ class MailingUpdateView(LoginRequiredMixin, UpdateView):
 
 
 class MailingDeleteView(LoginRequiredMixin, DeleteView):
+    """ Удаление рассылки """
     model = Mailing
     success_url = reverse_lazy('mailing:mailing_list')
 
@@ -351,7 +350,7 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
         message.user = self.request.user
         message.save()
 
-        """ Если форма валидна, то отправляется сообщение"""
+        """ Если форма валидна, то отправляется сообщение """
 
         return super().form_valid(form)
 
@@ -381,6 +380,7 @@ class MessageListView(LoginRequiredMixin, ListView):
 
 
 class MessageDetailView(LoginRequiredMixin, DetailView):
+    """ Удаление сообщения """
     model = Message
     extra_context = {'title': 'Информация о сообщении'}
 
@@ -438,13 +438,11 @@ class MailingLogListView(LoginRequiredMixin, ListView):
             else:
                 continue
 
-            info.append(
-                {
+            info.append({
                     'log': log,
                     'mailing': mailing,
                     'client': client,
-                }
-            )
+            })
 
         context['info_client'] = info
 
@@ -470,15 +468,20 @@ def toggle_mailing(request, pk):
 
     if request.method == 'POST':
 
-        if mailing.status == "created":
+        if mailing.status == "created" or mailing.status == "started":
             mailing.is_published = not mailing.is_published
 
-        if not mailing.is_published:
-            finish_task(mailing)
-        else:
-            mailing.status = "started"
+        if not (mailing.is_published and finish_task(mailing)):
+            delete_task(mailing)
+        elif mailing.is_published and not finish_task(mailing):
+            message_service = MailingService(mailing)
+
+            mailing.status = 'started'
+            mailing.save()
+
+            send_mailing(mailing)
+            message_service.create_task()
 
         mailing.save()
-        print(mailing.status)
 
         return redirect('mailing:view_mail', pk=mailing.pk)

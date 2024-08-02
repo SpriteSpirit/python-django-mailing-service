@@ -63,7 +63,6 @@ def finish_task(mailing):
 
     current_time = datetime.now(pytz.timezone('Europe/Moscow'))
     current_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
-    mailing.status = 'completed'
 
     return current_time > end_time.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -83,7 +82,7 @@ def send_mailing(mailing):
     """Отправка рассылки и создание лога рассылки"""
     message = mailing.message
     clients = mailing.client.all()
-    print('Send mailing func')
+    # print('Send mailing func')
 
     for client in clients:
         try:
@@ -95,6 +94,7 @@ def send_mailing(mailing):
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=[client.email]
             )
+
             mailing_log = MailingLogs(
                 date_time=datetime.now(),
                 status='success',
