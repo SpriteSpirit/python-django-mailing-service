@@ -26,6 +26,21 @@ def dashboard(request):
     user = request.user
     mailing_list = Mailing.objects.filter(user=user)
     blogposts = BlogPost.objects.all().order_by('-view_count')[:3]
+    formatted_posts = []
+
+    for post in blogposts:
+        published_date = post.created_at
+        month = published_date.strftime('%B')
+        day = published_date.strftime('%d')
+        year = published_date.strftime('%Y')
+        formatted_posts.append({
+            'post': post,
+            'publication_date': f"{month} {day}, {year}",
+            'image': post.image,
+        })
+
+    for post in formatted_posts:
+        print(post['image'])
 
     today = timezone.now().date()
     now_month = timezone.now().month
@@ -77,7 +92,7 @@ def dashboard(request):
         'now_month': json.dumps(now_month, ensure_ascii=False),
         'last_half_year': json.dumps(last_half_year, ensure_ascii=False),
         'clients_added_half_year': clients_added_half_year,
-        'blogposts': blogposts,
+        'formatted_posts': formatted_posts,
     }
     print(now_month)
 

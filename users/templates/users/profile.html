@@ -118,8 +118,9 @@
                     <div class="col-sm-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3 text-wsuccess" style="color: #4682B4;">О
-                                    себе</h6>
+                                <h6 class="d-flex align-items-center mb-3" style="color: #c08081;">
+                                    О себе
+                                </h6>
                                 <span class="card w-100 border-0">
                                     {% if not user.about_message %}
                                         Нет описания.
@@ -133,9 +134,9 @@
                     <div class="col-sm-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3" style="color: #4682B4;">Новые клиенты</h6>
+                                <h6 class="d-flex align-items-center mb-3" style="color: #c08081;">Новые клиенты</h6>
                                 {% for client in clients|slice:"-3:" %}
-                                <small>{{ client.name }} <span class="text-success">[{{ client.email }}]</span></small>
+                                <small>{{ client.name }} <span style="color: #4682B4;">[{{ client.email }}]</span></small>
                                 <div class="progress mb-3" style="height: 5px">
                                     <div class="bg-secondary" style="width: 100%; height: 3px;"></div>
                                 </div>

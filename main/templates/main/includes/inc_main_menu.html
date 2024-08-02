@@ -30,17 +30,17 @@
 
     <div class="nav-scroller py-1 mb-3 border-bottom">
         <nav class="nav nav-underline justify-content-between">
-            <a class="nav-item nav-link link-body-emphasis {% if request.path == '/' %} active {% endif %}"
-               href="{% url 'main:index' %}">ГЛАВНАЯ</a>
-            <a class="nav-item nav-link link-body-emphasis {% if request.path == '/blogs/' %} active {% endif %}"
-               href="{% url 'blogs:blog_list' %}">ПУБЛИКАЦИИ</a>
+            <a class="nav-item nav-link {% if request.path == '/' %} active {% endif %}"
+               href="{% url 'main:index' %}" style="color: #c08081;">ГЛАВНАЯ</a>
+            <a class="nav-item nav-link {% if request.path == '/blogs/' %} active {% endif %}"
+               href="{% url 'blogs:blog_list' %}" style="color: #c08081;">ПУБЛИКАЦИИ</a>
             {% if request.user|has_group:"Moderator" %}
-            <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:moderator_dashboard' %}">{% if user.is_staff %}КАБИНЕТ
+            <a class="nav-item nav-link" href="{% url 'mailing:moderator_dashboard' %}" style="color: #c08081;">{% if user.is_staff %}КАБИНЕТ
                 МОДЕРАТОРА{% else %}КАБИНЕТ АДМИНИСТРАТОРА{% endif %}</a>
             {% else %}
-            <a class="nav-item nav-link link-body-emphasis" href="{% url 'mailing:dashboard' %}">ЛИЧНЫЙ КАБИНЕТ</a>
+            <a class="nav-item nav-link" href="{% url 'mailing:dashboard' %}" style="color: #c08081;">ЛИЧНЫЙ КАБИНЕТ</a>
             {% endif %}
-            <a class="nav-item nav-link link-body-emphasis" href="{% url 'main:contacts' %}">СВЯЗАТЬСЯ С НАМИ</a>
+            <a class="nav-item nav-link" href="{% url 'main:contacts' %}" style="color: #c08081;">СВЯЗАТЬСЯ С НАМИ</a>
         </nav>
     </div>
 </div>

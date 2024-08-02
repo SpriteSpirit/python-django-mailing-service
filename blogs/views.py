@@ -76,7 +76,7 @@ class BlogPostUpdateView(LoginRequiredMixin, UpdateView):
     form_class = BlogPostForm
 
     def __init__(self, **kwargs):
-        super().__init__(kwargs)
+        super().__init__(**kwargs)
         self.object = None
 
     def get_form(self, form_class=None):
