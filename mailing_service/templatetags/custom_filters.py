@@ -66,7 +66,6 @@ def has_group(user, group_name):
 
 @register.filter('translate')
 def translate(value):
-    print(_(value))
     return _(value)
 
 

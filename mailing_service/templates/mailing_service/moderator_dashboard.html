@@ -13,8 +13,9 @@
         <!--        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
         <!--            <h1 class="h2">{{ title }}</h1>-->
         <!--        </div>-->
-        <h2 class="mb-3" style="color: #4682B4;">Информационная панель</h2><hr>
-        <div class="container-fluid">
+        <h2 class="mb-3" style="color: #4682B4; width:100%;">Информационная панель</h2>
+        <hr>
+        <div class="container-flex">
 
             <div class="row mt-3">
                 <div class="col-md-7">
@@ -34,52 +35,28 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-9 pb-1">
+                                    {% for country_info in countries_percentage %}
                                     <div class="row mb-2">
-                                        <div class="col-9">{{ country_1 }}</div>
-                                        <div class="col-3 text-right">{{ percent_1 }}%</div>
+                                        <div class="col-9">{{ country_info.0 }}</div>
+                                        <div class="col-3 text-right">{{ country_info.1 }}%</div>
                                         <div class="col-12">
                                             <div class="progress progress-sm mt-2">
-                                                <div class="progress-bar bg-green" role="progressbar"
-                                                     style="width: {{ percent_1 }}%"
+                                                <div class="progress-bar" role="progressbar"
+                                                     style="width: {{ country_info.1 }}%; background-color: #E32636;"
                                                      aria-valuenow="{{ percent_1 }}" aria-valuemin="0"
                                                      aria-valuemax="100">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row mb-2">
-                                        <div class="col-9">{{ country_2 }}</div>
-                                        <div class="col-3 text-right">{{ percent_2 }}%</div>
-                                        <div class="col-12">
-                                            <div class="progress progress-sm mt-2">
-                                                <div class="progress-bar bg-green" role="progressbar"
-                                                     style="width: {{ percent_2 }}%"
-                                                     aria-valuenow="{{ percent_2 }}" aria-valuemin="0"
-                                                     aria-valuemax="100">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2">
-                                        <div class="col-9">{{ country_3 }}</div>
-                                        <div class="col-3 text-right">{{ percent_3 }}%</div>
-                                        <div class="col-12">
-                                            <div class="progress progress-sm mt-2">
-                                                <div class="progress-bar bg-green" role="progressbar"
-                                                     style="width: {{ percent_3 }}%"
-                                                     aria-valuenow="{{ percent_3 }}" aria-valuemin="0"
-                                                     aria-valuemax="100">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                     <h6 class="mt-2">Сводка за все время</h6>
-                        <hr>
+                    <h6 class="mt-3 mb-2">Сводка за все время</h6>
+                    <hr class="mb-1">
                     <div class="d-flex justify-content-around align-items-center">
                         {% for item in zipped_data %}
                         <div class="col-lg-2 col-md-4 col-sm-6 col-6">
@@ -88,7 +65,15 @@
                                     <div class="d-flex justify-content-center align-items-center">
                                         <div class="state">
                                             <h6 style="color: #4682B4;">{{ item.0 }}</h6>
-                                            <h2 class="text-center">{{ item.1 }}</h2>
+                                            <hr class="mt-1">
+                                            <h2 class="text-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                     fill="#E32636" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                          d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5M8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.18.18 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.18.18 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.18.18 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.18.18 0 0 1-.134-.098z"/>
+                                                </svg>
+                                                {{ item.1 }}
+                                            </h2>
                                         </div>
                                         <div class="icon">
                                             <i class="ik ik-award"></i>
@@ -99,6 +84,7 @@
                         </div>
                         {% endfor %}
                     </div>
+                    <hr>
                 </div>
                 <div class="col-md-5">
                     <div class="card">
@@ -110,21 +96,23 @@
                                     {% for blog in formatted_posts %}
                                     <ul class="list-unstyled">
                                         <li>
-                                            <div class="d-flex flex-column flex-md-row gap-1 align-items-center align-items-md-center text-decoration-none border-center">
-                                                <div class="col-md-6 text-wrap">
-                                                    <svg class="bd-placeholder-img" width="100%" height="100%"
-                                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                                                         preserveAspectRatio="xMidYMid slice" focusable="false">
-                                                        <!--                                    <rect width="100%" height="100%" fill="#777"/>-->
-                                                        <image width="100%" height="100%"
-                                                               xlink:href="/media/{{ blog.image }}"/>
-                                                    </svg>
+                                            <a class="text-decoration-none" style="color: #4682B4" href="{% url 'blogs:detail_blog' blog.post.slug %}">
+                                                <div class="d-flex flex-column flex-md-row gap-1 align-items-center align-items-md-center border-center">
+                                                    <div class="col-md-6 text-wrap">
+                                                        <svg class="bd-placeholder-img" width="100%" height="160px"
+                                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                            <!--                                    <rect width="100%" height="100%" fill="#777"/>-->
+                                                            <image width="100%" height="100%"
+                                                                   xlink:href="/media/{{ blog.image }}"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="col-md-6 text-wrap">
+                                                        <h6>{{ blog.post.title }}</h6>
+                                                        <span style="color: #E32636; font-family: 'Playfair Display'; font-weight: 600;">{{blog.publication_date}}</span>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-6 text-wrap">
-                                                    <h6>{{ blog.post.title }}</h6>
-                                                    <small class="text-body-secondary">{{ blog.publication_date }}</small>
-                                                </div>
-                                            </div>
+                                            </a>
                                         </li>
                                     </ul>
                                     {% endfor %}

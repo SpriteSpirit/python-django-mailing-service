@@ -15,7 +15,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DetailView, D
 from mailing_service.forms import MailingForm, MessageForm, ClientForm
 from mailing_service.models import Client, Message, Mailing, MailingLogs
 from mailing_service.services import MailingService, send_mailing, finish_task, delete_task
-from mailing_service.templatetags.custom_filters import translate_month_from_num
+from mailing_service.templatetags.custom_filters import translate_month_from_num, translate_month
 
 from users.models import User
 from blogs.models import BlogPost
@@ -105,7 +105,7 @@ def moderator_dashboard(request):
     total_count = sum(countries.values())
     # Сортировка и расчет процентного соотношения
     countries_sorted = sorted(countries.items(), key=lambda x: x[1], reverse=True)
-    countries_percentage = [(name, count / total_count) for name, count in countries_sorted]
+    countries_percentage = [(name, int((count / total_count) * 100)) for name, count in countries_sorted]
 
     # Количество всех клиентов
     total_clients = 0
@@ -131,8 +131,6 @@ def moderator_dashboard(request):
     for user in all_users:
         if not (user.is_superuser or user.is_staff):
             total_users += 1
-    # Выбор топ-3 стран с наибольшим процентным соотношением
-    countries_percentage = countries_percentage[:3]
 
     blogposts = BlogPost.objects.all().order_by('-view_count')[:3]
     total_blogs = len(BlogPost.objects.all())
@@ -145,7 +143,7 @@ def moderator_dashboard(request):
         year = published_date.strftime('%Y')
         formatted_posts.append({
             'post': post,
-            'publication_date': f"{month} {day}, {year}",
+            'publication_date': f"{translate_month(month)} {day}, {year}",
             'image': post.image,
         })
 
@@ -156,16 +154,12 @@ def moderator_dashboard(request):
     context = {
         'title': "КАБИНЕТ МОДЕРАТОРА",
         'active_page': 'moderator_dashboard',
-        'country_1': countries_percentage[0][0],
-        'country_2': countries_percentage[1][0],
-        'country_3': countries_percentage[2][0],
-        'percent_1': int(countries_percentage[0][1] * 100),
-        'percent_2': int(countries_percentage[1][1] * 100),
-        'percent_3': int(countries_percentage[2][1] * 100),
+        'countries_percentage': countries_percentage[:3],
         'blogposts': blogposts,
         'formatted_posts': formatted_posts,
         'zipped_data': zipped_data,
     }
+    print(formatted_posts[0]['post'].slug)
 
     return render(request, 'mailing_service/moderator_dashboard.html', context)
 
