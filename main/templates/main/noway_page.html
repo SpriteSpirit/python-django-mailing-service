@@ -4,12 +4,12 @@
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
         <div class="row justify-content-center">
             <div class="col-lg-8 px-0 text-center">
-                <h3 class="display-6">Страница доступна только авторизованным пользователям</h1>
-                <p class="m-5">
-                    <a href="{% url 'users:login' %}" class="btn btn-outline-secondary btn-sm">Войдите</a> или
-                    <a href="{% url 'users:register' %}" class="btn btn-outline-secondary btn-sm">зарегистрируйтесь</a>
+                <h3 class="mb-4">Эта страница доступна только авторизованным пользователям</h3>
+                <p class="mt-4">
+                    <a href="{% url 'users:login' %}" class="btn btn-outline-success btn-sm">Войдите</a> или
+                    <a href="{% url 'users:register' %}" class="btn btn-outline-success btn-sm">зарегистрируйтесь</a>
                 </p>
-                <a href="{% url 'main:index' %}" class="btn btn-warning btn-sm mt-3" style="text-decoration: none;">Вернуться
+                <a href="{% url 'main:index' %}" class="btn btn-warning btn-sm" style="text-decoration: none;">Вернуться
                     назад</a>
             </div>
         </div>

@@ -22,7 +22,7 @@ from blogs.models import BlogPost
 from users.services import is_moderator, is_user
 
 
-@login_required
+@login_required(login_url='main:noway')
 @user_passes_test(is_user, login_url='main:access_denied')
 def dashboard(request):
     user = request.user
@@ -98,7 +98,7 @@ def dashboard(request):
     return render(request, 'mailing_service/dashboard.html', context)
 
 
-@login_required
+@login_required(login_url='main:noway')
 @user_passes_test(is_moderator, login_url='main:access_denied')
 def moderator_dashboard(request):
     all_users = User.objects.all()

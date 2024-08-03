@@ -14,6 +14,7 @@ class BlogPostListView(LoginRequiredMixin, ListView):
     context_object_name = 'blogposts'
     template_name = 'blogs/blog_list.html'
     permission_required = 'blogs.view_blogpost'
+    login_url = 'main:noway'
 
     # paginate_by = 3
 
