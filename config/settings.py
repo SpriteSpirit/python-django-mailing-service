@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "mailing_service",
     "users",
     "blogs",
+    'django_countries',
 ]
 
 MIDDLEWARE = [
@@ -121,10 +122,21 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ru"
 TIME_ZONE = "Europe/Moscow"
 USE_I18N = True
+USE_L10N = True
 USE_TZ = True
+
+LANGUAGES = [
+    ("ru", "Русский"),
+    ("en", "English"),
+    ("de", "Deutsch"),
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -179,7 +191,6 @@ CELERY_IMPORTS = ('mailing_service.services',)
 AUTH_USER_MODEL = 'users.User'
 
 LOGIN_URL = 'users:login'
-
 
 # User authentication settings
 LOGIN_REDIRECT_URL = "mailing:dashboard"

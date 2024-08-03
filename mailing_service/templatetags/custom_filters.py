@@ -1,5 +1,6 @@
 from django import template
 from mailing_service.models import Mailing
+from django.utils.translation import gettext as _
 
 register = template.Library()
 
@@ -61,3 +62,9 @@ def translate_user_activity(value):
 @register.filter(name='has_group')
 def has_group(user, group_name):
     return user.groups.filter(name=group_name).exists()
+
+
+@register.filter('translate')
+def translate(value):
+    print(_(value))
+    return _(value)

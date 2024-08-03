@@ -1,6 +1,8 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% load custom_filters %}
+{% load i18n %}
+
 {% block content %}
 
 {% include 'mailing_service/includes/inc_head.html' %}
@@ -42,9 +44,11 @@
                     <td class="text_content {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% endif %}">
                         <p class="mx-2 mb-0">{{ query_user.email }}</p>
                     </td>
+
                     <td class="text_content_center {% if query_user.is_superuser %} text-primary {% elif query_user.is_staff %} text-info {% endif %}">
-                        {{ query_user.country }}
+                       {{ query_user.country.name }}
                     </td>
+
                     {% if query_user.is_superuser %}
                     <td class="text_content_center text-primary">Администратор</td>
                     {% elif query_user.is_staff %}
@@ -56,7 +60,8 @@
                     {% if query_user.is_blocked %}
                     <td class="text_content_center text-danger">{{ query_user.is_blocked|translate_user_activity }}</td>
                     {% else %}
-                    <td class="text_content_center text-success">{{ query_user.is_blocked|translate_user_activity }}</td>
+                    <td class="text_content_center text-success">{{ query_user.is_blocked|translate_user_activity }}
+                    </td>
                     {% endif %}
                     <td class="text_content_center">
                         <div class="btn-group btn-group-sm" role="group">

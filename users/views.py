@@ -21,6 +21,7 @@ from config.settings import EMAIL_HOST_USER
 from mailing_service.models import Client
 from users.forms import UserForm, UserRegisterForm, CustomAuthenticationForm, UserProfileForm
 from users.models import User
+from django.utils.translation import gettext as _
 
 
 class UserCreateView(CreateView):
@@ -115,12 +116,12 @@ class UserListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
 
         return context
 
-    def get_queryset(self):
-        """ Просмотр только своих пользователей """
-        print(self.request.user.get_user_permissions())
-        print(self.request.user)
-
-        return super().get_queryset()
+    # def get_queryset(self):
+    #     """ Просмотр только своих пользователей """
+    #     print(self.request.user.get_user_permissions())
+    #     print(self.request.user)
+    #
+    #     return super().get_queryset()
 
     @staticmethod
     def post(request):
