@@ -54,3 +54,8 @@ def contacts(request):
 
 def noway_page(request):
     return render(request, 'main/noway_page.html')
+
+
+# Отображение страницы с ошибкой доступа (403) и детальной информацией о причинах
+def access_denied(request):
+    return render(request, 'main/denied_page.html')

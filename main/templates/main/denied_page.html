@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 px-0 text-center">
+                <h3 class="mb-4">Запрашиваемая страница недоступна для вас с текущими правами</h3>
+                <span class="display-9">
+                    Если вы уверены, что хотите получить доступ к этой странице,
+                    то смените аккаунт или запросите права доступа у администратора
+                </span>
+                <p class="mt-4">
+                    <a href="{% url 'users:login' %}" class="btn btn-outline-success btn-sm">Сменить аккаунт</a>
+                </p>
+                <a href="{% url 'main:index' %}" class="btn btn-warning btn-sm" style="text-decoration: none;">Вернуться
+                    назад</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

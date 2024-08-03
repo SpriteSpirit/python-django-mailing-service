@@ -23,7 +23,7 @@ from users.services import is_moderator, is_user
 
 
 @login_required
-@user_passes_test(is_user)
+@user_passes_test(is_user, login_url='main:access_denied')
 def dashboard(request):
     user = request.user
     mailing_list = Mailing.objects.filter(user=user)
@@ -99,7 +99,7 @@ def dashboard(request):
 
 
 @login_required
-@user_passes_test(is_moderator)
+@user_passes_test(is_moderator, login_url='main:access_denied')
 def moderator_dashboard(request):
     all_users = User.objects.all()
     # Подсчет встречаемости каждой страны среди пользователей
