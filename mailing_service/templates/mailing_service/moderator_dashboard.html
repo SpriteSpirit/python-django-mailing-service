@@ -10,90 +10,12 @@
     {% include 'mailing_service/includes/inc_inner_menu.html' %}
 
     <div class="col-md-6 ms-sm-auto col-lg-10 px-md-4">
-<!--        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
-<!--            <h1 class="h2">{{ title }}</h1>-->
-<!--        </div>-->
-        <h2 class="mb-3" style="color: #4682B4;">Информационная панель</h2>
+        <!--        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
+        <!--            <h1 class="h2">{{ title }}</h1>-->
+        <!--        </div>-->
+        <h2 class="mb-3" style="color: #4682B4;">Информационная панель</h2><hr>
         <div class="container-fluid">
-            <div class="row justify-content-center">
-                <h6 class="mt-2">Сводка за все время</h6>
-                <hr>
-                <div class="col-lg-2 col-md-6 col-sm-12">
-                    <div class="widget">
-                        <div class="widget-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="state">
-                                    <h6 style="color: #4682B4;">Рассылки</h6>
-                                    <h2 class="text-center">{{ total_mailings }}</h2>
-                                </div>
-                                <div class="icon">
-                                    <i class="ik ik-award"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12">
-                    <div class="widget">
-                        <div class="widget-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="state">
-                                    <h6 style="color: #4682B4;">Сообщения</h6>
-                                    <h2 class="text-center">{{ total_messages }}</h2>
-                                </div>
-                                <div class="icon">
-                                    <i class="ik ik-thumbs-up"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12">
-                    <div class="widget">
-                        <div class="widget-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="state">
-                                    <h6 style="color: #4682B4;">Клиенты</h6>
-                                    <h2 class="text-center">{{ total_clients }}</h2>
-                                </div>
-                                <div class="icon">
-                                    <i class="ik ik-calendar"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12">
-                    <div class="widget">
-                        <div class="widget-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="state">
-                                    <h6 style="color: #4682B4;">Пользователи</h6>
-                                    <h2 class="text-center">{{ total_users }}</h2>
-                                </div>
-                                <div class="icon">
-                                    <i class="ik ik-message-square"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12">
-                    <div class="widget">
-                        <div class="widget-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="state">
-                                    <h6 style="color: #4682B4;">Публикации</h6>
-                                    <h2 class="text-center">{{ total_blogs }}</h2>
-                                </div>
-                                <div class="icon">
-                                    <i class="ik ik-message-square"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="row mt-3">
                 <div class="col-md-7">
                     <div class="card">
@@ -154,6 +76,28 @@
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+                     <h6 class="mt-2">Сводка за все время</h6>
+                        <hr>
+                    <div class="d-flex justify-content-around align-items-center">
+                        {% for item in zipped_data %}
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="state">
+                                            <h6 style="color: #4682B4;">{{ item.0 }}</h6>
+                                            <h2 class="text-center">{{ item.1 }}</h2>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="ik ik-award"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -162,21 +106,35 @@
                             <div class="row align-items-center px-2">
                                 <h3 class="card-title" style="color: #4682B4;">Публикации</h3>
                                 <h6 class="card-title">Топ-3</h6>
-                                <div class="chart-area text-left m-0">
-                                    {% for blog in blogposts %}
-                                    <hr class="pb-1 mb-1">
-                                    <strong class="text-primary">{{ forloop.counter }} : </strong>
-                                    <a href="{% url 'blogs:detail_blog' blog.slug %}" class="text-secondary"
-                                       style="text-decoration: none;">
-                                        {{ blog }}
-                                    </a>
-                                    <hr class="pb-1 mb-1">
+                                <div class="chart-area text-lesft m-0">
+                                    {% for blog in formatted_posts %}
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="d-flex flex-column flex-md-row gap-1 align-items-center align-items-md-center text-decoration-none border-center">
+                                                <div class="col-md-6 text-wrap">
+                                                    <svg class="bd-placeholder-img" width="100%" height="100%"
+                                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                        <!--                                    <rect width="100%" height="100%" fill="#777"/>-->
+                                                        <image width="100%" height="100%"
+                                                               xlink:href="/media/{{ blog.image }}"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="col-md-6 text-wrap">
+                                                    <h6>{{ blog.post.title }}</h6>
+                                                    <small class="text-body-secondary">{{ blog.publication_date
+                                                        }}</small>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                     {% endfor %}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

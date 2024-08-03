@@ -39,9 +39,6 @@ def dashboard(request):
             'image': post.image,
         })
 
-    # for post in formatted_posts:
-    #     print(post['image'])
-
     today = timezone.now().date()
     now_month = timezone.now().month
     now_year = timezone.now().year
@@ -101,7 +98,6 @@ def dashboard(request):
 
 @login_required
 def moderator_dashboard(request):
-    # user = request.user
     all_users = User.objects.all()
     # Подсчет встречаемости каждой страны среди пользователей
     countries = Counter(user.country.name for user in all_users if user.country)
@@ -111,36 +107,53 @@ def moderator_dashboard(request):
     countries_sorted = sorted(countries.items(), key=lambda x: x[1], reverse=True)
     countries_percentage = [(name, count / total_count) for name, count in countries_sorted]
 
+    # Количество всех клиентов
     total_clients = 0
-    # Подсчет общего количества клиентов для нормализации данных
+
     for user in all_users:
         total_clients += len(user.client_set.all())
 
+    # Количество всех рассылок
     total_mailings = 0
-    # Подсчет общего количества рассылок для нормализации данных
+
     for user in all_users:
         total_mailings += len(user.mailing_set.all())
 
+    # Количество всех сообщений
     total_messages = 0
-    # Подсчет общего количества сообщений для нормализации данных
+
     for user in all_users:
         total_messages += len(user.message_set.all())
 
     # Количество всех пользователей
-    total_users = len(all_users)
+    total_users = 0
+
+    for user in all_users:
+        if not (user.is_superuser or user.is_staff):
+            total_users += 1
     # Выбор топ-3 стран с наибольшим процентным соотношением
     countries_percentage = countries_percentage[:3]
 
-    # Подсчет общего количества клиентов для нормализации данных
-    total_clients = 0
-    for user in all_users:
-        total_clients += len(user.client_set.all())
-
     blogposts = BlogPost.objects.all().order_by('-view_count')[:3]
     total_blogs = len(BlogPost.objects.all())
+    formatted_posts = []
+
+    for post in blogposts:
+        published_date = post.created_at
+        month = published_date.strftime('%B')
+        day = published_date.strftime('%d')
+        year = published_date.strftime('%Y')
+        formatted_posts.append({
+            'post': post,
+            'publication_date': f"{month} {day}, {year}",
+            'image': post.image,
+        })
+
+    labels = ['Пользователи', 'Клиенты', 'Рассылки', 'Сообщения', 'Публикации']
+    total_info = [total_users, total_clients, total_mailings, total_messages, total_blogs]
+    zipped_data = zip(labels, total_info)
 
     context = {
-        'active_page': 'moderator_dashboard',
         'title': "КАБИНЕТ МОДЕРАТОРА",
         'active_page': 'moderator_dashboard',
         'country_1': countries_percentage[0][0],
@@ -149,12 +162,9 @@ def moderator_dashboard(request):
         'percent_1': int(countries_percentage[0][1] * 100),
         'percent_2': int(countries_percentage[1][1] * 100),
         'percent_3': int(countries_percentage[2][1] * 100),
-        'total_clients': total_clients,
-        'total_mailings': total_mailings,
-        'total_messages': total_messages,
-        'total_users': total_users,
-        'total_blogs': total_blogs,
         'blogposts': blogposts,
+        'formatted_posts': formatted_posts,
+        'zipped_data': zipped_data,
     }
 
     return render(request, 'mailing_service/moderator_dashboard.html', context)

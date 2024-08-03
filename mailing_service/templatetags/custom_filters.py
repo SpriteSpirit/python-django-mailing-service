@@ -68,3 +68,8 @@ def has_group(user, group_name):
 def translate(value):
     print(_(value))
     return _(value)
+
+
+@register.filter(name='in_range')
+def in_range(query_list):
+    return range(len(query_list))
