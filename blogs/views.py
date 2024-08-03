@@ -29,6 +29,7 @@ class BlogPostListView(LoginRequiredMixin, ListView):
         """ Дополнительная информация """
         context = super().get_context_data(**kwargs)
         context['title'] = 'ПУБЛИКАЦИИ'
+        context['active_page'] = ''
 
         return context
 

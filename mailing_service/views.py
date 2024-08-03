@@ -39,8 +39,8 @@ def dashboard(request):
             'image': post.image,
         })
 
-    for post in formatted_posts:
-        print(post['image'])
+    # for post in formatted_posts:
+    #     print(post['image'])
 
     today = timezone.now().date()
     now_month = timezone.now().month
@@ -140,6 +140,7 @@ def moderator_dashboard(request):
     total_blogs = len(BlogPost.objects.all())
 
     context = {
+        'active_page': 'moderator_dashboard',
         'title': "КАБИНЕТ МОДЕРАТОРА",
         'active_page': 'moderator_dashboard',
         'country_1': countries_percentage[0][0],

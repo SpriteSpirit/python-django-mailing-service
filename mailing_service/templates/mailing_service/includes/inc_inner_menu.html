@@ -39,17 +39,16 @@
                         </svg>
                         Пользователи
                     </a>
-                </li>
-                {% else %}
-                <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'dashboard' %}active{% endif %}"
-                   data-toggle="tab" aria-current="page"
-                   href="{% url 'mailing:dashboard' %}">
-                    <svg class="bi">
-                        <use xlink:href="#house-fill"/>
-                    </svg>
-                    Главная
-                </a>
-                {% endif %}
+                    {% else %}
+                    <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'dashboard' %}active{% endif %}"
+                       data-toggle="tab" aria-current="page"
+                       href="{% url 'mailing:dashboard' %}">
+                        <svg class="bi">
+                            <use xlink:href="#house-fill"/>
+                        </svg>
+                        Главная
+                    </a>
+                    {% endif %}
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2 {% if active_page == 'mailing_list' %}active{% endif %}"
