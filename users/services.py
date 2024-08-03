@@ -14,3 +14,7 @@ def send_deactivate_email(user):
 
 def is_moderator(user):
     return user.groups.filter(name='Moderator').exists()
+
+
+def is_user(user):
+    return not (user.is_superuser or user.is_staff)

@@ -93,7 +93,23 @@ def register_user(request):
 class CustomLoginView(LoginView):
     form_class = CustomAuthenticationForm
     template_name = 'users/login.html'
-    success_url = reverse_lazy('mailing:dashboard')
+
+    def form_valid(self, form):
+        # Вызываем родительский метод form_valid, чтобы аутентификация прошла нормально
+        response = super().form_valid(form)
+        # self.request.user содержит аутентифицированного пользователя
+        user = self.request.user
+        print(f"Пользователь {user.username} вошел в аккаунт.")
+
+        return response
+
+    def get_success_url(self):
+        user = self.request.user
+
+        if user.is_authenticated and not (user.is_superuser or user.is_staff):
+            return reverse_lazy('mailing:dashboard')
+        else:
+            return reverse_lazy('mailing:moderator_dashboard')
 
 
 class CustomLogoutView(LogoutView):
@@ -130,9 +146,9 @@ class UserListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
         return redirect(reverse('users:user_list') + f'?highlight_user={user_id}')
 
 
-class UserCheckBlockView(PermissionRequiredMixin, View):
+class UserCheckBlockView(LoginRequiredMixin, PermissionRequiredMixin, View):
     """ Отображение страницы блокировки пользователя """
-    permission_required = 'can_block_user'
+    permission_required = 'auth.can_block_user'
 
     @staticmethod
     def get(request):

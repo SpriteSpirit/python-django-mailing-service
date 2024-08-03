@@ -19,10 +19,11 @@ from mailing_service.templatetags.custom_filters import translate_month_from_num
 
 from users.models import User
 from blogs.models import BlogPost
-from users.services import is_moderator
+from users.services import is_moderator, is_user
 
 
 @login_required
+@user_passes_test(is_user)
 def dashboard(request):
     user = request.user
     mailing_list = Mailing.objects.filter(user=user)

@@ -185,7 +185,6 @@ CELERY_TIMEZONE = 'Europe/Moscow'
 CELERY_IMPORTS = ('mailing_service.services',)
 
 AUTH_USER_MODEL = 'users.User'
-
 LOGIN_URL = 'users:login'
 
 # User authentication settings
