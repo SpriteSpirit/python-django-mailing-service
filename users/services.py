@@ -10,3 +10,7 @@ def send_deactivate_email(user):
         settings.EMAIL_HOST_USER,
         recipient_list=[user.email]
     )
+
+
+def is_moderator(user):
+    return user.groups.filter(name='Moderator').exists()

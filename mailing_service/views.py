@@ -3,7 +3,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import Permission
 from django.utils import timezone
@@ -19,6 +19,7 @@ from mailing_service.templatetags.custom_filters import translate_month_from_num
 
 from users.models import User
 from blogs.models import BlogPost
+from users.services import is_moderator
 
 
 @login_required
@@ -97,6 +98,7 @@ def dashboard(request):
 
 
 @login_required
+@user_passes_test(is_moderator)
 def moderator_dashboard(request):
     all_users = User.objects.all()
     # Подсчет встречаемости каждой страны среди пользователей
