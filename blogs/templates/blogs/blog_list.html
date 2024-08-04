@@ -37,7 +37,7 @@
                                 <a href="{% url 'blogs:detail_blog' blogpost.slug %}" class="btn btn-warning m-1">Читать</a>
 
                                 {% if user.is_stuff or user.is_superuser%}
-                                <a href="{% url 'blogs:update_blog' %}" class="btn btn-warning m-1">Редактировать</a>
+                                <a href="{% url 'blogs:update_blog' blogpost.slug %}" class="btn btn-warning m-1">Редактировать</a>
                                 {% endif %}
                             </div>
                         </div>
