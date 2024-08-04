@@ -1342,14 +1342,6 @@
 },
 {
     "model": "sessions.session",
-    "pk": "7bccbgmsi9ty4pa5s3y4l6yy5pc64gdr",
-    "fields": {
-        "session_data": ".eJxVjDsOwjAQBe_iGlmxvP5R0nMGa9dr4wBypDipIu5OIqWA9s3M20TEdalx7XmOI4ursOLyuxGmV24H4Ce2xyTT1JZ5JHko8qRd3ifO79vp_h1U7HWvg7HKAWVfNLLz3pAqemAHQRtCCtaAGSwnJAe-7Ag0GsqUNAAXheLzBdqcOAs:1sZsVz:MVCl9a824cxoJcpbD9Qmj3_vRy32IcKIY2HpOkSRK1E",
-        "expire_date": "2024-08-16T13:40:15.942Z"
-    }
-},
-{
-    "model": "sessions.session",
     "pk": "cswsqm1gf2nzhn1v901n8qg2w9o1ike7",
     "fields": {
         "session_data": ".eJxVjEEOwiAQRe_C2pCBMlBcuvcMZOhMbdVAUtqV8e7apAvd_vfef6lE2zqlrcmSZlZn5dXpd8s0PKTsgO9UblUPtazLnPWu6IM2fa0sz8vh_h1M1KZvbSN4n3ugbGIIyLbrgiPpomRHHkZnuAcesQexlgNEAY6ISAFxMNmr9wfEIzcY:1sZBDd:nzS_o_samMRdHlidcFtaIto7MYupG6-KyUBLuMIZbZM",
@@ -1853,10 +1845,22 @@
     }
 },
 {
+    "model": "django_celery_beat.crontabschedule",
+    "pk": 41,
+    "fields": {
+        "minute": "2",
+        "hour": "18",
+        "day_of_month": "2",
+        "month_of_year": "*",
+        "day_of_week": "*",
+        "timezone": "Europe/Moscow"
+    }
+},
+{
     "model": "django_celery_beat.periodictasks",
     "pk": 1,
     "fields": {
-        "last_update": "2024-07-31T19:30:52.022Z"
+        "last_update": "2024-08-02T15:02:00.211Z"
     }
 },
 {
@@ -1909,9 +1913,9 @@
         "one_off": false,
         "start_time": null,
         "enabled": true,
-        "last_run_at": "2024-07-31T01:58:59.128Z",
-        "total_run_count": 4,
-        "date_changed": "2024-07-31T02:30:04.576Z",
+        "last_run_at": "2024-08-02T14:57:19.489Z",
+        "total_run_count": 5,
+        "date_changed": "2024-08-02T14:57:19.529Z",
         "description": ""
     }
 },
@@ -2421,118 +2425,6 @@
 },
 {
     "model": "django_celery_beat.periodictask",
-    "pk": 32,
-    "fields": {
-        "name": "Рассылка: 34",
-        "task": "send_message",
-        "interval": null,
-        "crontab": 32,
-        "solar": null,
-        "clocked": null,
-        "args": "[34]",
-        "kwargs": "{}",
-        "queue": null,
-        "exchange": null,
-        "routing_key": null,
-        "headers": "{}",
-        "priority": null,
-        "expires": null,
-        "expire_seconds": null,
-        "one_off": false,
-        "start_time": null,
-        "enabled": true,
-        "last_run_at": null,
-        "total_run_count": 0,
-        "date_changed": "2024-07-17T18:58:00.273Z",
-        "description": ""
-    }
-},
-{
-    "model": "django_celery_beat.periodictask",
-    "pk": 33,
-    "fields": {
-        "name": "Рассылка: 35",
-        "task": "send_message",
-        "interval": null,
-        "crontab": 33,
-        "solar": null,
-        "clocked": null,
-        "args": "[35]",
-        "kwargs": "{}",
-        "queue": null,
-        "exchange": null,
-        "routing_key": null,
-        "headers": "{}",
-        "priority": null,
-        "expires": null,
-        "expire_seconds": null,
-        "one_off": false,
-        "start_time": null,
-        "enabled": true,
-        "last_run_at": null,
-        "total_run_count": 0,
-        "date_changed": "2024-07-17T19:12:29.222Z",
-        "description": ""
-    }
-},
-{
-    "model": "django_celery_beat.periodictask",
-    "pk": 34,
-    "fields": {
-        "name": "Рассылка: 36",
-        "task": "send_message",
-        "interval": null,
-        "crontab": 34,
-        "solar": null,
-        "clocked": null,
-        "args": "[36]",
-        "kwargs": "{}",
-        "queue": null,
-        "exchange": null,
-        "routing_key": null,
-        "headers": "{}",
-        "priority": null,
-        "expires": null,
-        "expire_seconds": null,
-        "one_off": false,
-        "start_time": null,
-        "enabled": true,
-        "last_run_at": null,
-        "total_run_count": 0,
-        "date_changed": "2024-07-17T19:21:35.119Z",
-        "description": ""
-    }
-},
-{
-    "model": "django_celery_beat.periodictask",
-    "pk": 35,
-    "fields": {
-        "name": "Рассылка: 37",
-        "task": "send_message",
-        "interval": null,
-        "crontab": 35,
-        "solar": null,
-        "clocked": null,
-        "args": "[37]",
-        "kwargs": "{}",
-        "queue": null,
-        "exchange": null,
-        "routing_key": null,
-        "headers": "{}",
-        "priority": null,
-        "expires": null,
-        "expire_seconds": null,
-        "one_off": false,
-        "start_time": null,
-        "enabled": true,
-        "last_run_at": null,
-        "total_run_count": 0,
-        "date_changed": "2024-07-26T15:35:20.421Z",
-        "description": ""
-    }
-},
-{
-    "model": "django_celery_beat.periodictask",
     "pk": 36,
     "fields": {
         "name": "Рассылка: 38",
@@ -2556,34 +2448,6 @@
         "last_run_at": null,
         "total_run_count": 0,
         "date_changed": "2024-07-26T15:41:48.787Z",
-        "description": ""
-    }
-},
-{
-    "model": "django_celery_beat.periodictask",
-    "pk": 37,
-    "fields": {
-        "name": "Рассылка: 39",
-        "task": "send_message",
-        "interval": null,
-        "crontab": 37,
-        "solar": null,
-        "clocked": null,
-        "args": "[39]",
-        "kwargs": "{}",
-        "queue": null,
-        "exchange": null,
-        "routing_key": null,
-        "headers": "{}",
-        "priority": null,
-        "expires": null,
-        "expire_seconds": null,
-        "one_off": false,
-        "start_time": null,
-        "enabled": true,
-        "last_run_at": null,
-        "total_run_count": 0,
-        "date_changed": "2024-07-26T19:58:46.421Z",
         "description": ""
     }
 },
@@ -2644,34 +2508,6 @@
     }
 },
 {
-    "model": "django_celery_beat.periodictask",
-    "pk": 40,
-    "fields": {
-        "name": "Рассылка: 42",
-        "task": "send_message",
-        "interval": null,
-        "crontab": 40,
-        "solar": null,
-        "clocked": null,
-        "args": "[42]",
-        "kwargs": "{}",
-        "queue": null,
-        "exchange": null,
-        "routing_key": null,
-        "headers": "{}",
-        "priority": null,
-        "expires": null,
-        "expire_seconds": null,
-        "one_off": false,
-        "start_time": null,
-        "enabled": true,
-        "last_run_at": null,
-        "total_run_count": 0,
-        "date_changed": "2024-07-28T20:18:00.882Z",
-        "description": ""
-    }
-},
-{
     "model": "mailing_service.client",
     "pk": 2,
     "fields": {
@@ -2711,7 +2547,7 @@
     "model": "mailing_service.client",
     "pk": 5,
     "fields": {
-        "name": "Котофей Куськоыч",
+        "name": "Котофей Куськович",
         "email": "sprite.spirit.t.me@gmail.com",
         "comment": "Любит делать кусь",
         "is_active": true,
@@ -2790,7 +2626,7 @@
         "first_send": "2024-07-17T18:58:00Z",
         "finish_send": "2024-07-18T18:57:00Z",
         "periodicity": "daily",
-        "status": "started",
+        "status": "completed",
         "message": 2,
         "is_published": false,
         "user": 6,
@@ -2809,9 +2645,9 @@
         "first_send": "2024-07-17T19:13:00Z",
         "finish_send": "2024-07-25T19:11:00Z",
         "periodicity": "weekly",
-        "status": "started",
+        "status": "completed",
         "message": 1,
-        "is_published": true,
+        "is_published": false,
         "user": 6,
         "client": [
             4,
@@ -2827,9 +2663,9 @@
         "first_send": "2024-07-17T19:23:00Z",
         "finish_send": "2024-08-01T19:21:00Z",
         "periodicity": "weekly",
-        "status": "started",
+        "status": "completed",
         "message": 2,
-        "is_published": true,
+        "is_published": false,
         "user": 6,
         "client": [
             2
@@ -2844,9 +2680,9 @@
         "first_send": "2024-07-26T15:36:00Z",
         "finish_send": "2024-07-27T15:35:00Z",
         "periodicity": "daily",
-        "status": "started",
+        "status": "completed",
         "message": 1,
-        "is_published": true,
+        "is_published": false,
         "user": 6,
         "client": [
             2
@@ -2879,7 +2715,7 @@
         "first_send": "2024-07-26T19:59:00Z",
         "finish_send": "2024-07-27T19:58:00Z",
         "periodicity": "daily",
-        "status": "started",
+        "status": "completed",
         "message": 1,
         "is_published": false,
         "user": 6,
@@ -2917,12 +2753,31 @@
         "first_send": "2024-07-28T20:18:00Z",
         "finish_send": "2024-07-29T20:17:00Z",
         "periodicity": "daily",
-        "status": "started",
+        "status": "completed",
         "message": 3,
-        "is_published": true,
+        "is_published": false,
         "user": 14,
         "client": [
             8
+        ]
+    }
+},
+{
+    "model": "mailing_service.mailing",
+    "pk": 43,
+    "fields": {
+        "created_at": "2024-08-02T15:00:55.114Z",
+        "first_send": "2024-08-02T15:02:00Z",
+        "finish_send": "2024-08-03T15:00:00Z",
+        "periodicity": "daily",
+        "status": "completed",
+        "message": 1,
+        "is_published": true,
+        "user": 6,
+        "client": [
+            6,
+            2,
+            5
         ]
     }
 },
@@ -3107,6 +2962,36 @@
     }
 },
 {
+    "model": "mailing_service.mailinglogs",
+    "pk": 51,
+    "fields": {
+        "date_time": "2024-08-02T15:00:55.937Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 43
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 52,
+    "fields": {
+        "date_time": "2024-08-02T15:00:56.522Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 43
+    }
+},
+{
+    "model": "mailing_service.mailinglogs",
+    "pk": 53,
+    "fields": {
+        "date_time": "2024-08-02T15:00:57.166Z",
+        "status": "success",
+        "server_response": "Сообщение успешно отправлено",
+        "mailing": 43
+    }
+},
+{
     "model": "users.user",
     "pk": 3,
     "fields": {
@@ -3140,7 +3025,7 @@
     "pk": 6,
     "fields": {
         "password": "pbkdf2_sha256$720000$lPeslcWq5vUQPu7QIy3n7w$pDKt/Q9l6q0J8CM8cHBMEMEXFhMOiSwWwd9XMkPLV7Q=",
-        "last_login": "2024-08-02T13:40:15.939Z",
+        "last_login": "2024-08-03T14:45:56.302Z",
         "is_superuser": false,
         "is_staff": false,
         "is_active": true,
@@ -3221,7 +3106,7 @@
     "pk": 14,
     "fields": {
         "password": "pbkdf2_sha256$720000$yNvPWwFXmurKrZ5QtuSq5D$PEjDudPNUvrn8T8LMnAKAgLTUAuw0BsdlEEnfnjlfXs=",
-        "last_login": "2024-08-02T11:06:56.842Z",
+        "last_login": "2024-08-03T15:11:22.024Z",
         "is_superuser": false,
         "is_staff": true,
         "is_active": true,
@@ -3246,16 +3131,43 @@
     }
 },
 {
+    "model": "users.user",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$saWo9WbAwOusBoHxngUY0a$JGEkeFznYqbRo8UfGDxei5+wnXdxmpIyjLLQNvb7sO8=",
+        "last_login": "2024-08-02T15:07:20.314Z",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-02T15:07:01.948Z",
+        "email": "test@localhost",
+        "first_name": "Test",
+        "last_name": "Test",
+        "middle_name": null,
+        "phone_number": "+79234567890",
+        "avatar": "users/avatars/WdOy2Ch5RyY.jpg",
+        "country": "RU",
+        "about_message": null,
+        "is_blocked": false,
+        "token": null,
+        "website": "https://",
+        "github": "",
+        "telegram": "@",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "blogs.blogpost",
     "pk": 1,
     "fields": {
         "title": "Тайна июльского пуха: Тополиный или Кошачий?",
         "slug": "tajna-iyulskogo-pukha-topolinij-ili-koshachij-ili-kak-prinesti-leto-v-dom",
         "content": "С приближением самого жаркого месяца года, июльская температура не только растет, но и... пухнет. Да, вы не ослышались – пухнет! Ведь именно в это время на улицах города разгуливает два главных источника летнего комфорта: тополиный пух и кошачий пух. Но какой из них правомерно называть истинным символом июля?\r\n\r\nТополиный пух: королевская роскошь или пыльная проблема?\r\n\r\nС одной стороны, тополиный пух – это настоящая летняя роскошь. Он парит в воздухе, создавая волшебную, романтическую атмосферу. Стоит только выглянуть в окно, и вы окунетесь в облако белоснежных хлопьев, словно в снег зимы, только гораздо более приятно. Однако, если вам не хватает романтики, а есть аллергия, то тополиный пух может превратиться в пыльную проблему. Неприятные симптомы, от зуда в глазах до постоянного чихания, – вот что ожидает тех, кто не готов к атаки белого зла.\r\n\r\nКошачий пух: домашний комфорт или фелинская интрига?\r\n\r\nС другой стороны, кошачий пух – это то, что многие из нас ассоциируют с домашним уютом. Он тихо расстилается на диванах, креслах и даже на клавиатуре вашего компьютера. Кошачий пух – это знак того, что у вас есть верный друг и компаньон, готовый разделить с вами жаркие июльские дни. Однако, если ваш питомец решил отметить лето массовым линькой, то ваш дом может превратиться в кошачий пуховой бурлеск. Вам предстоит решать, является ли это комфортом или интригой с целью заработать больше внимания и лакомств.\r\n\r\nИтог: пусть пух летит!\r\n\r\nВ конце концов, какой пух правомерно называть истинным символом июля – тополиный или кошачий? Ответ прост: оба! Июль – месяц контраста, когда жаркое солнце сочетается с легким ветром, а романтика соседствует с домашним уютом. Тополиный пух приносит в нашу жизнь воздушную легкость, а кошачий – тепло и привязанность. Поэтому пусть пух летит, пусть он окружает нас, напоминая о том, что лето – это время не только солнца, но и тепла человеческих (и животных) связей. А если аллергия или домашняя чистота станут проблемой, то вспомните: июля не бывает без пуха, а пуха – без июля!",
-        "image": "blog_image/scale_1200.png",
+        "image": "blog_image/puh_cat_mqRNe94.png",
         "created_at": "2024-08-01T19:27:51.236Z",
         "published": true,
-        "view_count": 48
+        "view_count": 51
     }
 },
 {
@@ -3265,10 +3177,10 @@
         "title": "Всегдажрун: Пушистый гурман с неутолимым аппетитом",
         "slug": "vsegdazhrun-pushistij-gurman-s-neutolimim-appetitom",
         "content": "Встречайте Всегдажруна, кота, который переписал правила сна. Он не просто любит спать – он сделал это своим призванием. Его рекорд – 23 часа 59 минут беспробудного сна в сутки, с кратковременными пробуждениями только для поедания вкусной еды или ласк от хозяев.\r\n\r\nВсегдажрун умудрился превратить сон в искусство. Он выбирает самые необычные позы, оборачиваясь спиралью, как улитка в своей раковине, или заворачиваясь в клубок, словно живой ковер. Его дыхание – это едва слышный шёпот, а приятное урчание создает уютную атмосферу в любой комнате.\r\n\r\nХозяева Всегдажруна признаются, что он научил их ценить тишину и покой. \"Он как живой Тайм-аут от суеты жизни\", – шутят они. Несмотря на его ленивый образ жизни, Всегдажрун остается любимцем семьи, и его сон стал семейной традицией – каждый член семьи старается подражать ему, если не по продолжительности, то по качеству отдыха. Благодаря Всегдажруну, дом преобразился в оазис релаксации, где время течет медленнее, а счастье – быстрее. Спасибо, Всегдажрун, за уроки искусства сна!",
-        "image": "blog_image/котэ-омномном-4625799.jpeg",
+        "image": "blog_image/fat_cat.jpeg",
         "created_at": "2024-08-01T20:56:12.862Z",
         "published": true,
-        "view_count": 25
+        "view_count": 27
     }
 },
 {
@@ -3278,10 +3190,10 @@
         "title": "Барсик Тыгыдык: Мелодия физики на лапках",
         "slug": "barsik-tigidik-melodiya-fiziki-na-lapkakh",
         "content": "Встречайте Барсика Тыгыдыка, кота, который бросил вызов законам физики. Его жизнь – это постоянное нарушение принципов гравитации, пространства и времени. Барсик может:\r\n\r\nЗанимать несколько мест одновременно: он может лежать на диване, а также одновременно сидеть на подоконнике и наблюдать за птицами.\r\nПревращать воздух в твердь: его взгляд способен зафиксировать в воздухе даже невидимые частицы, создавая эффект \"воздушных скульптур\".\r\nИгнорировать временные ограничения: Барсик может спать целый день, а затем проснуться, как будто только что пообедал, и требовать корма с тем же аппетитом.\r\nХозяева Барсика Тыгыдыка признаются, что его присутствие в доме стало причиной неожиданных открытий. \"Он научил нас видеть мир под другим углом – или, точнее, без углов\", – шутят они. Барсик – это живой пример того, что физика – это всего лишь теория, а на самом деле все возможно, если ты готов поверить в чудо. Его жизнь – это вдохновляющее напоминание о том, что иногда нужно отбросить правила и просто насладиться магией момента.",
-        "image": "blog_image/WdOy2Ch5RyY.jpg",
+        "image": "blog_image/run_cat_gC808jU.jpg",
         "created_at": "2024-08-01T20:58:42.553Z",
         "published": true,
-        "view_count": 11
+        "view_count": 13
     }
 },
 {
@@ -3291,10 +3203,10 @@
         "title": "Кот-блогер Джон Кетсвилл: жизнь, любовь и интернет",
         "slug": "kot-bloger-dzhon-ketsvill-zhizn-lyubov-i-internet",
         "content": "Джон Кетсвилл - пушистая звезда социальных сетей, покорившая сердца миллионов пользователей по всему миру. Этот очаровательный британский короткошерстный кот начал свою карьеру блогера в 2018 году, когда его хозяйка, Сара Джонсон, решила поделиться забавными фотографиями питомца в Instagram.\r\n\r\nБлагодаря своему харизматичному внешнему виду и уникальным выражениям мордочки, Джон быстро стал интернет-сенсацией. Его аккаунт @john_catswell насчитывает более 2 миллионов подписчиков, которые ежедневно следят за приключениями пушистого блогера.\r\n\r\nОсобую популярность Джону принесли его тематические фотосессии, где он предстает в различных образах: от шеф-повара до супергероя. Кот также известен своими \"обзорами\" игрушек и лакомств для животных, которые неизменно вызывают улыбку у его поклонников.\r\n\r\nПомимо развлекательного контента, Джон Кетсвилл участвует в благотворительных акциях, привлекая внимание к проблемам бездомных животных. Его популярность помогла собрать значительные средства для приютов и организаций по защите животных.\r\n\r\nСегодня Джон Кетсвилл - не просто домашний питомец, а настоящий бренд с собственной линейкой товаров для кошек и их владельцев. Его история успеха вдохновляет многих и доказывает, что в мире социальных медиа звездой может стать каждый, даже если у тебя четыре лапы и хвост.",
-        "image": "blog_image/scale_1200.jpeg",
+        "image": "blog_image/john_cat_VVBQ6WS.jpeg",
         "created_at": "2024-08-02T07:12:43.760Z",
         "published": true,
-        "view_count": 1
+        "view_count": 3
     }
 }
 ]
