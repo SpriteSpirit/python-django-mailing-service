@@ -49,6 +49,8 @@ class UserUpdateView(UpdateView):
 
         if form.is_valid:
             user = form.save(commit=True)
+            password = form.cleaned_data['password']
+            user.set_password(password)
             user.save()
 
         return super().form_valid(form)
@@ -76,10 +78,12 @@ def register_user(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save(commit=False)
 
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password1')
+
+            user.set_password(password)
             # выполняем аутентификацию
             user = authenticate(email=email, password=password)
             login(request, user)
