@@ -37,7 +37,7 @@ def dashboard(request):
         year = published_date.strftime('%Y')
         formatted_posts.append({
             'post': post,
-            'publication_date': f"{month} {day}, {year}",
+            'publication_date': f"{translate_month(month)} {day}, {year}",
             'image': post.image,
         })
 
