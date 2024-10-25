@@ -93,7 +93,7 @@ def dashboard(request):
         'clients_added_half_year': clients_added_half_year,
         'formatted_posts': formatted_posts,
     }
-    print(now_month)
+    # print(now_month)
 
     return render(request, 'mailing_service/dashboard.html', context)
 
@@ -468,6 +468,7 @@ class MailingLogListView(LoginRequiredMixin, ListView):
             })
 
         context['info_client'] = info
+        print(logs)
 
         return context
 

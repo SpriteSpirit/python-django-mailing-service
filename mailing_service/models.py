@@ -12,7 +12,7 @@ class Client(models.Model):
     objects = models.Manager()
 
     name = models.CharField(max_length=150, verbose_name='Фамилия Имя Отчество')
-    email = models.EmailField(unique=True, verbose_name='Email')
+    email = models.EmailField(unique=False, verbose_name='Email')
     comment = models.TextField(verbose_name='Комментарий', **NULLABLE)
     is_active = models.BooleanField(default=True, verbose_name='Действующий')
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)

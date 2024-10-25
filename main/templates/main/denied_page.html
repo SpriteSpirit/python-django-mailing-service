@@ -12,8 +12,13 @@
                 <p class="mt-4">
                     <a href="{% url 'users:login' %}" class="btn btn-outline-success btn-sm">Сменить аккаунт</a>
                 </p>
-                <a href="{% url 'main:index' %}" class="btn btn-warning btn-sm" style="text-decoration: none;">Вернуться
+                {% if user.is_staff or user.is_superuser %}
+                <a href="{% url 'mailing:moderator_dashboard' %}" class="btn btn-warning btn-sm" style="text-decoration: none;">Вернуться
                     назад</a>
+                {% else %}
+                <a href="{% url 'mailing:dashboard' %}" class="btn btn-warning btn-sm" style="text-decoration: none;">Вернуться
+                    назад</a>
+                {% endif %}
             </div>
         </div>
     </div>

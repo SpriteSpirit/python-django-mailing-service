@@ -115,6 +115,10 @@ class Command(BaseCommand):
                                         country=user['fields']['country'],
                                         about_message=user['fields']['about_message'],
                                         is_blocked=user['fields']['is_blocked'],
+                                        is_staff=user['fields']['is_staff'],
+                                        is_superuser=user['fields']['is_superuser'],
+                                        is_active=user['fields']['is_active'],
+                                        password=user['fields']['password'],
                                         ))
 
         # Создаем объекты в базе с помощью метода bulk_create()
